@@ -1,5 +1,5 @@
 #+TITLE: Item Clothing
-#+AUTHOR: innoxia bicobus rfpnj
+#+AUTHOR: innoxia bicobus
 
 For a version without all of the comments, see "rental_daddy.xml".
 
@@ -386,11 +386,11 @@ Use the tag ~slot~ for values inserted here.
   would block the FINGER slot when equipped into the WRIST slot):
 
 #+BEGIN_SRC xml
-		<incompatibleSlots slot="WRIST">
-			<slot>FINGER</slot>
-		</incompatibleSlots>
-		<incompatibleSlots slot="SOCK"/>
-		<incompatibleSlots slot="HAND"/>
+<incompatibleSlots slot="WRIST">
+	<slot>FINGER</slot>
+</incompatibleSlots>
+<incompatibleSlots slot="SOCK"/>
+<incompatibleSlots slot="HAND"/>
 #+END_SRC
 
 ** colours
@@ -445,8 +445,8 @@ colours in [[(tertiaryColoursDye)][tertiaryColoursDye]] are all found within the
 this is for a demonstration.
 
 If you want to include custom colours, do not define a ~values~ attribute, and
-instead, list each Colour. Colour types can be found here:
-https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/utils/Colour.java
+instead, list each Colour. Colour types can be found in the files present in the
+following folder: [[https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/utils/colours][src/com/lilithsthrone/utils/colours]]
 
 *Important:* please use the ~Colour~ values that start with ~CLOTHING_~.
 
@@ -491,8 +491,9 @@ coloured your svg with.
 The [[(cci)][copyColourIndex]] attribute defines which colour index should be copied into
 this colour slot on weapon generation. This particular colour, having an index
 of 0, will always be coloured the same as the primary colour when generated.
-Indexes go from 0->X, where X is the number of defined colours. i.e. If you only
-define primary and secondary, the first custom colour will have an index of 2.
+Indexes go from 0 \to X, where X is the number of defined colours. i.e. If you
+only define primary and secondary, the first custom colour will have an index
+of 2.
 
 Attributes from ~c0~ to ~c4~ are the colours which you've used in your svg and
 would like replaced with the colours you define below. ~c0~ is the darkest
@@ -580,7 +581,7 @@ Custom pattern colours can be defined just like the customColours up above.
 
 These tags determine where in the world your clothing can be found, and what
 special attributes your clothing should have. Possible tags are found here:
-https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/ItemTag.java
+[[https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/inventory/ItemTag.java][src/com/lilithsthrone/game/inventory/ItemTag.java]]
 
 ~itemTags~ without a =slot= defined will have these tags added to every
 equippable slot. Should only be used for generic tags like those related to
@@ -600,43 +601,79 @@ just for demonstration purposes.
 </itemTags>
 #+END_SRC
 
-* TODO sexAttributesSelf
+* sexAttributesSelf
+:PROPERTIES:
+:CUSTOM_ID: sex-attributes-self
+:END:
 
-See the 'res/clothing/innoxia/buttPLugs/butt_plug.xml' file for a working example of this:
+See the ~res/clothing/innoxia/buttPLugs/butt_plug.xml~ file for a working
+example of this element.
+
+These are the sex attributes applicable to the wearer (i.e. when inserted in the
+wearer's orifices or when the wearer is penetrating this clothing type. Mainly
+used for insertable dildos.)
 
 #+BEGIN_SRC xml
-	<sexAttributesSelf> <!-- These are the sex attributes applicable to the wearer (i.e. when inserted in the wearer's orifices or when the wearer is penetrating this clothing type. Mainly used for insertable dildos.) -->
-		<penetration/> <!-- This item has no penetration stats -->
-		<!-- If you want an item to be able to be used as a self-insertable sex-toy, use this format:
+	<sexAttributesSelf>
 		<penetration>
-			<length>15</length> cm value
-			<girth>5</girth> 0-6 corresponding to PenetrationGirth Enum values
-			<modifiers> For adding modifiers, use this format below:
-				<mod>VEINY</mod> Drawn from PenetrationModifier Enum values
+			<length>15</length>
+			<girth>5</girth>
+			<modifiers>
+				<mod>VEINY</mod>
 			</modifiers>
 		</penetration>
-		-->
-		<orifice/> <!-- This item has no orifice stats -->
-		<!-- Warning! As of v0.3.7, orifice sex toy support is not fully implemented into the game! -->
-		<!--
 		<orifice>
-			<depth>0</depth> cm value
-			<capacity>0</capacity> cm value corresponding to diameter of orifice
-			<elasticity>3</elasticity> 0-7 corresponding to OrificeElasticity Enum values
-			<plasticity>3</plasticity> 0-7 corresponding to OrificePlasticity Enum values
-			<wetness>0</wetness> 0-7 corresponding to Wetness Enum values
+			<depth>0</depth>
+			<capacity>0</capacity>
+			<elasticity>3</elasticity>
+			<plasticity>3</plasticity>
+			<wetness>0</wetness>
 			<modifiers>
-				<mod>PUFFY</mod> Drawn from OrificeModifier Enum values
+				<mod>PUFFY</mod>
 			</modifiers>
 		</orifice>
-		-->
 	</sexAttributesSelf>
 #+END_SRC
+** penetration
++ length :: value in cm
++ grith :: 0-6 corresponding to ~PenetrationGirth Enum~ values
++ modifiers :: For adding modifiers, add =mod= tags containing
+  ~PenetrationModifier Enum~ values
+** orifice
+*Warning!* As of /v0.3.7/, orifice sex toy support is not fully implemented into
+the game!
 
-* TODO sexAttributesOther
-See the 'res/clothing/norin/strapless_dildo/strapless_dildo.xml' file for a working example of this:
++ depth :: value in cm
++ capacity :: value in cm, corresponding to the diameter of the orifice
++ elasticity :: 0-7 corresponding to ~OrificeElasticity Enum~ values
++ plasticity :: 0-7 corresponding to ~OrificePlasticity Enum~ values
++ wetness :: 0-7 corresponding to ~Wetness Enum~ values
++ modifiers :: list of =mod= tags, each containing ~OrificeModifier Enum~ values
+
+* sexAttributesOther
+:PROPERTIES:
+:CUSTOM_ID: sex-attributes-other
+:END:
+
+These are the sex attributes applicable to someone who is interacting with the
+wearer (i.e. the penetration/orifice which is available for people other than
+the wearer. Mainly used for strap-on dildos.)
+
+See the ~res/clothing/norin/strapless_dildo/strapless_dildo.xml~ file for a
+working example of the following excerpt.
+
+For an explanation of the effects of the different sub elements, please refer to [[#sex-attributes-self][sexAttributesSelf]].
+
+
 #+BEGIN_SRC xml
-<sexAttributesOther/> <!-- These are the sex attributes applicable to someone who is interacting with the wearer (i.e. the penetration/orifice which is available for people other than the wearer. Mainly used for strap-on dildos.) -->
+<sexAttributesOther>
+	<penetration>
+		<length>25</length>
+		<girth>3</girth>
+		<modifiers/>
+	</penetration>
+	<orifice/>
+</sexAttributesOther>
 #+END_SRC
 
 * replacementText
@@ -644,13 +681,13 @@ See the 'res/clothing/norin/strapless_dildo/strapless_dildo.xml' file for a work
 The following sections are for defining the descriptions of displacing or
 replacing your clothing. The attribute 'type' defines which DisplacementType
 your descriptions are applied to. For standard equipping and unequipping, use
-REMOVE_OR_EQUIP. Types can be found here:
-https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/clothing/DisplacementType.java
+~REMOVE_OR_EQUIP~. Types can be found here:
+[[https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/inventory/clothing/DisplacementType.java][src/com/lilithsthrone/game/inventory/clothing/DisplacementType.java]]
 
 - Example :: This is the equip text for when socks are equipped to the "SOCK"
   slot:
 
-#+BEGIN_SRC xml
+  #+BEGIN_SRC xml
 <replacementText slot="SOCK" type="REMOVE_OR_EQUIP">
 	<self>
 		<![CDATA[[npc.Name] [npc.verb(pull)] the socks on to cover [npc.her] [npc.feet].]]>
@@ -662,12 +699,11 @@ https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthro
 		<![CDATA[[npc.Name] roughly [npc.verb(pull)] the socks onto [npc2.namePos] [npc2.feet].]]>
 	</otherRough>
 </replacementText>
-#+END_SRC
+  #+END_SRC
 
 - Example :: This is the equip text for when socks are equipped to the "HAND"
   slot:
-
-#+BEGIN_SRC xml
+  #+BEGIN_SRC xml
 <replacementText slot="HAND" type="REMOVE_OR_EQUIP">
 	<self>
 		<![CDATA[[npc.Name] [npc.verb(pull)] the socks on to cover [npc.her] [npc.hands].]]>
@@ -679,15 +715,14 @@ https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthro
 		<![CDATA[[npc.Name] roughly [npc.verb(pull)] the socks onto [npc2.namePos] [npc2.hands].]]>
 	</otherRough>
 </replacementText>
-#+END_SRC
+   #+END_SRC
 
 * displacementText
 This section is used for removal and displacement.
 
- - Example :: This is the unequip text for when socks are removed from the
-   "SOCK" slot:
-
-#+BEGIN_SRC xml
+- Example :: This is the unequip text for when socks are removed from the "SOCK"
+  slot:
+  #+BEGIN_SRC xml
 <displacementText slot="SOCK" type="REMOVE_OR_EQUIP">
 	<self>
 		<![CDATA[[npc.Name] [npc.verb(pull)] off [npc.her] socks.]]>
@@ -699,12 +734,11 @@ This section is used for removal and displacement.
 		<![CDATA[[npc.Name] roughly [npc.verb(pull)] off [npc2.namePos] socks.]]>
 	</otherRough>
 </displacementText>
-#+END_SRC
+  #+END_SRC
 
-
-- Example :: This is the unequip text for when socks are removed from the "HAND" slot:
-
-#+BEGIN_SRC xml
+- Example :: This is the unequip text for when socks are removed from the "HAND"
+  slot:
+  #+BEGIN_SRC xml
 <displacementText slot="HAND" type="REMOVE_OR_EQUIP">
 	<self>
 		<![CDATA[[npc.Name] [npc.verb(pull)] the socks from off of [npc.her] [npc.hands].]]>
@@ -716,4 +750,4 @@ This section is used for removal and displacement.
 		<![CDATA[[npc.Name] roughly [npc.verb(pull)] the socks from off of [npc2.namePos] [npc2.hands].]]>
 	</otherRough>
 </displacementText>
-#+END_SRC
+  #+END_SRC
