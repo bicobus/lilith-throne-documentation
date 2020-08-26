@@ -16,6 +16,9 @@ The name of this set bonus.
 #+END_SRC
 
 * statusEffect
+:PROPERTIES:
+:CUSTOM_ID: statusEffect
+:END:
 The id of the status effect which should be applied when a character is under
 the effect of this set bonus.
 
