@@ -1,6 +1,5 @@
 #+TITLE: Outfits
 #+AUTHOR: bicobus
-#+AUTHOR: rfpnj
 #+AUTHOR: innoxia
 
 Outfits are a way to make randomly generated NPCs' outfit generation less

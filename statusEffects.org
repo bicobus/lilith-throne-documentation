@@ -1,6 +1,5 @@
 #+TITLE: statusEffect
 #+AUTHOR: bicobus
-#+AUTHOR: rjpnj
 #+AUTHOR: innoxia
 
 * GENERAL INFORMATION
