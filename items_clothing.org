@@ -257,44 +257,28 @@ wearer's body.
 
 - Example :: I've defined this section as being the one to be used when equipped
   to the "SOCK" slot.
-
-#+BEGIN_SRC xml
+  #+BEGIN_SRC xml -r
 <blockedPartsList slot="SOCK">
-
-	<!-- You can add as many blockedParts elements as you like, but they should each have a different 'displacementType', and THERE SHOULD BE AT LEAST ONE, OF TYPE 'REMOVE_OR_EQUIP'.-->
-	<blockedParts>
-
-		<!-- If this clothing is displaced in the following way (in this case, by being removed), then the 'blockedBodyParts', 'clothingAccessBlocked', and 'concealedSlots' will all be revealed. If multiple 'blockedParts' block or conceal the same slot, only one 'blockedParts' needs to be displaced to reveal it. (e.g. If a pair of trousers has 'UNZIPS' and 'PULLS_DOWN' displacementTypes, and both of these contain the 'concealedSlots' 'slot' 'PENIS', then the penis will be revealed if either UNZIPS or PULLS_DOWN is activated.)
-		A full list of displacementTypes can be found here: https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/clothing/DisplacementType.java -->
+	<blockedParts> (ref:bprts)
 		<displacementType>REMOVE_OR_EQUIP</displacementType>
-
-		<!-- The access required to perform this displacementType. clothingAccess values can be found here: https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/clothing/ClothingAccess.java -->
 		<clothingAccessRequired>
 			<clothingAccess>FEET</clothingAccess>
 		</clothingAccessRequired>
-
-		<!-- The body parts that are blocked by this 'displacementType'. bodyPart values can be found here: https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/character/body/CoverableArea.java -->
 		<blockedBodyParts>
 			<bodyPart>FEET</bodyPart>
 		</blockedBodyParts>
-
-		<!-- The access that this 'displacementType' blocks. Again, clothingAccess values can be found here: https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/clothing/ClothingAccess.java -->
-		<clothingAccessBlocked/> <!-- Use the tag 'clothingAccess' for values inserted here. -->
-
-		<!-- The slots that this 'displacementType' conceals. Possible slots are found here: https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/InventorySlot.java -->
-		<!-- You can also use a preset list by adding an attribute named "values" to this element (an example - "CS Example" - is in the blockedParts section below this one). The preset lists that you can use are found here: https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/clothing/PresetConcealmentLists.java -->
-		<concealedSlots/> <!-- Use the tag 'slot' for values inserted here. -->
+		<clothingAccessBlocked/>
+		<concealedSlots/>
 	</blockedParts>
 </blockedPartsList>
-#+END_SRC
+  #+END_SRC
 
 This is another section to determines how the clothing interacts with other
 clothing and the wearer's body.
 
 - Example :: I've defined this section as being the one to be used when equipped
   to the "HAND" slot.
-
-#+BEGIN_SRC xml
+  #+BEGIN_SRC xml
 <blockedPartsList slot="HAND">
 	<blockedParts>
 		<displacementType>REMOVE_OR_EQUIP</displacementType>
@@ -306,19 +290,87 @@ clothing and the wearer's body.
 		<concealedSlots/>
 	</blockedParts>
 </blockedPartsList>
-#+END_SRC
+  #+END_SRC
 
-*** TODO blockedParts
+*** blockedParts
+:PROPERTIES:
+:CUSTOM_ID: blocked-parts
+:END:
 
-*** TODO displacementType
+You can add as many [[(bprts)][blockedParts]] elements as you like, but they should each have
+a different [[displacementType][displacementType]], and *there should be at least one, of type*
+~REMOVE_OR_EQUIP~.
 
-*** TODO clothingAccessRequired
+*** displacementType
+:PROPERTIES:
+:CUSTOM_ID: displacement-type
+:END:
 
-*** TODO blockedBodyParts
+If this clothing is displaced in the following way (in this case, by being
+removed), then the [[blockedBodyParts][blockedBodyParts]], [[clothingAccessBlocked][clothingAccessBlocked]], and
+[[concealedSlots][concealedSlots]] will all be revealed. If multiple [[blockedParts][blockedParts]] block or
+conceal the same slot, only one 'blockedParts' needs to be displaced to reveal
+it. (e.g. If a pair of trousers has 'UNZIPS' and 'PULLS_DOWN' displacementTypes,
+and both of these contain the 'concealedSlots' 'slot' 'PENIS', then the penis
+will be revealed if either UNZIPS or PULLS_DOWN is activated.)
 
-*** TODO clothingAccessBlocked
+A full list of displacementTypes can be found here:
+[[https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/inventory/clothing/DisplacementType.java][src/com/lilithsthrone/game/inventory/clothing/DisplacementType.java]]
 
-*** TODO concealedSlots
+*** clothingAccessRequired
+:PROPERTIES:
+:CUSTOM_ID: clothing-access-required
+:END:
+
+The access required to perform this [[displacementType][displacementType]].
+
+~clothingAccess~ values can be found here:
+[[https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/inventory/clothing/ClothingAccess.java][src/com/lilithsthrone/game/inventory/clothing/ClothingAccess.java]]
+
+*** blockedBodyParts
+:PROPERTIES:
+:CUSTOM_ID: blocked-body-parts
+:END:
+
+The body parts that are blocked by this [[displacementType][displacementType]].
+
+~bodyPart~ values can be found here:
+[[https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/character/body/CoverableArea.java][src/com/lilithsthrone/game/character/body/CoverableArea.java]]
+
+*** clothingAccessBlocked
+:PROPERTIES:
+:CUSTOM_ID: clothing-access-blocked
+:END:
+The access that this [[displacementType][displacementType]] blocks. Again, clothingAccess values can
+be found here: [[https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/inventory/clothing/ClothingAccess.java][src/com/lilithsthrone/game/inventory/clothing/ClothingAccess.java]]
+
+This element must contain a list of tag ~clothingAccess~ for values inserted
+here.
+
+- Example ::
+  #+BEGIN_SRC xml
+  <clothingAccess>MOUTH</clothingAccess>
+  #+END_SRC
+
+*** concealedSlots
+:PROPERTIES:
+:CUSTOM_ID: concealed-slots
+:END:
+
+The slots that this 'displacementType' conceals. Possible slots are found here:
+[[https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/inventory/InventorySlot.java][src/com/lilithsthrone/game/inventory/InventorySlot.java]]
+
+You can also use a preset list by adding an attribute named "values" to this
+element (an example - "CS Example" - is in the blockedParts section below this
+one). The preset lists that you can use are found here:
+[[https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/inventory/clothing/PresetConcealmentLists.java][src/com/lilithsthrone/game/inventory/clothing/PresetConcealmentLists.java]]
+
+Use the tag ~slot~ for values inserted here.
+
+- Example ::
+  #+BEGIN_SRC xml
+  <slot>HEAD</slot>
+  #+END_SRC
 
 ** incompatibleSlots
 
