@@ -42,6 +42,9 @@ created by myself to have author attribution.)
 #+END_SRC
 
 ** value
+:PROPERTIES:
+:CUSTOM_ID: value
+:END:
 
 The base value of this clothing. I roughly base things on 1 flame = 10p, so 10
 flames = £1.
@@ -54,6 +57,9 @@ flames = £1.
 #+END_SRC
 
 ** determiner
+:PROPERTIES:
+:CUSTOM_ID: determiner
+:END:
 
 The determiner which is displayed before this item's name. While usually "a" or
 "an", for things like socks or gloves, you'll want to use "a pair of". I use the
