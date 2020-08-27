@@ -1,6 +1,5 @@
 #+TITLE: Miscanelaous Items
-#+AUTHOR: innoxia
-#+AUTHOR: bicobus
+#+AUTHOR: innoxia, bicobus
 
 Please note: Item modding is not fully complete yet, as you cannot define any enchantment effects for items. I will expand this at some point in the future, but for now, this modding framework should be enough for most uses.
 

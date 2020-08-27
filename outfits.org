@@ -1,6 +1,5 @@
 #+TITLE: Outfits
-#+AUTHOR: bicobus
-#+AUTHOR: innoxia
+#+AUTHOR: innoxia, bicobus
 
 Outfits are a way to make randomly generated NPCs' outfit generation less
 chaotic.

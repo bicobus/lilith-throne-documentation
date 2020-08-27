@@ -1,13 +1,14 @@
 #+TITLE: setBonuses
-#+AUTHOR: bicobus
-#+AUTHOR: innoxia
-#+AUTHOR: rfpnj
+#+AUTHOR: innoxia, bicobus
+
 * GENERAL INFORMATION
+
 If you are unsure of anything, please use the LT Discord to ask for help! You
 can see another annotated example in the file
 ~'res/setBonuses/innoxia/enforcer.xml'~.
 
 * name
+
 The name of this set bonus.
 
 #+NAME: name

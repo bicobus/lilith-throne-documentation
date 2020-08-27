@@ -1,13 +1,14 @@
 #+TITLE: statusEffect
-#+AUTHOR: bicobus
-#+AUTHOR: innoxia
+#+AUTHOR: innoxia, bicobus
 
 * GENERAL INFORMATION
+
 If you are unsure of anything, please use the LT Discord to ask for help! You
 can see another annotated example in the file
 ~'res/statusEffects/innoxia/set_kitty.xml'~.
 
 * renderingPriority
+
 An integer used for determining the order of rendering status effect icons. A
 higher value means that it's higher up in the rendering priority (and so will be
 rendered before others). Typical values go from 0 to 100. A good default value
