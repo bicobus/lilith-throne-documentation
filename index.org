@@ -118,7 +118,12 @@ file [[https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/liliths
 Please note that any item set with a rarity of LEGENDARY will not appear
 naturally in the game, neither from the shop keepers nor random encounters.
 
-** colours
+** TODO colours [0%]
+
+ - [ ] Gather all information about weapon's colours system.
+ - [ ] Reduce the colours section in the other documents and make them refer to
+   this one instead.
+ - [ ] Inform of ~statusEffects~ special case.
 
 Colours are available for most moddable items. The rules to follow are generally
 the same for all type of item, with the exception for the weapons which expand
