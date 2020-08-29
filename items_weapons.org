@@ -68,7 +68,7 @@ this dagger would always be called "Demon's Dagger" instead of, for example,
 <name appendDamageName="true"><![CDATA[Demon's Dagger]]></name>
 #+END_SRC
 
-** name Plural
+** namePlural
 
 The plural name of this weapon. If ~pluralByDefault~'s "false" is changed to
 "true", then the game will always the plural name when referring to this weapon.
@@ -293,7 +293,7 @@ For an empty spell list, use an empty element:
 The combat moves that are unlocked when equipping this weapon. The ~combatMoves~
 element is similar to the [[#spells][spells]] element.
 
-#+BEGIN_SRC xml -r -l "<!-- %s -->"
+#+BEGIN_SRC xml 
 <combatMoves changeOnReforge="true">
 	<move damageType="PHYSICAL">ASSAULT_RIFLE_MAG_DUMP</move>
 </combatMoves>

@@ -16,7 +16,7 @@ modAuthorDirectory.getName() + "_"
     + innerChild.getName().split("\\.")[0]
 #+END_SRC
 
-This results in this particular item's id being: "innoxia_template_socks".
+This results in this particular item's id being: =innoxia_template_socks=.
 
 _PLEASE NOTE:_ This clothing item will not show up in the game, due to the
 rarity being set to LEGENDARY, and no shopkeepers being defined as selling this
@@ -530,7 +530,7 @@ colours:
 14. #d3bc5f
 15. #c8ab37
 
-#+BEGIN_SRC xml -r
+#+BEGIN_SRC xml
 <customColours>
 	<customColour copyColourIndex="0" c0="#6C5353" c1="#916F6F" c2="#AC9393" c3="#C8B7B7" c4="#E3DBDB"> (ref:cci)
 		<defaultColours>

@@ -144,6 +144,7 @@ images for the game.
 #+BEGIN_SRC xml
 <imageName>pill.svg</imageName>
 #+END_SRC
+
 ** colours
 
 Your item can be coloured any way you like, but if you'd like the game to
@@ -244,6 +245,7 @@ the player.
 	</p>
 ]]></applyEffects>
 #+END_SRC
+
 ** itemTags
 :PROPERTIES:
 :CUSTOM_ID: item-tags
