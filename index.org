@@ -1,5 +1,11 @@
+-*- ispell-change-dictionary: english; -*-
 #+TITLE: Index
-#+AUTHOR: bicobus
+#+AUTHOR: bicobus, innoxia
+
+The following documents will try it's best to expose the different ways of
+augmenting your experience while playing Lilith's Throne. While the documents
+tries to be as accurate as possible, you're invited, dear reader, to consult
+existing ~xml~ files residing in your ~res/mods/~ folder.
 
 If you are unsure of anything, please use the [[https://discord.gg/nDRvMXH][Lilith's Throne Discord]] to ask for
 help!
@@ -17,9 +23,38 @@ help!
   content (combat moves, spells), change in statuses (being affected by a spell)
   or effects afflicting your character's attributes (health increase/decrease).
 - file:setBonuses.org :: Define the statusEffects pertaining to a set of
-  clothings or weapons.
+  clothing or weapons.
 
-* Some elements expect Boolean values
+** Note on status effects and how to use them
+:PROPERTIES:
+:CUSTOM_ID: note-on-effects
+:END:
+
+We understand by effects a set of of logic conditonally applied to a character.
+The source of definining that condition differs, is ultimately applied through
+an ~applyEffect~ block. Most wearable items has to go through a set bonus in
+order to have access to the status effects mechanics.
+
+Wearable have to define themselves as part of a set. The set then activate the
+status effect based on simple conditionnals. Sets of one item, although counter
+intuitive, are acceptable. Non-wearable items have a direct access to an
+~applyEffect~ block, and as such do not require a reference to a ~statusEffect~.
+
+
+#+BEGIN_SRC dot :file images/hierarchy.png
+digraph {
+coi [label = "Clothing Items"]
+wi [label = "Weapon Items"]
+cui [label = "Consumable Items"]
+appl [shape=box label = "applyEffect"]
+
+{ coi wi } -> "setBonus";
+"setBonus" -> "statusEffect";
+{ "statusEffect" cui } -> appl;
+}
+#+END_SRC
+
+** Some elements expect Boolean values
 :PROPERTIES:
 :CUSTOM_ID: boolean-values
 :END:
@@ -35,13 +70,37 @@ expected:
 - ~true~
 - ~false~
 
-* Shared tags and informations
+* Shared tags and information
 
-Accross the different types of items exists shared concepts. Some of those
+Across the different types of items exists shared concepts. Some of those
 concept may be expanded on a per category basis, for example weapons needs more
 colours than the other kinds of items and thus expand the available list.
 
+** Item's identifier
+
+The item identifier is the internal name of your objects and the only way to
+refer to them from between ~xml~ files. It is calculated from your clothing's
+folder and ~.xml~ name using the following code:
+
+#+BEGIN_SRC java
+modAuthorDirectory.getName() + "_"
+    + innerChild.getParentFile().getName() + "_"
+    + innerChild.getName().split("\\.")[0]
+#+END_SRC
+
+Which would resolve to =innoxia_template_socks= for the object located in
+~res/mods/innoxia/clothing/template/socks.xml~.
+
+The identifier is generated for every pertinent file existing in your modules
+folder structure. The identifier being generated, and not user defined, is an
+important variable to keep in mind. If you ever rename the folder or the =xml=
+file, the identifier will change which, in turn, will invalidate all existing
+reference present in the players saves files.
+
 ** author tags
+:PROPERTIES:
+:CUSTOM_ID: author-tags
+:END:
 
 How attribution to the mod author (/you/) should be displayed in the object's
 tooltip. If left blank or not included, a default attribution based on folder
@@ -53,6 +112,9 @@ The content of the element should be a short one line descriptor.
   that it was made by 'Innoxia'./
 
 ** value
+:PROPERTIES:
+:CUSTOM_ID: value
+:END:
 
 The base value of an object. I roughly base things on 1 flame = 10p, so 10
 flames = £1.
@@ -139,29 +201,29 @@ values are as follows:
 
 + /Red/ is used as base colour for changing the primary colour of the graphic
   in-game, and the game will only recognise and change the following colours:
-  1. #ff2a2a
-  2. #ff5555
-  3. #ff8080
-  4. #ffaaaa
-  5. #ffd5d5
+  1. =#ff2a2a=
+  2. =#ff5555=
+  3. =#ff8080=
+  4. =#ffaaaa=
+  5. =#ffd5d5=
 
 + /Orange/ is used as base colour for changing the secondary colour of the
   graphic in-game, and the game will only recognise and change the following
   colours:
-  1. #ff7f2a
-  2. #ff9955
-  3. #ffb380
-  4. #ffccaa
-  5. #ffe6d5
+  1. =#ff7f2a=
+  2. =#ff9955=
+  3. =#ffb380=
+  4. =#ffccaa=
+  5. =#ffe6d5=
 
 + /Yellow/ is used as base colour for changing the tertiary colour of the
   graphic in-game, and the game will only recognise and change the following
   colours:
-  1. #ffd42a
-  2. #ffdd55
-  3. #ffe680
-  4. #ffeeaa
-  5. #fff6d5
+  1. =#ffd42a=
+  2. =#ffdd55=
+  3. =#ffe680=
+  4. =#ffeeaa=
+  5. =#fff6d5=
 
 *Important:* any gradients that you use should be called: =innoGrad1=,
 =innoGrad2=, etc.
@@ -219,7 +281,7 @@ following folder: [[https://github.com/Innoxia/liliths-throne-public/blob/dev/sr
 </tertiaryColoursDye>
 #+END_SRC
 
-*** customColours
+*** Custom Colours
 
 You can define any number of custom colours to replace the shades you've
 coloured your svg with.
@@ -231,34 +293,34 @@ primary colour when generated. Indexes go from 0 \to X, where X is the number of
 defined colours. i.e. If you only define primary and secondary, the first custom
 colour will have an index of 2.
 
-Attributes from ~c0~ to ~c4~ are the colours which you've used in your svg and
+Attributes from ~c0~ \to ~c4~ are the colours which you've used in your svg and
 would like replaced with the colours you define below. ~c0~ is the darkest
 shade. Shades can go up to any number, but setting just 5 shades should work
 best.
 
-If you have used the primary/secondary/tertiary elements up above, then do not
-use their associated colour hexes. (i.e. If you've defined a primaryColours
-element, do not use #ff2a2a, #ff5555, #ff8080, #ffaaaa, or #ffd5d5 in the
-customColour attributes.)
+If you have used the ~primary~ / ~secondary~ / ~tertiary~ elements up above,
+then do not use their associated colour hexes. (i.e. If you've defined a
+~primaryColours~ element, do not use either of =#ff2a2a=, =#ff5555=, =#ff8080=,
+=#ffaaaa=, or =#ffd5d5= in the customColour attributes.)
 
-You should also NOT use any of the following, as they are reserved for pattern
+You should also *not* use any of the following, as they are reserved for pattern
 colours:
 
-1. #f4d7d7
-2. #e9afaf
-3. #de8787
-4. #d35f5f
-5. #c83737
-6. #f4e3d7
-7. #e9c6af
-8. #deaa87
-9. #d38d5f
-10. #c87137
-11. #f4eed7
-12. #e9ddaf
-13. #decd87
-14. #d3bc5f
-15. #c8ab37
+1. =#f4d7d7=
+2. =#e9afaf=
+3. =#de8787=
+4. =#d35f5f=
+5. =#c83737=
+6. =#f4e3d7=
+7. =#e9c6af=
+8. =#deaa87=
+9. =#d38d5f=
+10. =#c87137=
+11. =#f4eed7=
+12. =#e9ddaf=
+13. =#decd87=
+14. =#d3bc5f=
+15. =#c8ab37=
 
 #+BEGIN_SRC xml
 <customColours>
