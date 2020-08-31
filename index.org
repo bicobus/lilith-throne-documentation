@@ -1,4 +1,4 @@
--*- ispell-change-dictionary: english; -*-
+# -*- ispell-change-dictionary: english; -*-
 #+TITLE: Index
 #+AUTHOR: bicobus, innoxia
 
@@ -120,6 +120,9 @@ The base value of an object. I roughly base things on 1 flame = 10p, so 10
 flames = £1.
 
 ** name
+:PROPERTIES:
+:CUSTOM_ID: name
+:PROPERTIES:
 
 The name element contain the singular form of the name of the object (One
 /sock/, two /socks/).
@@ -136,6 +139,9 @@ Each object with the possession of a name also has a plural form. If you have to
 inform name, expect to fill in it's plural form.
 
 ** determiner
+:PROPERTIES:
+:CUSTOM_ID: determiner
+:END:
 
 The determiner which is displayed before an item's name. While they are usually
 "a" or "an", for things like socks or gloves, you'll want to use "a pair of"
@@ -155,11 +161,17 @@ this elements if they equate "a" or "an".
   #+END_SRC
 
 ** Description
+:PROPERTIES:
+:CUSTOM_ID: description
+:END:
 
 A long form description of the item. Should be present for each object under the
 items category.
 
 ** Item's image
+:PROPERTIES:
+:CUSTOM_ID: item-image
+:END:
 
 The element ~imageName~ will be found through the different objects. It informs
 of the file path for the object's image. All images /must be/ .svg format.
@@ -173,6 +185,9 @@ If the item can be equipped, then an ~imageEquippedname~ must also be provided.
 Please refer to the appropriate documentation for more details.
 
 ** rarity
+:PROPERTIES:
+:CUSTOM_ID: rarity
+:END:
 
 The rarity of several object can be defined using the constants listed in the
 file [[https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/inventory/Rarity.java][src/com/lilithsthrone/game/inventory/Rarity.java]].
@@ -180,12 +195,19 @@ file [[https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/liliths
 Please note that any item set with a rarity of LEGENDARY will not appear
 naturally in the game, neither from the shop keepers nor random encounters.
 
-** TODO colours [0%]
+** TODO colours [33%]
+:PROPERTIES:
+:CUSTOM_ID: colours
+:END:
 
  - [ ] Gather all information about weapon's colours system.
- - [ ] Reduce the colours section in the other documents and make them refer to
+ - [-] Reduce the colours section in the other documents and make them refer to
    this one instead.
- - [ ] Inform of ~statusEffects~ special case.
+   + [X] items clothing
+   + [ ] items weapons
+   + [ ] items items
+   + [X] items tattoo
+ - [X] Inform of ~statusEffects~ special case.
 
 Colours are available for most moddable items. The rules to follow are generally
 the same for all type of item, with the exception for the weapons which expand
@@ -241,8 +263,7 @@ colours in =tertiaryColoursDye= are all found within the list preset ~ALL~, but
 this is for a demonstration.
 
 If you want to include custom colours, do not define a ~values~ attribute, and
-instead, list each Colour. Colour types can be found in the files present in the
-following folder: [[https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/utils/colours][src/com/lilithsthrone/utils/colours]]
+instead, list each Colour.
 
 *Important:* please use the ~Colour~ values that start with ~CLOTHING_~.
 
@@ -332,3 +353,9 @@ colours:
 	</customColour>
 </customColours>
 #+END_SRC
+
+*** status effects special case
+
+Status effects also accept colours, but to a lesser degree. The colours for
+status effects are there to recolor the icon, as such at most three values are
+expected for =primary=, =secondary=, and =tertiary= colours.

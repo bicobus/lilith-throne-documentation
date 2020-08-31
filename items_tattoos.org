@@ -92,38 +92,10 @@ Inventory slots that this tattoo can be assigned to. Leave blank to allow all sl
 
 ** colours
 
+Please consult the relevant [[file:index.org::#colours][documentation]].
+
 Use this section to define available colours for your tattoo. The game detects
 specific colour values, and recolours them to the value chosen by the player.
-These values are as follows:
-
-+ Red is used as base colour for changing the primary colour of the graphic
-  in-game, and the game will only recognise and change the following colours:
-  - #ff2a2a
-  - #ff5555
-  - #ff8080
-  - #ffaaaa
-  - #ffd5d5
-+ Orange is used as base colour for changing the secondary colour of the graphic
-  in-game, and the game will only recognise and change the following colours:
-  - #ff7f2a
-  - #ff9955
-  - #ffb380
-  - #ffccaa
-  - #ffe6d5
-+ Yellow is used as base colour for changing the tertiary colour of the graphic
-  in-game, and the game will only recognise and change the following colours:
-  - #ffd42a
-  - #ffdd55
-  - #ffe680
-  - #ffeeaa
-  - #fff6d5
-
-
-*ANY GRADIENTS THAT YOU USE SHOULD BE CALLED:* =innoGrad1=, =innoGrad2=, etc.
-
-You can see a visual representation of these colours here: https://www.lilithsthrone.com/wiki/doku.php?id=modding_wiki:modding:creating_clothes
-
-Colour lists to be used can be found here: https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/utils/ColourListPresets.java
 
 #+BEGIN_SRC xml
 <primaryColours values="ALL"/>
@@ -132,10 +104,6 @@ Colour lists to be used can be found here: https://github.com/Innoxia/liliths-th
 #+END_SRC
 
 You can also make your own, custom list of colours to be used. If you want to include custom colours, do not define a 'values' attribute, and instead, list each Colour, like in the example below.
-
-Colour types can be found here: https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/utils/Colour.java
-
-PLEASE USE THE 'Colour' VALUES THAT START WITH 'CLOTHING-'
 
 #+BEGIN_SRC xml
 <tertiaryColours>
