@@ -1,29 +1,13 @@
+# -*- ispell-change-dictionary: english; -*-
 #+TITLE: Tattoos
 #+AUTHOR: innoxia, bicobus
 
 For a version without all of the comments, see "rental_daddy.xml".
 
-
-* GENERAL INFORMATION
-
-If you are unsure of anything, please use the LT Discord to ask for help! Your
-tattoo's id (which is very important to the game), is calculated from your
-tattoo's folder and .xml name using the following code:
-
-#+BEGIN_SRC java
-modAuthorDirectory.getName() + "_"
-    + innerChild.getParentFile().getName() + "_"
-    + innerChild.getName().split("\\.")[0]
-#+END_SRC
-
-This results in this particular item's id being: ~innoxia_hearts_hearts~.
-
-*IMPORTANT:* If you ever change the name of this .xml, or containing folder, any
-tattoos that exist in the game will be removed!
-
 * coreAttributes
 
 ** value
+
 The base value of this tattoo. All of the standard tattoos are 500 flames. I
 roughly base things on 1 flame = 10p, so 10 flames = £1.
 
@@ -82,7 +66,9 @@ for this.
 
 ** slotAvailability
 
-Inventory slots that this tattoo can be assigned to. Leave blank to allow all slots to be used. Possible slots are found here: https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/InventorySlot.java
+Inventory slots that this tattoo can be assigned to. Leave blank to allow all
+slots to be used. Possible slots are found here:
+https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/InventorySlot.java
 
 #+BEGIN_SRC xml
 <slotAvailability>
@@ -92,7 +78,7 @@ Inventory slots that this tattoo can be assigned to. Leave blank to allow all sl
 
 ** colours
 
-Please consult the relevant [[file:index.org::#colours][documentation]].
+Please consult the relevant [[file:index.org::#colours][documentation]] about colours.
 
 Use this section to define available colours for your tattoo. The game detects
 specific colour values, and recolours them to the value chosen by the player.

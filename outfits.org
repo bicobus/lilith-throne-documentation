@@ -1,3 +1,4 @@
+# -*- ispell-change-dictionary: english; -*-
 #+TITLE: Outfits
 #+AUTHOR: innoxia, bicobus
 
@@ -7,19 +8,35 @@ chaotic.
 As a final note, I will add support for allowing the automatic generation of
 piercings in the next update.
 
-* Tasks to be done for this document [1/6]
+* Tasks to be done for this document [3/6]
 :PROPERTIES:
 :COOKIE_DATA: todo recursive
 :END:
-*** TODO for the [[weight][weight]] section
+*** DONE for the [[weight][weight]] section
+
 Explain if rarity needs a bigger or smaller number. 100 isn't explicit enough.
-*** TODO [[mainWeapons and offhandWeapons][weapons]] write examples for [0/2]:
-- [ ] mainWeapons
-- [ ] offhandWeapons
-*** TODO [[guaranteedClothingEquips][guaranteedClothingEquips]] [0/1]
-- [ ] details ~clothing~ tag
+
+*** DONE [[mainWeapons and offhandWeapons][weapons]] write examples for [2/2]:
+
+- [X] mainWeapons
+- [X] offhandWeapons
+
+*** TODO [[guaranteedClothingEquips][guaranteedClothingEquips]] [1/3]
+
+- [X] details ~clothing~ tag
+- [ ] What is a displaced list?
+- [ ] Effect sub-elements are undocumented
+
 *** TODO review [[genericClothingType][genericClothingType]]
+
+What are the conditionals refered in the section? Is it the =conditional=
+sub-element or are all sub-elements acting as a filter?
+
 *** TODO review [[clothingType][clothingType]]
+
+Somebody should read what I (bicobus) wrote in order to validate my
+understanding.
+
 *** DONE check all links
 
 * coreAttributes
@@ -126,11 +143,15 @@ Default outfits have a weight of 100. As there could be several outfits added to
 the weighting method, the chance of this outfit being selected is not able to be
 precisely determined.
 
+A bigger number makes the outfits more common. There is no upper limit.
+
 #+BEGIN_SRC xml
 <weight>100</weight>
 #+END_SRC
 
 * generationAttributes
+
+** Conditional statements
 
 You can define any number of conditional statements to use elsewhere in this
 file. They must be enclosed in CDATA tags, and must use a format of
@@ -167,7 +188,7 @@ Preceding ~presetColourGroups~ can be used, but not succeeding ones. (i.e.
 #+BEGIN_SRC xml
 <presetColourGroup1 singleColour="true">
 	<randomColour>CLOTHING_PINK</randomColour>
-	<randomColour>CLOTHING_PINK_LIGHT</randomColour>
+	<randOMCOLOUR>CLOTHING_PINK_LIGHT</randomColour>
 	<randomColour>CLOTHING_RED_DARK</randomColour>
 </presetColourGroup1>
 
@@ -193,9 +214,50 @@ Weapons can be added in a similar (although more limited) manner to clothing.
 This file doesn't use any weapons. Look at
 ~res/outfits/innoxia/genericMugger/dominion_masculine.xml~ for a weapon example.
 
-#+BEGIN_SRC xml
-<mainWeapons/>
+The content present in =mainWeapons= and =offhandWeapons= follow the same rules.
+The main weapons block defines which item should be inserted into the
+character's main attack slot, where ass the off hand block defines which item to
+be inserted into the character's off hand. Each block receive one or several
+=weapon= sub elements.
 
+The =weapon= block require the following elements to be present:
+
+ - =conditional= :: references to the conditional statement present in the
+   document.
+ - =types= :: A list of valid item to be chosen from. It expects [[file:index.org::#item-identifier][item identifiers]].
+ - =damageTypes= :: Possible choices available at
+   [[https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/combat/DamageType.java][src/com/lilithsthrone/game/combat/DamageType.java]]
+ - =primaryColours= :: contains a list of =colour= elements, which makes
+   references to the preset groups defined previously.
+ - =secondaryColours= :: contains a list of =colour= elements, which makes
+   references to the preset groups defined previously.
+
+#+BEGIN_SRC xml
+<mainWeapons>
+	<weapon>
+		<conditional><![CDATA[cond1 && !cond2]]></conditional>
+		<types>
+			<type>innoxia_pipe_pipe</type>
+			<type>innoxia_bat_wooden</type>
+			<type>innoxia_bat_metal</type>
+		</types>
+		<damageTypes>
+			<damage>PHYSICAL</damage>
+		</damageTypes>
+		<primaryColours>
+			<colour>presetColourGroup1</colour>
+		</primaryColours
+		<secondaryColours/>
+		<!-- 'colours' element can be used in addition to, or as a replacement of, the primary/secondary/tertiary colours elements. It is defined as follows:
+		<colours>
+			<colour>presetColourGroup1</colour> Individual colours or presetColourGroups can be used.
+		</colours>
+		-->
+	</weapon>
+</mainWeapons>
+#+END_SRC
+
+#+BEGIN_SRC xml
 <offhandWeapons/>
 #+END_SRC
 
@@ -228,6 +290,47 @@ in which case only the first item is used.
 </guaranteedClothingEquips>
 #+END_SRC
 
+*** clothing tags
+
+The clothing element expects the following variables:
+
+**** Colours group
+
+Each variable must contain a valid =CLOTHING_= colour.
+
+- colour
+- colourSecondary
+- colourTertiary
+
+**** enchantmentKnown
+
+No idea. Ask the discord.
+
+**** id
+
+The clothing id. Refer to [[file:index.org::#item-identifier][Item's identifier]].
+
+**** isDirty
+
+Whether the clothing item should spawn dirty.
+
+**** name
+
+Name of the clothing item? I have no idea as to how it'll display within the
+game. Ask the discord.
+
+**** pattern
+
+No idea. Ask the discord.
+
+**** pattern colour
+
+Each variable must contain a valid =CLOTHING_= colour.
+
+- patternColour
+- patternColourSecondary
+- patternColourTertiary
+
 ** genericClothingType
 Theses elements automatically populate the possible clothing lists with all
 clothing in the game that satisfies the conditionals.
@@ -235,15 +338,15 @@ clothing in the game that satisfies the conditionals.
 #+BEGIN_SRC xml
 <genericClothingType>
 	<itemTags>
-      <tag>DRESS</tag>
+	  <tag>DRESS</tag>
 	</itemTags>
 	<acceptableFemininities>
 		<femininity>FEMININE</femininity>
 	</acceptableFemininities>
 	<slot/>
-    <rarity>COMMON</rarity>
-    <conditional/>
-    <primaryColours>
+	<rarity>COMMON</rarity>
+	<conditional/>
+	<primaryColours>
 		<colour>presetColourGroup1</colour>
 	</primaryColours>
 	<secondaryColours/>
@@ -259,7 +362,7 @@ clothing in the game that satisfies the conditionals.
 	<slot/>
 	<rarity>COMMON</rarity>
 	<conditional><![CDATA[clothing.getSlot().isJewellery() && (RND.nextInt(100)<=25 || clothing.getSlot()==IS_PIERCING_EAR)]]></conditional>
-    <primaryColours>
+	<primaryColours>
 		<colour>presetColourGroup2</colour>
 	</primaryColours>
 	<secondaryColours/>
@@ -326,6 +429,13 @@ It is defined as follows:
 #+END_SRC
 
 ** clothingType
+
+Presumably this block filters items based on the list of types, then each
+character that satisfy the =conditional= sub-element is susceptible to be
+selected.
+
+The colour references serves as a list of preset colours for this outfit's
+condional.
 
 #+BEGIN_SRC xml
 <clothingType>

@@ -1,3 +1,4 @@
+# -*- ispell-change-dictionary: english; -*-
 #+TITLE: Items Weapons
 #+AUTHOR: innoxia, bicobus
 
@@ -230,7 +231,7 @@ https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthro
 The available damage types that this weapon can spawn in with.
 
 Values can be found here (MISC should not be used):
-https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/combat/DamageType.java
+[[https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/combat/DamageType.java][src/com/lilithsthrone/game/combat/DamageType.java]]
 
 #+BEGIN_SRC xml
 <availableDamageTypes>
@@ -421,6 +422,8 @@ format as [[#on-hit-effect][onHitEffect]].
 #+END_SRC
 
 ** colours
+
+Please consult the relevant [[file:index.org::#colours][documentation]] about colours.
 
 Your clothing can be coloured any way you like, but if you'd like the player to
 be able to dye your clothing, you can specify available colours here.
