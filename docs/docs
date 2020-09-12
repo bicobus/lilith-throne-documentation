@@ -1,0 +1,3 @@
+.. |project_name| replace:: Lilith's Throne Mod Documentations
+.. _clothing example: https://github.com/Innoxia/liliths-throne-public/tree/dev/res/mods/innoxia/items/clothing
+.. _ext.rarity: https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/inventory/Rarity.java

@@ -1,0 +1,74 @@
+==========
+setBonuses
+==========
+
+    :Author: innoxia, bicobus
+
+.. contents::
+
+
+
+1 GENERAL INFORMATION
+---------------------
+
+If you are unsure of anything, please use the LT Discord to ask for help! You
+can see another annotated example in the file
+``'res/setBonuses/innoxia/enforcer.xml'``.
+
+2 name
+------
+
+The name of this set bonus.
+
+.. code:: xml
+    :name: name
+
+    <name><![CDATA[Socks of Power]]></name>
+
+.. _statusEffect:
+
+3 statusEffect
+--------------
+
+The id of the status effect which should be applied when a character is under
+the effect of this set bonus.
+
+.. code:: xml
+    :name: statusEffect
+
+    <statusEffect>innoxia_set_template</statusEffect>
+
+4 numberRequiredForCompleteSet
+------------------------------
+
+The number of items of clothing or weapons which a character needs to equip to
+gain this set bonus.
+
+.. code:: xml
+    :name: numberRequiredForCompleteSet
+
+    <numberRequiredForCompleteSet>1</numberRequiredForCompleteSet>
+
+5 blockedSlotsCountingTowardsFullSet
+------------------------------------
+
+If any of the slots defined in this section are blocked (due to the character’s
+body not supporting clothing in these slots), then the slot is counted as being
+equipped with an item of clothing from this set. For example, as the leg slot is
+defined in this section, a character with a taur’s body (which is therefore
+blocked from wearing leg clothing) would have the ``numberRequiredForCompleteSet``
+reduced by 1. It’s usually best to fill out this section with each slot that can
+be fitted with an item of this set’s clothing. As this set only has 1 item in
+it, this section does nothing (as an item set can only ever be activated with at
+least 1 item of clothing/weapon equipped), and is just for demonstrative
+purposes. For a fully functioning example, please refer to
+``'res/setBonuses/innoxia/enforcer.xml'``.
+
+Possible slots are found here: `https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/InventorySlot.java <https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/InventorySlot.java>`_
+
+.. code:: xml
+    :name: blockedSlotsCountingTowardsFullSet
+
+    <blockedSlotsCountingTowardsFullSet>
+    	<slot>SOCK</slot>
+    </blockedSlotsCountingTowardsFullSet>
