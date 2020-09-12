@@ -179,7 +179,7 @@ Navigate to [[https://github.com/Innoxia/liliths-throne-public/tree/dev/res/setB
 The file paths for this clothing's image. Please refer to the [[file:index.org::#item-image][documentation
 about images]].
 
-- Example :: I've defined this as "sock.svg", which should be placed in the same
+- Example :: I've defined this as =sock.svg=, which should be placed in the same
   folder location alongside this xml file.
 
 #+BEGIN_SRC xml
@@ -192,8 +192,8 @@ The file paths for this clothing's image while equipped. The "slot" attribute
 determines the InventorySlot in which the defined file will be used.
 
 - Example :: When equipped to the "SOCK" slot, the sock will be displayed using
-  the "sock.svg" file. When equipped to the "HAND" slot, it will instead use the
-  "sock_hand.svg" file. Again, this file must be placed in the same folder
+  the =sock.svg= file. When equipped to the "HAND" slot, it will instead use the
+  =sock_hand.svg= file. Again, this file must be placed in the same folder
   location alongside this xml file.
 
 #+BEGIN_SRC xml
@@ -515,9 +515,9 @@ wearer's body.
 
 - Example :: I've defined this section as being the one to be used when equipped
   to the "SOCK" slot.
-  #+BEGIN_SRC xml -r
+  #+BEGIN_SRC xml
 <blockedPartsList slot="SOCK">
-	<blockedParts> (ref:bprts)
+	<blockedParts>
 		<displacementType>REMOVE_OR_EQUIP</displacementType>
 		<clothingAccessRequired>
 			<clothingAccess>FEET</clothingAccess>
@@ -555,7 +555,7 @@ clothing and the wearer's body.
 :CUSTOM_ID: blocked-parts
 :END:
 
-You can add as many [[(bprts)][blockedParts]] elements as you like, but they should each have
+You can add as many ~blockedParts~ elements as you like, but they should each have
 a different [[displacementType][displacementType]], and *there should be at least one, of type*
 ~REMOVE_OR_EQUIP~.
 

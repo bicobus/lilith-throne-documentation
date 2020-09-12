@@ -8,36 +8,6 @@ chaotic.
 As a final note, I will add support for allowing the automatic generation of
 piercings in the next update.
 
-* Tasks to be done for this document [3/6]
-:PROPERTIES:
-:COOKIE_DATA: todo recursive
-:END:
-*** DONE for the [[weight][weight]] section
-
-Explain if rarity needs a bigger or smaller number. 100 isn't explicit enough.
-
-*** DONE [[mainWeapons and offhandWeapons][weapons]] write examples for [2/2]:
-
-- [X] mainWeapons
-- [X] offhandWeapons
-
-*** TODO [[guaranteedClothingEquips][guaranteedClothingEquips]] [1/3]
-
-- [X] details ~clothing~ tag
-- [ ] What is a displaced list?
-- [ ] Effect sub-elements are undocumented
-
-*** TODO review [[genericClothingType][genericClothingType]]
-
-What are the conditionals refered in the section? Is it the =conditional=
-sub-element or are all sub-elements acting as a filter?
-
-*** TODO review [[clothingType][clothingType]]
-
-Somebody should read what I (bicobus) wrote in order to validate my
-understanding.
-
-*** DONE check all links
 
 * coreAttributes
 
@@ -231,6 +201,11 @@ The =weapon= block require the following elements to be present:
    references to the preset groups defined previously.
  - =secondaryColours= :: contains a list of =colour= elements, which makes
    references to the preset groups defined previously.
+ - colours :: element can be used in addition to, or as a replacement of, the
+   primary/secondary/tertiary colours elements.
+
+Individual colours or ~presetColourGroups~ can be listed in each sub-element
+related to colours.
 
 #+BEGIN_SRC xml
 <mainWeapons>
@@ -248,11 +223,9 @@ The =weapon= block require the following elements to be present:
 			<colour>presetColourGroup1</colour>
 		</primaryColours
 		<secondaryColours/>
-		<!-- 'colours' element can be used in addition to, or as a replacement of, the primary/secondary/tertiary colours elements. It is defined as follows:
 		<colours>
-			<colour>presetColourGroup1</colour> Individual colours or presetColourGroups can be used.
+			<colour>presetColourGroup1</colour>
 		</colours>
-		-->
 	</weapon>
 </mainWeapons>
 #+END_SRC
@@ -292,19 +265,26 @@ in which case only the first item is used.
 
 *** clothing tags
 
+- Sub elements ::
+  + effects : list of enchantments.
+  + displacedList : Unknown purpose.
+
 The clothing element expects the following variables:
 
 **** Colours group
 
-Each variable must contain a valid =CLOTHING_= colour.
+Each of the following variable must contain a valid =CLOTHING_= colour (constant).
 
-- colour
-- colourSecondary
-- colourTertiary
+- Variables ::
+  - =colour=
+  - =colourSecondary=
+  - =colourTertiary=
 
 **** enchantmentKnown
 
 No idea. Ask the discord.
+
+Boolean.
 
 **** id
 
@@ -312,16 +292,16 @@ The clothing id. Refer to [[file:index.org::#item-identifier][Item's identifier]
 
 **** isDirty
 
-Whether the clothing item should spawn dirty.
+Whether the clothing item should spawn dirty, and in need of cleaning.
 
 **** name
 
-Name of the clothing item? I have no idea as to how it'll display within the
-game. Ask the discord.
+How the item should be displayed. The following example will output to
+"Character's butt-plug": ~name="[npc.NamePos(true)] butt-plug"~.
 
 **** pattern
 
-No idea. Ask the discord.
+The pattern to apply to the item.
 
 **** pattern colour
 
@@ -332,6 +312,7 @@ Each variable must contain a valid =CLOTHING_= colour.
 - patternColourTertiary
 
 ** genericClothingType
+
 Theses elements automatically populate the possible clothing lists with all
 clothing in the game that satisfies the conditionals.
 
@@ -410,11 +391,25 @@ jewellery have a 25% chance instead. These items are automatically skipped if
 the character doesn't have the relevant slot accessible. In the case of
 jewellery, ears that are not pierced cannot received earrings.
 
-#+BEGIN_SRC
+#+BEGIN_SRC java
 clothing.getSlot().isJewellery() && (RND.nextInt(100)<=25 || clothing.getSlot()==IS_PIERCING_EAR)
 #+END_SRC
 
 *** primary, secondary and tertiary colours
+
+Three sub elements:
+ * =primaryColours=
+ * =secondaryColours=
+ * =tertiaryColours=
+
+Each accepts a preset color defined earlier in the document.
+
+#+BEGIN_SRC xml
+<primaryColours>
+	<colour>presetColourGroup2</colour>
+</primaryColours>
+#+END_SRC
+
 *** colours
 ~colours~ elements can be used in addition to, or as a replacement of, the
 primary/secondary/tertiary colours elements. Individual colours or
@@ -437,6 +432,20 @@ selected.
 The colour references serves as a list of preset colours for this outfit's
 condional.
 
+The constant present in the =type= sub-elements are capitalized references to
+the item's path, minus the name of the author. As such, for an item lying in
+=res/clothing/innoxia/chest/lacy_plunge_bra.xml=, it's type constant will be
+=CHEST_LACY_PLUNGE_BRA=.
+
+Both =genericClothingType= and =clothingType= are shuffled together before being
+run through and worn. So if two items occupies the same slot, as for example
+several bra, then only one of them will be chosen at random.
+
+=primaryColours= sub-element has an optional attribute ~value~, which can be
+used as a pre-set colour list instead of defining individual colours.
+
+https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/utils/ColourListPresets.java
+
 #+BEGIN_SRC xml
 <clothingType>
 	<conditional><![CDATA[npc.hasBreasts()]]></conditional>
@@ -445,7 +454,7 @@ condional.
 		<type>CHEST_LACY_PLUNGE_BRA</type>
 		<type>CHEST_FULLCUP_BRA</type>
 	</types>
-	<primaryColours values="LINGERIE"/> <!-- The optional attribute "values" can be used as a pre-set colour list instead of defining individual colours. Accepted values can be found here: https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/utils/ColourListPresets.java -->
+	<primaryColours values="LINGERIE"/>
 	<secondaryColours/>
 	<tertiaryColours/>
 </clothingType>
@@ -496,37 +505,5 @@ condional.
 	</primaryColours>
 	<secondaryColours/>
 	<tertiaryColours/>
-</clothingType>
-
-<clothingType>
-	<conditional/>
-	<types>
-		<type>WRIST_WOMENS_WATCH</type>
-	</types>
-	<primaryColours>
-		<colour>CLOTHING_PINK_LIGHT</colour>
-		<colour>CLOTHING_PINK</colour>
-	</primaryColours>
-	<secondaryColours/>
-	<tertiaryColours/>
-</clothingType>
-
-<!-- Both "genericClothingType"s and "clothingType"s are shuffled together before being run through and worn, so if two items have the same slot, such as these two headbands, then it's random as to which is worn. -->
-
-<clothingType>
-	<conditional><![CDATA[npc.getHairRawLengthValue()>12]]></conditional>
-	<types>
-		<type>HEAD_HEADBAND_BOW</type>
-		<type>HEAD_HEADBAND</type>
-	</types>
-	<primaryColours>
-		<colour>CLOTHING_BLACK</colour>
-		<colour>CLOTHING_WHITE</colour>
-	</primaryColours>
-	<secondaryColours/>
-	<tertiaryColours>
-		<colour>CLOTHING_PINK_LIGHT</colour>
-		<colour>CLOTHING_RED</colour>
-	</tertiaryColours>
 </clothingType>
 #+END_SRC
