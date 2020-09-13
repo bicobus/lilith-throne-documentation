@@ -105,6 +105,9 @@ Example
      *A tag discreetly sewn into the T-shirt’s inner lining informs you*
      *that it was made by ’Innoxia’.*
 
+.. index:: ! item-value
+   :name: item-value
+
 value
 -----
 
