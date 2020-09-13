@@ -34,6 +34,8 @@ extensions = [
     "sphinx_rtd_theme"
 ]
 
+primary_domain = None
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
@@ -49,6 +51,13 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # a list of builtin themes.
 #
 html_theme = 'sphinx_rtd_theme'
+html_context = {
+    'display_github': True,
+    'github_user': 'bicobus',
+    'github_repo': 'lilith-throne-documentation',
+    'github_version': 'master',
+    'conf_py_path': '/docs/',
+}
 html_baseurl = "https://bicobus.github.io/lilith-throne-documentation/"
 
 # Add any paths that contain custom static files (such as style sheets) here,
