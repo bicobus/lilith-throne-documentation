@@ -4,27 +4,26 @@ Miscanelaous Items
 
     :Author: innoxia, bicobus
 
-.. contents::
+.. note::
 
-Please note: Item modding is not fully complete yet, as you cannot define any enchantment effects for items. I will expand this at some point in the future, but for now, this modding framework should be enough for most uses.
+   Item modding is not fully complete yet, as you cannot define any enchantment
+   effects for items. I will expand this at some point in the future, but for
+   now, this modding framework should be enough for most uses.
 
-.. _boolean-values:
-
-1 Boolean Values
-----------------
+Boolean Values
+--------------
 
 Boolean values can be used throughought the elements of this document. Those
 values are to be understood as:
 
 - true
-
 - false
 
-2 coreAttributes
-----------------
+coreAttributes
+--------------
 
-2.1 authorTag
-~~~~~~~~~~~~~
+authorTag
+~~~~~~~~~
 
 How attribution to the mod author (you!) should be displayed in the item’s
 tooltip. If left blank or not included, a default attribution based on folder
@@ -36,8 +35,8 @@ This tag is optionnal.
 
     <authorTag><![CDATA[A small name stamped on one side of the pill reads 'Inno-Industries'.]]></authorTag>
 
-2.2 value
-~~~~~~~~~
+value
+~~~~~
 
 How much this item is worth.
 
@@ -45,8 +44,8 @@ How much this item is worth.
 
     <value>20</value>
 
-2.3 determiner
-~~~~~~~~~~~~~~
+determiner
+~~~~~~~~~~
 
 What’s appended before the item’s name in an instance of “Innoxia has X Breeder
 Pill”, where X is the determiner. This will usually be either “a” or “an”, but
@@ -59,8 +58,8 @@ would now need to be “a pair of”.
 
     <determiner><![CDATA[a]]></determiner>
 
-2.4 name
-~~~~~~~~
+name
+~~~~
 
 The singular name of this item.
 
@@ -68,20 +67,21 @@ The singular name of this item.
 
     <name><![CDATA[breeder pill]]></name>
 
-2.5 namePlural
-~~~~~~~~~~~~~~
+namePlural
+~~~~~~~~~~
 
 The plural name of this item.
 
-The argument ``pluralByDefault`` defines whether the item will always be refered
-by it’s plural name (e.g. “a pair of pants”). The argument accepts `boolean-values`_.
+The variable ``pluralByDefault`` defines whether the item will always be refered
+by it’s plural name (e.g. “a pair of pants”). The argument accepts `Boolean
+Values`_.
 
 .. code:: xml
 
     <namePlural pluralByDefault="false"><![CDATA[breeder pills]]></namePlural>
 
-2.6 description
-~~~~~~~~~~~~~~~
+description
+~~~~~~~~~~~
 
 The description/lore of this item.
 
@@ -89,8 +89,8 @@ The description/lore of this item.
 
     <description><![CDATA[A small, light-purple pill, individually packaged in a foil and plastic wrapper. While the text printed on the foil identifies this pill as an 'Orally-Administered Reproduction Enhancer', it's colloquially known as a 'breeder pill', and temporarily boosts both fertility and virility when ingested.]]></description>
 
-2.7 useDescriptor
-~~~~~~~~~~~~~~~~~
+useDescriptor
+~~~~~~~~~~~~~
 
 How the item is used. This should be a single verb, and is used as the title of
 the action when using it.
@@ -99,63 +99,64 @@ the action when using it.
 
     <useDescriptor>swallow</useDescriptor>
 
-2.8 sexUse
-~~~~~~~~~~
+sexUse
+~~~~~~
 
 Define whether the item can be used during sex, like a dildo or a pill.
 
-This element accepts `boolean-values`_.
+This element accepts `Boolean Values`_.
 
 .. code:: xml
 
     <sexUse>true</sexUse>
 
-2.9 combatUseAllies
-~~~~~~~~~~~~~~~~~~~
+combatUseAllies
+~~~~~~~~~~~~~~~
 
 Define whether the item can be used, either on yourself or your allies, during
 combat.
 
-This element accepts `boolean-values`_.
+This element accepts `Boolean Values`_.
 
 .. code:: xml
 
     <combatUseAllies>true</combatUseAllies>
 
-2.10 combatUseEnemies
-~~~~~~~~~~~~~~~~~~~~~
+combatUseEnemies
+~~~~~~~~~~~~~~~~
 
 Define whether the item can be used on your opponents during combat.
 
-This element accepts `boolean-values`_.
+This element accepts `Boolean Values`_.
 
 .. code:: xml
 
     <combatUseEnemies>false</combatUseEnemies>
 
-2.11 consumedOnUse
-~~~~~~~~~~~~~~~~~~
+consumedOnUse
+~~~~~~~~~~~~~
 
-Define whether the item should be consumed on use. *(Editor Note: is it a consumable?)*
+Define whether the item should be consumed on use. *(Editor Note: is it a
+consumable?)*
 
-This element accepts `1 Boolean Values`_.
+This element accepts `Boolean Values`_.
 
 .. code:: xml
 
     <consumedOnUse>true</consumedOnUse>
 
-2.12 rarity
-~~~~~~~~~~~
+rarity
+~~~~~~
 
 The rarity of this item. Values can be found here:
-`src/com/lilithsthrone/game/inventory/Rarity.java <https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/inventory/Rarity.java>`_
+:ltgithub:`src/com/lilithsthrone/game/inventory/Rarity.java`
 
 .. code:: xml
 
     <rarity>COMMON</rarity>
 
-2.13 imageName
-~~~~~~~~~~~~~~
+imageName
+~~~~~~~~~
 
 The file name of this item’s image when in the character’s inventory. The only
 supported file type is .svg. I use the free program “Inkscape” to make .svg
@@ -165,56 +166,15 @@ images for the game.
 
     <imageName>pill.svg</imageName>
 
-2.14 colours
-~~~~~~~~~~~~
+colours
+~~~~~~~
 
 Your item can be coloured any way you like, but if you’d like the game to
 automatically re-colour your item, you can specify available colours here.
 
-- *Red* is used as base colour for the primary colour of the graphic in-game,
-  and the game will only recognise and change the following colours:
+.. seealso::
 
-  - #ff2a2a
-
-  - #ff5555
-
-  - #ff8080
-
-  - #ffaaaa
-
-  - #ffd5d5
-
-- *Orange* is used as base colour for the secondary colour of the graphic
-  in-game, and the game will only recognise and change the following colours:
-
-  - #ff7f2a
-
-  - #ff9955
-
-  - #ffb380
-
-  - #ffccaa
-
-  - #ffe6d5
-
-- *Yellow* is used as base colour for the tertiary colour of the graphic
-  in-game, and the game will only recognise and change the following colours:
-
-  - #ffd42a
-
-  - #ffdd55
-
-  - #ffe680
-
-  - #ffeeaa
-
-  - #fff6d5
-
-**any gradients that you use should be called:** ``innoGrad1``, ``innoGrad2``, etc.
-
-A visual representation of these colours is available on the `wiki <https://www.lilithsthrone.com/wiki/doku.php?id=modding_wiki:modding:creating_clothes>`_.
-
-Colour lists to be used can be found here: `src/com/lilithsthrone/utils/colours <https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/utils/colours>`_
+   :ref:`colours`
 
 Each defaults to ``CLOTHING_BLACK``.
 
@@ -224,15 +184,15 @@ Each defaults to ``CLOTHING_BLACK``.
     <colourSecondary/>
     <colourTertiary/>
 
-2.15 effectTooltipLines
-~~~~~~~~~~~~~~~~~~~~~~~
+effectTooltipLines
+~~~~~~~~~~~~~~~~~~
 
 You can use this section to describe any extra features of this item. These
 effects are shown in the tooltip when the player hovers over the item icon, so
 try and keep them short (as they should fit on one line). It should probably
-only be used to describe what happens in the `apply-effects`_ element. No characters
-are passed in as parsing arguments, so you should NOT use any character-specific
-parsing elements (such as ``[npc.name]``).
+only be used to describe what happens in the `applyEffects`_ element. No
+characters are passed in as parsing arguments, so you should NOT use any
+character-specific parsing elements (such as ``[npc.name]``).
 
 .. code:: xml
 
@@ -243,16 +203,14 @@ parsing elements (such as ``[npc.name]``).
     	<line><![CDATA['<i>[#SE_PROMISCUITY_PILL.getName(null)]</i>']]></line>
     </effectTooltipLines>
 
-.. _apply-effects:
-
-2.16 applyEffects
-~~~~~~~~~~~~~~~~~
+applyEffects
+~~~~~~~~~~~~
 
 This is what is called and parsed every time this item is used on someone. The
 character being subjected to the effects is given the tag ``npc``, while the
-character using the item on the target is ``npc2``. If self-using the item, ``npc``
-and ``npc2`` will be the same character. All of the returned text is displayed to
-the player.
+character using the item on the target is ``npc2``. If self-using the item,
+``npc`` and ``npc2`` will be the same character. All of the returned text is
+displayed to the player.
 
 .. code:: xml
 
@@ -285,12 +243,11 @@ the player.
     	</p>
     ]]></applyEffects>
 
-.. _item-tags:
+itemTags
+~~~~~~~~
 
-2.17 itemTags
-~~~~~~~~~~~~~
-
-Special item tags that apply to this item. Values can be found here: `src/com/lilithsthrone/game/inventory/ItemTag.java <https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/inventory/ItemTag.java>`_
+Special item tags that apply to this item. Values can be found here:
+:ltgithub:`src/com/lilithsthrone/game/inventory/ItemTag.java`
 
 .. code:: xml
 
@@ -302,8 +259,8 @@ Special item tags that apply to this item. Values can be found here: `src/com/li
     	<tag>SOLD_BY_RALPH</tag>
     </itemTags>
 
-3 useDescription
-----------------
+useDescription
+--------------
 
 Descriptions that are displayed when using this item.
 

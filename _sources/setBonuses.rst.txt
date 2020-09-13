@@ -1,15 +1,18 @@
-==========
-setBonuses
-==========
+.. include:: global.inc.rst
+.. former title was setBonuses
+
+=========
+Item Sets
+=========
 
     :Author: innoxia, bicobus
 
 GENERAL INFORMATION
 -------------------
 
-If you are unsure of anything, please use the LT Discord to ask for help! You
-can see another annotated example in the file
-``'res/setBonuses/innoxia/enforcer.xml'``.
+If you are unsure of anything, please join the `Lilith's Throne Discord`_ and
+ask for help! You can see another annotated example in the file
+:ltgithub:`res/setBonuses/innoxia/enforcer.xml`.
 
 name
 ----
@@ -55,10 +58,10 @@ blocked from wearing leg clothing) would have the
 this section with each slot that can be fitted with an item of this set’s
 clothing. As this set only has 1 item in it, this section does nothing (as an
 item set can only ever be activated with at least 1 item of clothing/weapon
-equipped), and is just for demonstrative purposes. For a fully functioning
-example, please refer to ``'res/setBonuses/innoxia/enforcer.xml'``.
+equipped), and is just for demonstrative purposes.
 
-Possible slots are found here: `/src/com/lilithsthrone/game/inventory/InventorySlot.java <https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/InventorySlot.java>`_
+Possible slots are found here:
+:ltgithub:`src/com/lilithsthrone/game/inventory/InventorySlot.java`
 
 .. code:: xml
     :name: blockedSlotsCountingTowardsFullSet

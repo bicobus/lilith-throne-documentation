@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>statusEffects &mdash; Lilith&#39;s Throne Mod Documentation  documentation</title>
+  <title>5. statusEffects &mdash; Lilith&#39;s Throne Mod Documentation  documentation</title>
   
 
   
@@ -38,7 +38,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="setBonuses" href="setBonuses.html" /> 
+    <link rel="prev" title="4. Item Sets" href="setBonuses.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -84,35 +84,35 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="items.html">Items folder</a></li>
-<li class="toctree-l1"><a class="reference internal" href="outfits.html">Outfits</a></li>
-<li class="toctree-l1"><a class="reference internal" href="setBonuses.html">setBonuses</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">statusEffects</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#general-information">GENERAL INFORMATION</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#renderingpriority">renderingPriority</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#renderineffectspanel">renderInEffectsPanel</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#beneficial">beneficial</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#combateffect">combatEffect</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#sexeffect">sexEffect</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#name">name</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#description">description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#imagename">imageName</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#colours">colours</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#colourprimary">colourPrimary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#coloursecondary">colourSecondary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#colourtertiary">colourTertiary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">1. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="items.html">2. Items folder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outfits.html">3. Outfits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setBonuses.html">4. Item Sets</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. statusEffects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#general-information">5.1. GENERAL INFORMATION</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#renderingpriority">5.2. renderingPriority</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#renderineffectspanel">5.3. renderInEffectsPanel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#beneficial">5.4. beneficial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#combateffect">5.5. combatEffect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sexeffect">5.6. sexEffect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#name">5.7. name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#description">5.8. description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#imagename">5.9. imageName</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#colours">5.10. colours</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#colourprimary">5.10.1. colourPrimary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#coloursecondary">5.10.2. colourSecondary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#colourtertiary">5.10.3. colourTertiary</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#attributemodifiers">attributeModifiers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#combatmoves">combatMoves</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#spells">spells</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#extraeffects">extraEffects</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#effect-logic">Effect Logic</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#applicationcondition">applicationCondition</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#applyeffect">applyEffect</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#applyremovaleffect">applyRemovalEffect</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#applypostremovaleffect">applyPostRemovalEffect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#attributemodifiers">5.11. attributeModifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#combatmoves">5.12. combatMoves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#spells">5.13. spells</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#extraeffects">5.14. extraEffects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#effect-logic">5.15. Effect Logic</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#applicationcondition">5.15.1. applicationCondition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#applyeffect">5.15.2. applyEffect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#applyremovaleffect">5.15.3. applyRemovalEffect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#applypostremovaleffect">5.15.4. applyPostRemovalEffect</a></li>
 </ul>
 </li>
 </ul>
@@ -163,7 +163,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>statusEffects</li>
+      <li><span class="section-number">5. </span>statusEffects</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -183,7 +183,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="statuseffects">
-<h1>statusEffects<a class="headerlink" href="#statuseffects" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">5. </span>statusEffects<a class="headerlink" href="#statuseffects" title="Permalink to this headline">¶</a></h1>
 <blockquote>
 <div><dl class="field-list simple">
 <dt class="field-odd">Author</dt>
@@ -192,7 +192,7 @@
 </dl>
 </div></blockquote>
 <div class="section" id="general-information">
-<h2>GENERAL INFORMATION<a class="headerlink" href="#general-information" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1. </span>GENERAL INFORMATION<a class="headerlink" href="#general-information" title="Permalink to this headline">¶</a></h2>
 <p>Status effects are bits of logic applied to a character. The effect convey
 access to a variety of content, like combat moves or spell. They can also change
 the attributes of the character.</p>
@@ -200,7 +200,7 @@ the attributes of the character.</p>
 <code class="docutils literal notranslate"><span class="pre">res/statusEffects/innoxia/set_kitty.xml</span></code>.</p>
 </div>
 <div class="section" id="renderingpriority">
-<h2>renderingPriority<a class="headerlink" href="#renderingpriority" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2. </span>renderingPriority<a class="headerlink" href="#renderingpriority" title="Permalink to this headline">¶</a></h2>
 <p>An integer used for determining the order of rendering status effect icons. A
 higher value means that it’s higher up in the rendering priority (and so will be
 rendered before others). Typical values go from 0 to 100. A good default value
@@ -223,7 +223,7 @@ level, etc.) have a priority of 80.</p></li>
 </div>
 </div>
 <div class="section" id="renderineffectspanel">
-<h2>renderInEffectsPanel<a class="headerlink" href="#renderineffectspanel" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.3. </span>renderInEffectsPanel<a class="headerlink" href="#renderineffectspanel" title="Permalink to this headline">¶</a></h2>
 <p>Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want this status effect to be displayed in the affected
 character’s status effect panel. This should pretty much always be ’true’.</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;renderInEffectsPanel&gt;</span>true<span class="nt">&lt;/renderInEffectsPanel&gt;</span>
@@ -231,7 +231,7 @@ character’s status effect panel. This should pretty much always be ’true’.
 </div>
 </div>
 <div class="section" id="beneficial">
-<h2>beneficial<a class="headerlink" href="#beneficial" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.4. </span>beneficial<a class="headerlink" href="#beneficial" title="Permalink to this headline">¶</a></h2>
 <p>Populate with one of these tags:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">BENEFICIAL</span></code> if this is a good status effect for a character to have.</p></li>
@@ -243,7 +243,7 @@ character’s status effect panel. This should pretty much always be ’true’.
 </div>
 </div>
 <div class="section" id="combateffect">
-<h2>combatEffect<a class="headerlink" href="#combateffect" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.5. </span>combatEffect<a class="headerlink" href="#combateffect" title="Permalink to this headline">¶</a></h2>
 <p>Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want this status effect to be rendered during combat, and
 if the <a class="reference internal" href="#applyeffect">applyEffect</a> element should be applied to the affected character on
 every combat round during which it is active. This should only be set to true if
@@ -255,14 +255,14 @@ of combat.</p>
 </div>
 </div>
 <div class="section" id="sexeffect">
-<h2>sexEffect<a class="headerlink" href="#sexeffect" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.6. </span>sexEffect<a class="headerlink" href="#sexeffect" title="Permalink to this headline">¶</a></h2>
 <p>Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want this status effect to be rendered during sex.</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;sexEffect&gt;</span>false<span class="nt">&lt;/sexEffect&gt;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="name">
-<h2>name<a class="headerlink" href="#name" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.7. </span>name<a class="headerlink" href="#name" title="Permalink to this headline">¶</a></h2>
 <p>The name of this set bonus. The character under the effect is passed in as the
 <code class="docutils literal notranslate"><span class="pre">npc</span></code> parsing argument, so if you want to, you can include parsing elements
 such as <code class="docutils literal notranslate"><span class="pre">[npc.name]</span></code>.</p>
@@ -271,7 +271,7 @@ such as <code class="docutils literal notranslate"><span class="pre">[npc.name]<
 </div>
 </div>
 <div class="section" id="description">
-<h2>description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.8. </span>description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>The description of this status effect. The character under the effect is passed
 in as the <code class="docutils literal notranslate"><span class="pre">npc</span></code> parsing argument, so if you want to, you can include parsing
 elements such as <code class="docutils literal notranslate"><span class="pre">[npc.name]</span></code>.</p>
@@ -282,7 +282,7 @@ elements such as <code class="docutils literal notranslate"><span class="pre">[n
 </div>
 </div>
 <div class="section" id="imagename">
-<h2>imageName<a class="headerlink" href="#imagename" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.9. </span>imageName<a class="headerlink" href="#imagename" title="Permalink to this headline">¶</a></h2>
 <p>The name of the icon which should be used to represent this status effect. The
 icon must be an svg file, and must be placed in the same folder as this XML
 file.</p>
@@ -291,34 +291,34 @@ file.</p>
 </div>
 </div>
 <div class="section" id="colours">
-<h2>colours<a class="headerlink" href="#colours" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.10. </span>colours<a class="headerlink" href="#colours" title="Permalink to this headline">¶</a></h2>
 <p>The colour which should be associated with this status effect. Just like with
 clothing and weapon recolouring, this is used to recolour the image you used
 above. <code class="docutils literal notranslate"><span class="pre">PresetColour</span></code> value should be used here, drawn from
 <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/utils/colours/PresetColour.java">src/com/lilithsthrone/utils/colours/PresetColour.java</a></p>
 <div class="section" id="colourprimary">
-<h3>colourPrimary<a class="headerlink" href="#colourprimary" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.10.1. </span>colourPrimary<a class="headerlink" href="#colourprimary" title="Permalink to this headline">¶</a></h3>
 <p>This has to have a value defined, or else this XML file will fail to load.</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;colourPrimary&gt;</span>CLOTHING_WHITE<span class="nt">&lt;/colourPrimary&gt;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="coloursecondary">
-<h3>colourSecondary<a class="headerlink" href="#coloursecondary" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.10.2. </span>colourSecondary<a class="headerlink" href="#coloursecondary" title="Permalink to this headline">¶</a></h3>
 <p>This can optionally be left blank, like the ’colourTertiary’ element below.</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;colourSecondary/&gt;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="colourtertiary">
-<h3>colourTertiary<a class="headerlink" href="#colourtertiary" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.10.3. </span>colourTertiary<a class="headerlink" href="#colourtertiary" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;colourTertiary/&gt;</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="attributemodifiers">
-<h2>attributeModifiers<a class="headerlink" href="#attributemodifiers" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.11. </span>attributeModifiers<a class="headerlink" href="#attributemodifiers" title="Permalink to this headline">¶</a></h2>
 <p>The attributes which should be affected by having this status effect. The
 <code class="docutils literal notranslate"><span class="pre">value=&quot;10&quot;</span></code> part defines how much the attribute should be numerically
 affected (and can be negative), while the <code class="docutils literal notranslate"><span class="pre">DAMAGE_LUST</span></code> part defines which
@@ -333,7 +333,7 @@ should be drawn from here:
 </div>
 </div>
 <div class="section" id="combatmoves">
-<h2>combatMoves<a class="headerlink" href="#combatmoves" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.12. </span>combatMoves<a class="headerlink" href="#combatmoves" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">CombatMoves</span></code> which should be unlocked for the character affected by this
 status effect. <code class="docutils literal notranslate"><span class="pre">CombatMoves</span></code> identifiers are defined in their constructors.
 When modding support for combat moves is added, the identifier will be described
@@ -351,7 +351,7 @@ this folder: <a class="reference external" href="https://github.com/Innoxia/lili
 </div>
 </div>
 <div class="section" id="spells">
-<h2>spells<a class="headerlink" href="#spells" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.13. </span>spells<a class="headerlink" href="#spells" title="Permalink to this headline">¶</a></h2>
 <p>The Spells which should be unlocked for the character affected by this status
 effect. Current Spells can be found in the files in this folder:
 <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/combat/spells/Spell.java">src/com/lilithsthrone/game/combat/spells/Spell.java</a></p>
@@ -367,7 +367,7 @@ effect. Current Spells can be found in the files in this folder:
 </div>
 </div>
 <div class="section" id="extraeffects">
-<h2>extraEffects<a class="headerlink" href="#extraeffects" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.14. </span>extraEffects<a class="headerlink" href="#extraeffects" title="Permalink to this headline">¶</a></h2>
 <p>You can use this section to describe any extra effects that this status effect
 might apply. These effects are shown in the tooltip when the player hovers over
 the status effect icon. The character under the effect is passed in as the
@@ -385,7 +385,7 @@ described, but if you need to use this section, use the following format:</p>
 </div>
 </div>
 <div class="section" id="effect-logic">
-<h2>Effect Logic<a class="headerlink" href="#effect-logic" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.15. </span>Effect Logic<a class="headerlink" href="#effect-logic" title="Permalink to this headline">¶</a></h2>
 <p>The condition for a status effect to be applied is by default <code class="docutils literal notranslate"><span class="pre">false</span></code>, which
 means that it can only be applied by a direct method call elsewhere for
 <code class="docutils literal notranslate"><span class="pre">GameCharacter.addStatusEffect(AbstractStatusEffect</span> <span class="pre">statusEffect,</span> <span class="pre">int</span>
@@ -405,7 +405,7 @@ such as: <code class="docutils literal notranslate"><span class="pre">[#npc.isFe
 characters, such as: <code class="docutils literal notranslate"><span class="pre">[##npc.isFeminine()]</span></code>. As a final note, all whitespace
 is stripped from the returned String before it is parsed into a Boolean.</p>
 <div class="section" id="applicationcondition">
-<h3>applicationCondition<a class="headerlink" href="#applicationcondition" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.15.1. </span>applicationCondition<a class="headerlink" href="#applicationcondition" title="Permalink to this headline">¶</a></h3>
 <p>This example is meant to show that you can use the parser to create more
 <em>complex</em> conditionals.</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;applicationCondition&gt;</span><span class="cp">&lt;![CDATA[</span>
@@ -425,7 +425,7 @@ is stripped from the returned String before it is parsed into a Boolean.</p>
 </div>
 </div>
 <div class="section" id="applyeffect">
-<h3>applyEffect<a class="headerlink" href="#applyeffect" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.15.2. </span>applyEffect<a class="headerlink" href="#applyeffect" title="Permalink to this headline">¶</a></h3>
 <p>Status effects execute an <code class="docutils literal notranslate"><span class="pre">applyEffect(GameCharacter</span> <span class="pre">target,</span> <span class="pre">int</span>
 <span class="pre">secondsPassed)</span></code> method every time the game ends a turn. The <code class="docutils literal notranslate"><span class="pre">target</span></code> argument
 is the character who is under the effect of this particular status effect, while
@@ -479,7 +479,7 @@ it is parsed, so it’s safe to use tabs and <strong>not spaces</strong> for for
 </div>
 </div>
 <div class="section" id="applyremovaleffect">
-<h3>applyRemovalEffect<a class="headerlink" href="#applyremovaleffect" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.15.3. </span>applyRemovalEffect<a class="headerlink" href="#applyremovaleffect" title="Permalink to this headline">¶</a></h3>
 <p>In a similar manner to the <a class="reference internal" href="#applyeffect">applyEffect</a> element above, the game processes
 logic when a status effect is removed.</p>
 <p>This logic is performed while the character is still under the effects of this
@@ -489,7 +489,7 @@ status effect.</p>
 </div>
 </div>
 <div class="section" id="applypostremovaleffect">
-<h3>applyPostRemovalEffect<a class="headerlink" href="#applypostremovaleffect" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.15.4. </span>applyPostRemovalEffect<a class="headerlink" href="#applypostremovaleffect" title="Permalink to this headline">¶</a></h3>
 <p>In a similar manner to the <a class="reference internal" href="#applyeffect">applyEffect</a> element above, the game processes
 logic after a status effect has been removed.</p>
 <p>This logic is performed immediately after the effect is removed, so the
@@ -510,7 +510,7 @@ character is no longer under the effects of this status effect.</p>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="setBonuses.html" class="btn btn-neutral float-left" title="setBonuses" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="setBonuses.html" class="btn btn-neutral float-left" title="4. Item Sets" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -520,7 +520,7 @@ character is no longer under the effects of this status effect.</p>
   <div role="contentinfo">
     <p>
         
-        &copy; Copyright 2020, Bicobus
+        &copy; Copyright 2020, Innoxia, Bicobus
 
     </p>
   </div>

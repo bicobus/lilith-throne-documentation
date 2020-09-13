@@ -4,15 +4,11 @@ Items Weapons
 
     :Author: innoxia, bicobus
 
-.. contents::
+coreAttributes
+--------------
 
-
-
-1 coreAttributes
-----------------
-
-1.1 authorTag
-~~~~~~~~~~~~~
+authorTag
+~~~~~~~~~
 
 How attribution to the mod author (*you*) should be displayed in the item’s
 tooltip. If left blank or not included, a default attribution based on folder
@@ -24,8 +20,8 @@ This tag is optionnal.
 
     <authorTag><![CDATA[A discreet inscription at the base of the dagger's blade informs you that it was made by 'Innoxia'.]]></authorTag>
 
-1.2 value
-~~~~~~~~~
+value
+~~~~~
 
 How much this weapon is worth.
 
@@ -33,8 +29,8 @@ How much this weapon is worth.
 
     <value>3000</value>
 
-1.3 melee
-~~~~~~~~~
+melee
+~~~~~
 
 Use “true” if this is a melee weapon, and “false” if it’s ranged. (Without
 quotation marks.)
@@ -43,8 +39,8 @@ quotation marks.)
 
     <melee>true</melee>
 
-1.4 twoHanded
-~~~~~~~~~~~~~
+twoHanded
+~~~~~~~~~
 
 Use “true” if this weapon is two-handed, and thus cannot be simultaneously
 wielded with an offhand weapon, and “false” if it’s one-handed. (Without
@@ -54,8 +50,8 @@ quotation marks.)
 
     <twoHanded>false</twoHanded>
 
-1.5 determiner
-~~~~~~~~~~~~~~
+determiner
+~~~~~~~~~~
 
 What’s appended before the weapon’s name in an instance of “Innoxia was holding
 X Demon’s Dagger”, where X is the determiner. This will usually be either “a” or
@@ -68,32 +64,36 @@ would now need to be “a pair of”.
 
     <determiner><![CDATA[a]]></determiner>
 
-1.6 name
-~~~~~~~~
+name
+~~~~
 
 The name of this weapon.
 
-``appendDamageName`` defaults to true and can be left out. If you ever want this
-weapon to not be described by its damage type, then set it as false. That is
-this dagger would always be called “Demon’s Dagger” instead of, for example,
-“Forceful Demon’s Dagger”.
+``appendDamageName``
+    defaults to true and can be left out. If you ever want this weapon to not be
+    described by its damage type, then set it as false. That is this dagger
+    would always be called “Demon’s Dagger” instead of, for example, “Forceful
+    Demon’s Dagger”.
 
 .. code:: xml
 
     <name appendDamageName="true"><![CDATA[Demon's Dagger]]></name>
 
-1.7 namePlural
-~~~~~~~~~~~~~~
+namePlural
+~~~~~~~~~~
 
-The plural name of this weapon. If ``pluralByDefault``’s “false” is changed to
-“true”, then the game will always the plural name when referring to this weapon.
+The plural name of this weapon.
+
+``pluralByDefault``
+    If set to ``true``, then the game will always use the plural name when
+    referring to this weapon.
 
 .. code:: xml
 
     <namePlural pluralByDefault="false"><![CDATA[Demon's Daggers]]></namePlural>
 
-1.8 description
-~~~~~~~~~~~~~~~
+description
+~~~~~~~~~~~
 
 The description/lore of this weapon.
 
@@ -101,8 +101,8 @@ The description/lore of this weapon.
 
     <description><![CDATA[A demon's dagger, with a blade made out of enchanted ethereal energy. Daggers such as this one are carried by the elite demon Enforcers, and, while intended primarily to be a symbol of power and status, they are nonetheless completely functional.]]></description>
 
-1.9 attackDescriptor
-~~~~~~~~~~~~~~~~~~~~
+attackDescriptor
+~~~~~~~~~~~~~~~~
 
 How the weapon is used. This should be a single verb, and is used as the title
 of attacking actions in combat.
@@ -111,8 +111,8 @@ of attacking actions in combat.
 
     <attackDescriptor>stab</attackDescriptor>
 
-1.10 attackTooltipDescription
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+attackTooltipDescription
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 The description that’s displayed when hovering over the attack action in combat.
 Follow the same guidelines as equipText (a couple of entries further down this
@@ -125,23 +125,28 @@ write in the first-person narrative. (Still use npc2 for the target, though.)
 
     <attackTooltipDescription><![CDATA[Strike out with your Demon's Dagger at [npc2.name].]]></attackTooltipDescription>
 
-1.11 rarity
-~~~~~~~~~~~
+rarity
+~~~~~~
 
 The rarity of this weapon.
 
-Values can be found here: `https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/Rarity.java <https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/Rarity.java>`_
+Values can be found here:
+:ltgithub:`src/com/lilithsthrone/game/inventory/Rarity.java`
 
 .. code:: xml
 
     <rarity>EPIC</rarity>
 
-1.12 weaponSet
-~~~~~~~~~~~~~~
+weaponSet
+~~~~~~~~~
 
 Which set this weapon is a part of.
 
-Values can be found here: `https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/clothing/ClothingSet.java <https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/clothing/ClothingSet.java>`_
+Values can be found here: :ltgithub:`/res/setBonuses/`
+
+.. seealso::
+
+   :doc:`/setBonuses`
 
 .. code:: xml
 
