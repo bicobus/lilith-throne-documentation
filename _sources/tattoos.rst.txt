@@ -107,7 +107,9 @@ specific colour values, and recolours them to the value chosen by the player.
     <secondaryColours values="ALL"/>
     <tertiaryColours values="ALL"/>
 
-You can also make your own, custom list of colours to be used. If you want to include custom colours, do not define a ’values’ attribute, and instead, list each Colour, like in the example below.
+You can also make your own, custom list of colours to be used. If you want to
+include custom colours, do not define a ’values’ attribute, and instead, list
+each Colour, like in the example below.
 
 .. code:: xml
 

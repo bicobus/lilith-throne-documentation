@@ -26,11 +26,13 @@ coreAttributes
 
 authorTag
 ~~~~~~~~~
+.. index:: author-tags
 
 Author attribution, if you want one.
 
-Please refer to the explanation on the index about :ref:`author
-tags<author-tags>`.
+.. seealso::
+
+   :ref:`author-tags`
 
 .. code:: xml
 
@@ -38,8 +40,9 @@ tags<author-tags>`.
 
 value
 ~~~~~
+.. index:: item-value
 
-Please refer to the general information about item `value <index.rst>`_.
+Please refer to the general information about :ref:`item value<item-value>`.
 
 Example
     I’ve defined this as 60, which is about the price for a basic pair
