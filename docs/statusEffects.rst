@@ -326,7 +326,7 @@ you should be able to apply a good range of effects.
     This can be used with a ``TOTAL_SECONDS_PASSED==0`` check to, for example,
     only apply an effect when this status effect is initially added.
 
-    .. note::
+    .. important::
 
         In combat, “seconds passed” is actually represented by the number of
         combat turns passed. So, for example, ``TOTAL_SECONDS_PASSED`` would be

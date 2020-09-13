@@ -72,6 +72,8 @@ Across the different types of items exists shared concepts. Some of those
 concept may be expanded on a per category basis, for example weapons needs more
 colours than the other kinds of items and thus expand the available list.
 
+.. _items-identifier:
+
 Item’s identifier
 -----------------
 
@@ -104,7 +106,9 @@ name will be used.
 The content of the element should be a short one line descriptor.
 
 Example
-    *A tag discreetly sewn into the T-shirt’s inner lining informs you that it was made by ’Innoxia’.*
+
+     *A tag discreetly sewn into the T-shirt’s inner lining informs you*
+     *that it was made by ’Innoxia’.*
 
 value
 -----
@@ -143,9 +147,11 @@ Should this element remain undefined, the game will automatically select either
 this elements if they equate “a” or “an”.
 
 Literate Example
+
     Innoxia was holding *a pair of* scissors.
 
 Code Example
+
     .. code:: xml
 
         <determiner><![CDATA[a pair of]]></determiner>
@@ -155,6 +161,8 @@ Description
 
 A long form description of the item. Should be present for each object under the
 items category.
+
+.. _items-image:
 
 Item’s image
 ------------
@@ -170,14 +178,18 @@ I use 256 × 256 as a personal preference).
 If the item can be equipped, then an ``imageEquippedname`` must also be
 provided. Please refer to the appropriate documentation for more details.
 
+.. _rarity:
+
 rarity
 ------
 
 The rarity of several object can be defined using the constants listed in the
-file `ext.rarity`_.
+file :ltgithub:`src/com/lilithsthrone/game/inventory/Rarity.java`.
 
 Please note that any item set with a rarity of LEGENDARY will not appear
 naturally in the game, neither from the shop keepers nor random encounters.
+
+.. _colours:
 
 colours
 -------
@@ -223,26 +235,31 @@ values are as follows:
   4. ``#ffeeaa``
   5. ``#fff6d5``
 
-**Important:** any gradients that you use should be called: ``innoGrad1``,
-``innoGrad2``, etc.
+.. important::
+
+   Any gradients that you use should be called: ``innoGrad1``, ``innoGrad2``,
+   etc.
 
 A visual representation of these colours is available on the :wiki:`wiki
 <creating_clothes>`.
 
-Colour lists to be used can be found here: `src/com/lilithsthrone/utils/colours <https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/utils/colours>`_
+Colour lists to be used can be found here:
+:ltgithub:`src/com/lilithsthrone/utils/colours`.
 
 You can leave the attribute ``recolouringAllowed`` out of colour definitions. If
 you want the player to be unable to change this colour, then set it as false.
 This is only used in very niche situations (such as for the filly choker).
 
 You can also make your own, custom list of colours to be used. The following
-colours in ``tertiaryColoursDye`` are all found within the list preset ``ALL``, but
-this is for a demonstration.
+colours in ``tertiaryColoursDye`` are all found within the list preset ``ALL``,
+but this is for a demonstration.
 
 If you want to include custom colours, do not define a ``values`` attribute, and
 instead, list each Colour.
 
-**Important:** please use the ``Colour`` values that start with ``CLOTHING_``.
+.. important::
+
+   please use the ``Colour`` values that start with ``CLOTHING_``.
 
 Code Example
     .. code:: xml
@@ -288,38 +305,41 @@ coloured your svg with.
 The ``copyColourIndex`` attribute seen in the example below defines which colour
 index should be copied into this colour slot on weapon generation. This
 particular colour, having an index of 0, will always be coloured the same as the
-primary colour when generated. Indexes go from 0 :math:`\to` X, where X is the number of
-defined colours. i.e. If you only define primary and secondary, the first custom
-colour will have an index of 2.
+primary colour when generated. Indexes go from 0 :math:`\to` X, where X is the
+number of defined colours. i.e. If you only define primary and secondary, the
+first custom colour will have an index of 2.
 
-Attributes from ``c0`` :math:`\to` ``c4`` are the colours which you’ve used in your svg and
-would like replaced with the colours you define below. ``c0`` is the darkest
-shade. Shades can go up to any number, but setting just 5 shades should work
-best.
+Attributes from ``c0`` :math:`\to` ``c4`` are the colours which you’ve used in
+your svg and would like replaced with the colours you define below. ``c0`` is
+the darkest shade. Shades can go up to any number, but setting just 5 shades
+should work best.
 
-If you have used the ``primary`` / ``secondary`` / ``tertiary`` elements up above,
-then do not use their associated colour hexes. (i.e. If you’ve defined a
-``primaryColours`` element, do not use either of ``#ff2a2a``, ``#ff5555``, ``#ff8080``,
-``#ffaaaa``, or ``#ffd5d5`` in the customColour attributes.)
+If you have used the ``primary`` / ``secondary`` / ``tertiary`` elements up
+above, then do not use their associated colour hexes. (i.e. If you’ve defined a
+``primaryColours`` element, do not use either of ``#ff2a2a``, ``#ff5555``,
+``#ff8080``, ``#ffaaaa``, or ``#ffd5d5`` in the customColour attributes.)
 
-You should also **not** use any of the following, as they are reserved for pattern
-colours:
+You should also **not** use any of the following, as they are reserved for
+pattern colours:
 
-1. ``#f4d7d7``
-2. ``#e9afaf``
-3. ``#de8787``
-4. ``#d35f5f``
-5. ``#c83737``
-6. ``#f4e3d7``
-7. ``#e9c6af``
-8. ``#deaa87``
-9. ``#d38d5f``
-10. ``#c87137``
-11. ``#f4eed7``
-12. ``#e9ddaf``
-13. ``#decd87``
-14. ``#d3bc5f``
-15. ``#c8ab37``
+.. hlist::
+   :columns: 3
+
+   * ``#f4d7d7``
+   * ``#e9afaf``
+   * ``#de8787``
+   * ``#d35f5f``
+   * ``#c83737``
+   * ``#f4e3d7``
+   * ``#e9c6af``
+   * ``#deaa87``
+   * ``#d38d5f``
+   * ``#c87137``
+   * ``#f4eed7``
+   * ``#e9ddaf``
+   * ``#decd87``
+   * ``#d3bc5f``
+   * ``#c8ab37``
 
 .. code:: xml
 
