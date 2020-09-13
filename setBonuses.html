@@ -20,7 +20,7 @@
     <link rel="canonical" href="https://bicobus.github.io/lilith-throne-documentation/setBonuses.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="statusEffect" href="statusEffects.html" />
+    <link rel="next" title="statusEffects" href="statusEffects.html" />
     <link rel="prev" title="Outfits" href="outfits.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -30,7 +30,7 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="statusEffects.html" title="statusEffect"
+          <a href="statusEffects.html" title="statusEffects"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="outfits.html" title="Outfits"
@@ -46,7 +46,7 @@
           <div class="body" role="main">
             
   <div class="section" id="setbonuses">
-<h1><a class="toc-backref" href="#id6">setBonuses</a><a class="headerlink" href="#setbonuses" title="Permalink to this headline">¶</a></h1>
+<h1>setBonuses<a class="headerlink" href="#setbonuses" title="Permalink to this headline">¶</a></h1>
 <blockquote>
 <div><dl class="field-list simple">
 <dt class="field-odd">Author</dt>
@@ -54,64 +54,50 @@
 </dd>
 </dl>
 </div></blockquote>
-<div class="contents topic" id="contents">
-<p class="topic-title">Contents</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#setbonuses" id="id6">setBonuses</a></p>
-<ul>
-<li><p><a class="reference internal" href="#general-information" id="id7">1 GENERAL INFORMATION</a></p></li>
-<li><p><a class="reference internal" href="#name" id="id8">2 name</a></p></li>
-<li><p><a class="reference internal" href="#statuseffect" id="id9">3 statusEffect</a></p></li>
-<li><p><a class="reference internal" href="#numberrequiredforcompleteset" id="id10">4 numberRequiredForCompleteSet</a></p></li>
-<li><p><a class="reference internal" href="#blockedslotscountingtowardsfullset" id="id11">5 blockedSlotsCountingTowardsFullSet</a></p></li>
-</ul>
-</li>
-</ul>
-</div>
 <div class="section" id="general-information">
-<h2><a class="toc-backref" href="#id7">1 GENERAL INFORMATION</a><a class="headerlink" href="#general-information" title="Permalink to this headline">¶</a></h2>
+<h2>GENERAL INFORMATION<a class="headerlink" href="#general-information" title="Permalink to this headline">¶</a></h2>
 <p>If you are unsure of anything, please use the LT Discord to ask for help! You
 can see another annotated example in the file
 <code class="docutils literal notranslate"><span class="pre">'res/setBonuses/innoxia/enforcer.xml'</span></code>.</p>
 </div>
 <div class="section" id="name">
-<h2><a class="toc-backref" href="#id8">2 name</a><a class="headerlink" href="#name" title="Permalink to this headline">¶</a></h2>
+<h2>name<a class="headerlink" href="#name" title="Permalink to this headline">¶</a></h2>
 <p>The name of this set bonus.</p>
 <div class="highlight-xml notranslate" id="id1"><div class="highlight"><pre><span></span><span class="nt">&lt;name&gt;</span><span class="cp">&lt;![CDATA[Socks of Power]]&gt;</span><span class="nt">&lt;/name&gt;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="statuseffect">
-<span id="id2"></span><h2><a class="toc-backref" href="#id9">3 statusEffect</a><a class="headerlink" href="#statuseffect" title="Permalink to this headline">¶</a></h2>
+<h2>statusEffect<a class="headerlink" href="#statuseffect" title="Permalink to this headline">¶</a></h2>
 <p>The id of the status effect which should be applied when a character is under
 the effect of this set bonus.</p>
-<div class="highlight-xml notranslate" id="id3"><div class="highlight"><pre><span></span><span class="nt">&lt;statusEffect&gt;</span>innoxia_set_template<span class="nt">&lt;/statusEffect&gt;</span>
+<div class="highlight-xml notranslate" id="id2"><div class="highlight"><pre><span></span><span class="nt">&lt;statusEffect&gt;</span>innoxia_set_template<span class="nt">&lt;/statusEffect&gt;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="numberrequiredforcompleteset">
-<h2><a class="toc-backref" href="#id10">4 numberRequiredForCompleteSet</a><a class="headerlink" href="#numberrequiredforcompleteset" title="Permalink to this headline">¶</a></h2>
+<h2>numberRequiredForCompleteSet<a class="headerlink" href="#numberrequiredforcompleteset" title="Permalink to this headline">¶</a></h2>
 <p>The number of items of clothing or weapons which a character needs to equip to
 gain this set bonus.</p>
-<div class="highlight-xml notranslate" id="id4"><div class="highlight"><pre><span></span><span class="nt">&lt;numberRequiredForCompleteSet&gt;</span>1<span class="nt">&lt;/numberRequiredForCompleteSet&gt;</span>
+<div class="highlight-xml notranslate" id="id3"><div class="highlight"><pre><span></span><span class="nt">&lt;numberRequiredForCompleteSet&gt;</span>1<span class="nt">&lt;/numberRequiredForCompleteSet&gt;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="blockedslotscountingtowardsfullset">
-<h2><a class="toc-backref" href="#id11">5 blockedSlotsCountingTowardsFullSet</a><a class="headerlink" href="#blockedslotscountingtowardsfullset" title="Permalink to this headline">¶</a></h2>
+<h2>blockedSlotsCountingTowardsFullSet<a class="headerlink" href="#blockedslotscountingtowardsfullset" title="Permalink to this headline">¶</a></h2>
 <p>If any of the slots defined in this section are blocked (due to the character’s
 body not supporting clothing in these slots), then the slot is counted as being
 equipped with an item of clothing from this set. For example, as the leg slot is
 defined in this section, a character with a taur’s body (which is therefore
-blocked from wearing leg clothing) would have the <code class="docutils literal notranslate"><span class="pre">numberRequiredForCompleteSet</span></code>
-reduced by 1. It’s usually best to fill out this section with each slot that can
-be fitted with an item of this set’s clothing. As this set only has 1 item in
-it, this section does nothing (as an item set can only ever be activated with at
-least 1 item of clothing/weapon equipped), and is just for demonstrative
-purposes. For a fully functioning example, please refer to
-<code class="docutils literal notranslate"><span class="pre">'res/setBonuses/innoxia/enforcer.xml'</span></code>.</p>
-<p>Possible slots are found here: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/InventorySlot.java">https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/InventorySlot.java</a></p>
-<div class="highlight-xml notranslate" id="id5"><div class="highlight"><pre><span></span><span class="nt">&lt;blockedSlotsCountingTowardsFullSet&gt;</span>
+blocked from wearing leg clothing) would have the
+<code class="docutils literal notranslate"><span class="pre">numberRequiredForCompleteSet</span></code> reduced by 1. It’s usually best to fill out
+this section with each slot that can be fitted with an item of this set’s
+clothing. As this set only has 1 item in it, this section does nothing (as an
+item set can only ever be activated with at least 1 item of clothing/weapon
+equipped), and is just for demonstrative purposes. For a fully functioning
+example, please refer to <code class="docutils literal notranslate"><span class="pre">'res/setBonuses/innoxia/enforcer.xml'</span></code>.</p>
+<p>Possible slots are found here: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/InventorySlot.java">/src/com/lilithsthrone/game/inventory/InventorySlot.java</a></p>
+<div class="highlight-xml notranslate" id="id4"><div class="highlight"><pre><span></span><span class="nt">&lt;blockedSlotsCountingTowardsFullSet&gt;</span>
     <span class="nt">&lt;slot&gt;</span>SOCK<span class="nt">&lt;/slot&gt;</span>
 <span class="nt">&lt;/blockedSlotsCountingTowardsFullSet&gt;</span>
 </pre></div>
@@ -129,11 +115,11 @@ purposes. For a fully functioning example, please refer to
   <h3><a href="index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">setBonuses</a><ul>
-<li><a class="reference internal" href="#general-information">1 GENERAL INFORMATION</a></li>
-<li><a class="reference internal" href="#name">2 name</a></li>
-<li><a class="reference internal" href="#statuseffect">3 statusEffect</a></li>
-<li><a class="reference internal" href="#numberrequiredforcompleteset">4 numberRequiredForCompleteSet</a></li>
-<li><a class="reference internal" href="#blockedslotscountingtowardsfullset">5 blockedSlotsCountingTowardsFullSet</a></li>
+<li><a class="reference internal" href="#general-information">GENERAL INFORMATION</a></li>
+<li><a class="reference internal" href="#name">name</a></li>
+<li><a class="reference internal" href="#statuseffect">statusEffect</a></li>
+<li><a class="reference internal" href="#numberrequiredforcompleteset">numberRequiredForCompleteSet</a></li>
+<li><a class="reference internal" href="#blockedslotscountingtowardsfullset">blockedSlotsCountingTowardsFullSet</a></li>
 </ul>
 </li>
 </ul>
@@ -143,7 +129,7 @@ purposes. For a fully functioning example, please refer to
                         title="previous chapter">Outfits</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="statusEffects.html"
-                        title="next chapter">statusEffect</a></p>
+                        title="next chapter">statusEffects</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -172,7 +158,7 @@ purposes. For a fully functioning example, please refer to
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="statusEffects.html" title="statusEffect"
+          <a href="statusEffects.html" title="statusEffects"
              >next</a> |</li>
         <li class="right" >
           <a href="outfits.html" title="Outfits"
