@@ -8,17 +8,18 @@ Item Clothing
 
 Clothing and anything that is wearable, even inside.
 
-For a working example, please consult your `ext.clothingexample`_ folder.
+You can find working examples of clothing in the
+:ltgithub:`res/mods/innoxia/items/clothing` folder.
 
 General Information
 -------------------
 
-PLEASE NOTE: Any clothing item whose rarity is set to LEGENDARY or above will
-not show up in the game, as no shopkeepers have been being defined as selling
-items of that quality. You can spawn it from the debug menu if you wish. The
-debug menu is accessed by typing ``buggy`` at any point in the game. It is best
-to enter the debug menu when not in the middle of combat, sex, or
-movement-locked dialogue, as it will break you out of it.
+Any clothing item whose rarity is set to LEGENDARY or above will not show up in
+the game, as no shopkeepers have been being defined as selling items of that
+quality. You can spawn it from the debug menu if you wish. The debug menu is
+accessed by typing ``buggy`` at any point in the game. It is best to enter the
+debug menu when not in the middle of combat, sex, or movement-locked dialogue,
+as it will break you out of it.
 
 coreAttributes
 --------------
@@ -28,7 +29,8 @@ authorTag
 
 Author attribution, if you want one.
 
-Please refer to the explanation on the index about `author tag <index.rst>`_.
+Please refer to the explanation on the index about :ref:`author
+tags<author-tags>`.
 
 .. code:: xml
 
@@ -155,8 +157,6 @@ will use the top slot for determining which slot this clothing should fit into.
 
 Possible slots are found here:
 :ltgithub:`src/com/lilithsthrone/game/inventory/InventorySlot.java`
-
-`src/com/lilithsthrone/game/inventory/InventorySlot.java <https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/inventory/InventorySlot.java>`_
 
 Example
     I defined ``SOCK`` as the top slot, as this is the intended slot for

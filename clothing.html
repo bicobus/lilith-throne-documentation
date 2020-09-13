@@ -84,8 +84,8 @@
               
             
             
-              <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul class="current">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="items.html">Items folder</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Item Clothing</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#general-information">General Information</a></li>
@@ -208,22 +208,24 @@
 </dl>
 </div></blockquote>
 <p>Clothing and anything that is wearable, even inside.</p>
-<p>For a working example, please consult your <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/res/mods/innoxia/items/clothing">ext.clothingexample</a> folder.</p>
+<p>You can find working examples of clothing in the
+<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/res/mods/innoxia/items/clothing">res/mods/innoxia/items/clothing</a> folder.</p>
 <div class="section" id="general-information">
 <h2>General Information<a class="headerlink" href="#general-information" title="Permalink to this headline">¶</a></h2>
-<p>PLEASE NOTE: Any clothing item whose rarity is set to LEGENDARY or above will
-not show up in the game, as no shopkeepers have been being defined as selling
-items of that quality. You can spawn it from the debug menu if you wish. The
-debug menu is accessed by typing <code class="docutils literal notranslate"><span class="pre">buggy</span></code> at any point in the game. It is best
-to enter the debug menu when not in the middle of combat, sex, or
-movement-locked dialogue, as it will break you out of it.</p>
+<p>Any clothing item whose rarity is set to LEGENDARY or above will not show up in
+the game, as no shopkeepers have been being defined as selling items of that
+quality. You can spawn it from the debug menu if you wish. The debug menu is
+accessed by typing <code class="docutils literal notranslate"><span class="pre">buggy</span></code> at any point in the game. It is best to enter the
+debug menu when not in the middle of combat, sex, or movement-locked dialogue,
+as it will break you out of it.</p>
 </div>
 <div class="section" id="coreattributes">
 <h2>coreAttributes<a class="headerlink" href="#coreattributes" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="authortag">
 <h3>authorTag<a class="headerlink" href="#authortag" title="Permalink to this headline">¶</a></h3>
 <p>Author attribution, if you want one.</p>
-<p>Please refer to the explanation on the index about <a class="reference external" href="index.rst">author tag</a>.</p>
+<p>Please refer to the explanation on the index about <a class="reference internal" href="overview.html#author-tags"><span class="std std-ref">author
+tags</span></a>.</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;authorTag&gt;</span><span class="cp">&lt;![CDATA[A tag discreetly sewn into the T-shirt&#39;s inner lining informs you that it was made by &#39;Innoxia&#39;.]]&gt;</span><span class="nt">&lt;/authorTag&gt;</span>
 </pre></div>
 </div>
@@ -339,7 +341,6 @@ common slot to be fitted into. This is especially important for NPCs, as they
 will use the top slot for determining which slot this clothing should fit into.</p>
 <p>Possible slots are found here:
 <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/InventorySlot.java">src/com/lilithsthrone/game/inventory/InventorySlot.java</a></p>
-<p><a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/inventory/InventorySlot.java">src/com/lilithsthrone/game/inventory/InventorySlot.java</a></p>
 <dl class="simple">
 <dt>Example</dt><dd><p>I defined <code class="docutils literal notranslate"><span class="pre">SOCK</span></code> as the top slot, as this is the intended slot for
 socks. As I also want the player to be able to equip socks onto their hands, I
@@ -385,7 +386,7 @@ in the code. Possible rarities are found here:
 <div class="section" id="imagename">
 <h3>imageName<a class="headerlink" href="#imagename" title="Permalink to this headline">¶</a></h3>
 <p>The file paths for this clothing’s image. Please refer to the
-<a class="reference internal" href="index.html#items-image"><span class="std std-ref">documentation about images</span></a>.</p>
+<a class="reference internal" href="overview.html#items-image"><span class="std std-ref">documentation about images</span></a>.</p>
 <dl class="simple">
 <dt>Example</dt><dd><p>I’ve defined this as “sock.svg”, which should be placed in the same
 folder location alongside this xml file.</p>
@@ -851,7 +852,7 @@ would block the FINGER slot when equipped into the WRIST slot):</p>
 </div>
 <div class="section" id="colours">
 <h3>colours<a class="headerlink" href="#colours" title="Permalink to this headline">¶</a></h3>
-<p>Please consult the relevant <a class="reference internal" href="index.html#colours"><span class="std std-ref">documentation</span></a>.</p>
+<p>Please consult the relevant <a class="reference internal" href="overview.html#colours"><span class="std std-ref">documentation</span></a>.</p>
 <p>Your clothing can be coloured any way you like, but if you’d like the player to
 be able to dye your clothing, you can specify available colours here.
 <code class="docutils literal notranslate"><span class="pre">primaryColours</span></code>, <code class="docutils literal notranslate"><span class="pre">secondaryColours</span></code>, and <code class="docutils literal notranslate"><span class="pre">tertiaryColours</span></code> can all spawn
