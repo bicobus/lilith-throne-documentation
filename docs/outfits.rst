@@ -223,29 +223,28 @@ be inserted into the character’s off hand. Each block receive one or several
 
 The ``weapon`` block require the following elements to be present:
 
-.. glossary::
+``conditional``
+    references to the conditional statement present in the document.
 
-   ``conditional``
-        references to the conditional statement present in the document.
+``types``
+    A list of valid item to be chosen from. It expects :ref:`items
+    identifiers<items-identifier>`.
 
-   ``types``
-        A list of valid item to be chosen from. It expects :ref:`items identifiers<items-identifier>`.
+``damageTypes``
+    Possible choices available at
+    :ltgithub:`src/com/lilithsthrone/game/combat/DamageType.java`
 
-   ``damageTypes``
-        Possible choices available at
-        :ltgithub:`src/com/lilithsthrone/game/combat/DamageType.java`
+``primaryColours``
+    contains a list of ``colour`` elements, which makes references to the preset
+    groups defined previously.
 
-   ``primaryColours``
-        contains a list of ``colour`` elements, which makes references to the
-        preset groups defined previously.
+``secondaryColours``
+    contains a list of ``colour`` elements, which makes references to the preset
+    groups defined previously.
 
-   ``secondaryColours``
-        contains a list of ``colour`` elements, which makes references to the
-        preset groups defined previously.
-
-   ``colours``
-        element can be used in addition to, or as a replacement of, the
-        primary/secondary/tertiary colours elements.
+``colours``
+    element can be used in addition to, or as a replacement of, the
+    primary/secondary/tertiary colours elements.
 
 Individual colours or ``presetColourGroups`` can be listed in each sub-element
 related to colours.
@@ -312,37 +311,33 @@ in which case only the first item is used.
 clothing tags
 ^^^^^^^^^^^^^
 
-The clothing tag accepts the following variables.
+The clothing tag accepts the following variables:
 
-.. glossary::
+colour
+    Must contain a valid ``CLOTHING_`` colour.
+colourSecondary
+    Must contain a valid ``CLOTHING_`` colour.
+colourTertiary
+    Must contain a valid ``CLOTHING_`` colour.
+patternColour
+    Must contain a valid ``CLOTHING_`` colour.
+patternColourSecondary
+    Must contain a valid ``CLOTHING_`` colour.
+patternColourTertiary
+    Must contain a valid ``CLOTHING_`` colour.
+enchantmentKnown
+    type: boolean. Purpose unknown.
+id
+    The clothing ID
 
-   colour
-   colourSecondary
-   colourTertiary
-        Must contain a valid ``CLOTHING_`` colour.
-
-   enchantmentKnown
-        type: boolean. Purpose unknown.
-
-   id
-        The clothing ID
-
-        .. seealso:: :ref:`items-identifier`
-
-   isDirty
-        Whether the clothing item should spawn dirty, and in need of cleaning.
-
-   name
-        How the item should be displayed. The following example will output to
-        “Character’s butt-plug”: ``name="[npc.NamePos(true)] butt-plug"``.
-
-   pattern
-        The pattern to apply to the item.
-
-   patternColour
-   patternColourSecondary
-   patternColourTertiary
-        Must contain a valid ``CLOTHING_`` colour.
+    .. seealso:: :ref:`items-identifier`
+isDirty
+    Whether the clothing item should spawn dirty, and in need of cleaning.
+name
+    How the item should be displayed. The following example will output to
+    “Character’s butt-plug”: ``name="[npc.NamePos(true)] butt-plug"``.
+pattern
+    The pattern to apply to the item.
 
 The clothing tags has the following sub elements.
 
