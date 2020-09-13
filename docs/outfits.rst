@@ -121,7 +121,8 @@ account. This conditional instance does **not** support the
 
    - List of accepted :ltgithub:`method calls<src/com/lilithsthrone/game/Game.java>`
      for the main game (using the ``game`` tag).
-   - And also here: :ltgithub:`com/lilithsthrone/game/dialogue/utils/UtilText.java`
+   - Generic method calls can be found in:
+     :ltgithub:`src/com/lilithsthrone/game/dialogue/utils/UtilText.java`
 
 The method ``initScriptEngine()`` in ``UtilText.java`` shows you what you can get a
 handle on.
