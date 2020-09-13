@@ -17,8 +17,11 @@ jobs:
       - name: Upgrade pip
         run: |
           python3 -m pip install --upgrade pip
-      - name: Pip cache dir operations
+      - name: Get pip cache directory
         id: pip-cache
+        run: echo "::set-output name=dir::$(pip cache dir)"
+      - name: Pip cache dir operations
+        uses: actions/cache@v2
         with:
           path: ${{ steps.pip-cache.outputs.dir }}
           key: ${{ runner.os }}-pip-${{ hashFiles('**/requirments.txt') }}
