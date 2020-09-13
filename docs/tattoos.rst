@@ -1,18 +1,19 @@
+.. include:: global.inc.rst
+
 =======
 Tattoos
 =======
 
     :Author: innoxia, bicobus
 
-.. contents::
+For a version without all of the comments, see
+:ltgithub:`res/mods/innoxia/items/tattoos/heartWomb/heart_womb.xml`.
 
-For a version without all of the comments, see “rental\ :sub:`daddy.xml`\”.
+coreAttributes
+--------------
 
-1 coreAttributes
-----------------
-
-1.1 value
-~~~~~~~~~
+value
+~~~~~
 
 The base value of this tattoo. All of the standard tattoos are 500 flames. I
 roughly base things on 1 flame = 10p, so 10 flames = £1.
@@ -21,8 +22,8 @@ roughly base things on 1 flame = 10p, so 10 flames = £1.
 
     <value>2000</value> 
 
-1.2 name
-~~~~~~~~
+name
+~~~~
 
 The name of this tattoo.
 
@@ -30,8 +31,8 @@ The name of this tattoo.
 
     <name><![CDATA[heart womb]]></name>
 
-1.3 description
-~~~~~~~~~~~~~~~
+description
+~~~~~~~~~~~
 
 The description that’s shown in tooltips and on the item’s inspection page.
 
@@ -39,34 +40,34 @@ The description that’s shown in tooltips and on the item’s inspection page.
 
     <description><![CDATA[A stylised heart tattoo, which roughly resembles the shape of a female's reproductive system.]]></description>
 
-1.4 availabilityRequirements
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+availabilityRequirements
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Availability requirements for this tattoo. Use ’npc’ for the character receiving
 the tattoo. Can be left blank.
 
-Example of tattoo available only to the player or feminine NPCs
+Example
+    tattoo available only to the player or feminine NPCs
+
     .. code:: xml
 
         <availabilityRequirements><![CDATA[npc.isPlayer() || npc.isFeminine()]]></availabilityRequirements>
 
-1.5 imageName
-~~~~~~~~~~~~~
+imageName
+~~~~~~~~~
 
-The file path for this clothing’s image. All images MUST BE .svg format. Colours
-to be used are described below, above the ’primaryColours’ element. I use the
-free program ’InkScape’ to make my .svg images.
+.. seealso::
 
-.svg images scale perfectly up and down to any size, so, while it should be a
-square, it doesn’t really matter what size your canvas is (although I use
-256 × 256 as a personal preference).
+   :ref:`items-image`
+
+The file path for this clothing’s image.
 
 .. code:: xml
 
     <imageName>heart_womb.svg</imageName>
 
-1.6 enchantmentLimit
-~~~~~~~~~~~~~~~~~~~~
+enchantmentLimit
+~~~~~~~~~~~~~~~~
 
 How many enchantments can be fit into this item. I feel like 5 is a good number
 for this.
@@ -75,12 +76,16 @@ for this.
 
     <enchantmentLimit>10</enchantmentLimit>
 
-1.7 slotAvailability
-~~~~~~~~~~~~~~~~~~~~
+slotAvailability
+~~~~~~~~~~~~~~~~
 
 Inventory slots that this tattoo can be assigned to. Leave blank to allow all
-slots to be used. Possible slots are found here:
-`https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/InventorySlot.java <https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/InventorySlot.java>`_
+slots to be used.
+
+.. seealso::
+
+   List of :ltgithub:`possible
+   slots</src/com/lilithsthrone/game/inventory/InventorySlot.java>`.
 
 .. code:: xml
 
@@ -88,10 +93,10 @@ slots to be used. Possible slots are found here:
     	<slot>GROIN</slot>
     </slotAvailability>
 
-1.8 colours
-~~~~~~~~~~~
+colours
+~~~~~~~
 
-Please consult the relevant `documentation <index.rst>`_ about colours.
+Please consult the relevant :ref:`documentation about colours<colours>`.
 
 Use this section to define available colours for your tattoo. The game detects
 specific colour values, and recolours them to the value chosen by the player.
