@@ -30,6 +30,7 @@ author = 'Bicobus'
 extensions = [
     "sphinx.ext.graphviz",
     "sphinx.ext.extlinks",
+    "sphinx.ext.githubpages"
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -47,6 +48,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # a list of builtin themes.
 #
 html_theme = 'classic'
+html_baseurl = "https://bicobus.github.io/lilith-throne-documentation/"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
