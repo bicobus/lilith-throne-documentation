@@ -1,45 +1,186 @@
 
-<!DOCTYPE html>
 
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>statusEffects &#8212; Lilith&#39;s Throne Mod Documentation  documentation</title>
-    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>statusEffects &mdash; Lilith&#39;s Throne Mod Documentation  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
     
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
-    <link rel="canonical" href="https://bicobus.github.io/lilith-throne-documentation/statusEffects.html" />
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="setBonuses" href="setBonuses.html" /> 
-  </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="setBonuses.html" title="setBonuses"
-             accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Lilith&#39;s Throne Mod Documentation  documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">statusEffects</a></li> 
-      </ul>
-    </div>  
+</head>
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Lilith's Throne Mod Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="items.html">Items folder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outfits.html">Outfits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setBonuses.html">setBonuses</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">statusEffects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#general-information">GENERAL INFORMATION</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#renderingpriority">renderingPriority</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#renderineffectspanel">renderInEffectsPanel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#beneficial">beneficial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#combateffect">combatEffect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sexeffect">sexEffect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#name">name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#description">description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#imagename">imageName</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#colours">colours</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#colourprimary">colourPrimary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#coloursecondary">colourSecondary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#colourtertiary">colourTertiary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#attributemodifiers">attributeModifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#combatmoves">combatMoves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#spells">spells</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#extraeffects">extraEffects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#effect-logic">Effect Logic</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#applicationcondition">applicationCondition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#applyeffect">applyEffect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#applyremovaleffect">applyRemovalEffect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#applypostremovaleffect">applyPostRemovalEffect</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Lilith's Throne Mod Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>statusEffects</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/statusEffects.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="statuseffects">
 <h1>statusEffects<a class="headerlink" href="#statuseffects" title="Permalink to this headline">¶</a></h1>
@@ -311,8 +452,8 @@ passed during the last turn’s end (in seconds).</p>
 that’s passed while under the effect of this status effect (in seconds).
 This can be used with a <code class="docutils literal notranslate"><span class="pre">TOTAL_SECONDS_PASSED==0</span></code> check to, for example,
 only apply an effect when this status effect is initially added.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p>In combat, “seconds passed” is actually represented by the number of
 combat turns passed. So, for example, <code class="docutils literal notranslate"><span class="pre">TOTAL_SECONDS_PASSED</span></code> would be
 converted into 2 if the character had been under the status effect’s
@@ -361,85 +502,57 @@ character is no longer under the effects of this status effect.</p>
 </div>
 
 
-            <div class="clearer"></div>
+           </div>
+           
           </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">statusEffects</a><ul>
-<li><a class="reference internal" href="#general-information">GENERAL INFORMATION</a></li>
-<li><a class="reference internal" href="#renderingpriority">renderingPriority</a></li>
-<li><a class="reference internal" href="#renderineffectspanel">renderInEffectsPanel</a></li>
-<li><a class="reference internal" href="#beneficial">beneficial</a></li>
-<li><a class="reference internal" href="#combateffect">combatEffect</a></li>
-<li><a class="reference internal" href="#sexeffect">sexEffect</a></li>
-<li><a class="reference internal" href="#name">name</a></li>
-<li><a class="reference internal" href="#description">description</a></li>
-<li><a class="reference internal" href="#imagename">imageName</a></li>
-<li><a class="reference internal" href="#colours">colours</a><ul>
-<li><a class="reference internal" href="#colourprimary">colourPrimary</a></li>
-<li><a class="reference internal" href="#coloursecondary">colourSecondary</a></li>
-<li><a class="reference internal" href="#colourtertiary">colourTertiary</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#attributemodifiers">attributeModifiers</a></li>
-<li><a class="reference internal" href="#combatmoves">combatMoves</a></li>
-<li><a class="reference internal" href="#spells">spells</a></li>
-<li><a class="reference internal" href="#extraeffects">extraEffects</a></li>
-<li><a class="reference internal" href="#effect-logic">Effect Logic</a><ul>
-<li><a class="reference internal" href="#applicationcondition">applicationCondition</a></li>
-<li><a class="reference internal" href="#applyeffect">applyEffect</a></li>
-<li><a class="reference internal" href="#applyremovaleffect">applyRemovalEffect</a></li>
-<li><a class="reference internal" href="#applypostremovaleffect">applyPostRemovalEffect</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="setBonuses.html" class="btn btn-neutral float-left" title="setBonuses" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="setBonuses.html"
-                        title="previous chapter">setBonuses</a></p>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/statusEffects.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Bicobus
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
         </div>
       </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="setBonuses.html" title="setBonuses"
-             >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Lilith&#39;s Throne Mod Documentation  documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">statusEffects</a></li> 
-      </ul>
-    </div>
-    <div class="footer" role="contentinfo">
-        &#169; Copyright 2020, Bicobus.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
-    </div>
-  </body>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
 </html>
