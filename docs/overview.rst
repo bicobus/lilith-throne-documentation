@@ -13,8 +13,8 @@ augmenting your experience while playing Lilith’s Throne. While the documents
 tries to be as accurate as possible, you’re invited, dear reader, to consult
 existing ``xml`` files residing in your ``res/mods/`` folder.
 
-If you are unsure of anything, please use the Lilith’s Throne Discord
-`Lilith's Throne Discord`_ to ask for help!
+If you are unsure of anything, please use the `Lilith's Throne Discord`_ to ask
+for help!
 
 Note on status effects and how to use them
 ------------------------------------------

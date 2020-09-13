@@ -18,7 +18,7 @@ import sphinx_rtd_theme
 # -- Project information -----------------------------------------------------
 
 project = "Lilith's Throne Mod Documentation"
-copyright = '2020, Bicobus'
+copyright = '2020, Innoxia, Bicobus'
 author = 'Bicobus'
 
 
