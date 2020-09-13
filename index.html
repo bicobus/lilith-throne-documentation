@@ -106,7 +106,7 @@ status effect based on simple conditionnals. Sets of one item, although counter
 intuitive, are acceptable. Non-wearable items have a direct access to an
 <code class="docutils literal notranslate"><span class="pre">applyEffect</span></code> block, and as such do not require a reference to a
 <code class="docutils literal notranslate"><span class="pre">statusEffect</span></code>.</p>
-digraph {
+<div class="graphviz"><img src="_images/graphviz-ae388fd966c8a1061a06d21a26d6cb8a623d5b7c.png" alt="digraph {
    coi [label = &quot;Clothing Items&quot;]
    wi [label = &quot;Weapon Items&quot;]
    cui [label = &quot;Consumable Items&quot;]
@@ -114,7 +114,8 @@ digraph {
    { coi wi } -&gt; &quot;setBonus&quot;;
    &quot;setBonus&quot; -&gt; &quot;statusEffect&quot;;
    { &quot;statusEffect&quot; cui } -&gt; appl;
-}</div>
+}" class="graphviz" /></div>
+</div>
 <div class="section" id="some-elements-expect-boolean-values">
 <h2>Some elements expect Boolean values<a class="headerlink" href="#some-elements-expect-boolean-values" title="Permalink to this headline">¶</a></h2>
 <p>Some elements are boolean switches which are either true, or false. The name of
