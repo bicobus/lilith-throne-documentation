@@ -1,0 +1,436 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miscanelaous Items &#8212; Lilith&#39;s Throne Mod Documentation  documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <link rel="canonical" href="https://bicobus.github.io/lilith-throne-documentation/items_items.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tattoos" href="tattoos.html" />
+    <link rel="prev" title="Item Clothing" href="clothing.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="tattoos.html" title="Tattoos"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="clothing.html" title="Item Clothing"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Lilith&#39;s Throne Mod Documentation  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="items.html" accesskey="U">Items folder</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Miscanelaous Items</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="miscanelaous-items">
+<h1><a class="toc-backref" href="#id2">Miscanelaous Items</a><a class="headerlink" href="#miscanelaous-items" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Author</dt>
+<dd class="field-odd"><p>innoxia, bicobus</p>
+</dd>
+</dl>
+</div></blockquote>
+<div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#miscanelaous-items" id="id2">Miscanelaous Items</a></p>
+<ul>
+<li><p><a class="reference internal" href="#boolean-values" id="id3">1 Boolean Values</a></p></li>
+<li><p><a class="reference internal" href="#coreattributes" id="id4">2 coreAttributes</a></p>
+<ul>
+<li><p><a class="reference internal" href="#authortag" id="id5">2.1 authorTag</a></p></li>
+<li><p><a class="reference internal" href="#value" id="id6">2.2 value</a></p></li>
+<li><p><a class="reference internal" href="#determiner" id="id7">2.3 determiner</a></p></li>
+<li><p><a class="reference internal" href="#name" id="id8">2.4 name</a></p></li>
+<li><p><a class="reference internal" href="#nameplural" id="id9">2.5 namePlural</a></p></li>
+<li><p><a class="reference internal" href="#description" id="id10">2.6 description</a></p></li>
+<li><p><a class="reference internal" href="#usedescriptor" id="id11">2.7 useDescriptor</a></p></li>
+<li><p><a class="reference internal" href="#sexuse" id="id12">2.8 sexUse</a></p></li>
+<li><p><a class="reference internal" href="#combatuseallies" id="id13">2.9 combatUseAllies</a></p></li>
+<li><p><a class="reference internal" href="#combatuseenemies" id="id14">2.10 combatUseEnemies</a></p></li>
+<li><p><a class="reference internal" href="#consumedonuse" id="id15">2.11 consumedOnUse</a></p></li>
+<li><p><a class="reference internal" href="#rarity" id="id16">2.12 rarity</a></p></li>
+<li><p><a class="reference internal" href="#imagename" id="id17">2.13 imageName</a></p></li>
+<li><p><a class="reference internal" href="#colours" id="id18">2.14 colours</a></p></li>
+<li><p><a class="reference internal" href="#effecttooltiplines" id="id19">2.15 effectTooltipLines</a></p></li>
+<li><p><a class="reference internal" href="#applyeffects" id="id20">2.16 applyEffects</a></p></li>
+<li><p><a class="reference internal" href="#itemtags" id="id21">2.17 itemTags</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#usedescription" id="id22">3 useDescription</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Please note: Item modding is not fully complete yet, as you cannot define any enchantment effects for items. I will expand this at some point in the future, but for now, this modding framework should be enough for most uses.</p>
+<div class="section" id="boolean-values">
+<span id="id1"></span><h2><a class="toc-backref" href="#id3">1 Boolean Values</a><a class="headerlink" href="#boolean-values" title="Permalink to this headline">¶</a></h2>
+<p>Boolean values can be used throughought the elements of this document. Those
+values are to be understood as:</p>
+<ul class="simple">
+<li><p>true</p></li>
+<li><p>false</p></li>
+</ul>
+</div>
+<div class="section" id="coreattributes">
+<h2><a class="toc-backref" href="#id4">2 coreAttributes</a><a class="headerlink" href="#coreattributes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="authortag">
+<h3><a class="toc-backref" href="#id5">2.1 authorTag</a><a class="headerlink" href="#authortag" title="Permalink to this headline">¶</a></h3>
+<p>How attribution to the mod author (you!) should be displayed in the item’s
+tooltip. If left blank or not included, a default attribution based on folder
+name will be used.</p>
+<p>This tag is optionnal.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;authorTag&gt;</span><span class="cp">&lt;![CDATA[A small name stamped on one side of the pill reads &#39;Inno-Industries&#39;.]]&gt;</span><span class="nt">&lt;/authorTag&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="value">
+<h3><a class="toc-backref" href="#id6">2.2 value</a><a class="headerlink" href="#value" title="Permalink to this headline">¶</a></h3>
+<p>How much this item is worth.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;value&gt;</span>20<span class="nt">&lt;/value&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="determiner">
+<h3><a class="toc-backref" href="#id7">2.3 determiner</a><a class="headerlink" href="#determiner" title="Permalink to this headline">¶</a></h3>
+<p>What’s appended before the item’s name in an instance of “Innoxia has X Breeder
+Pill”, where X is the determiner. This will usually be either “a” or “an”, but
+for other items may be different.</p>
+<p>An example might be: “Innoxia is holding X scissors”, where X (the determiner)
+would now need to be “a pair of”.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;determiner&gt;</span><span class="cp">&lt;![CDATA[a]]&gt;</span><span class="nt">&lt;/determiner&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="name">
+<h3><a class="toc-backref" href="#id8">2.4 name</a><a class="headerlink" href="#name" title="Permalink to this headline">¶</a></h3>
+<p>The singular name of this item.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;name&gt;</span><span class="cp">&lt;![CDATA[breeder pill]]&gt;</span><span class="nt">&lt;/name&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="nameplural">
+<h3><a class="toc-backref" href="#id9">2.5 namePlural</a><a class="headerlink" href="#nameplural" title="Permalink to this headline">¶</a></h3>
+<p>The plural name of this item.</p>
+<p>The argument <code class="docutils literal notranslate"><span class="pre">pluralByDefault</span></code> defines whether the item will always be refered
+by it’s plural name (e.g. “a pair of pants”). The argument accepts <a class="reference internal" href="#boolean-values">boolean-values</a>.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;namePlural</span> <span class="na">pluralByDefault=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[breeder pills]]&gt;</span><span class="nt">&lt;/namePlural&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="description">
+<h3><a class="toc-backref" href="#id10">2.6 description</a><a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h3>
+<p>The description/lore of this item.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;description&gt;</span><span class="cp">&lt;![CDATA[A small, light-purple pill, individually packaged in a foil and plastic wrapper. While the text printed on the foil identifies this pill as an &#39;Orally-Administered Reproduction Enhancer&#39;, it&#39;s colloquially known as a &#39;breeder pill&#39;, and temporarily boosts both fertility and virility when ingested.]]&gt;</span><span class="nt">&lt;/description&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="usedescriptor">
+<h3><a class="toc-backref" href="#id11">2.7 useDescriptor</a><a class="headerlink" href="#usedescriptor" title="Permalink to this headline">¶</a></h3>
+<p>How the item is used. This should be a single verb, and is used as the title of
+the action when using it.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;useDescriptor&gt;</span>swallow<span class="nt">&lt;/useDescriptor&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sexuse">
+<h3><a class="toc-backref" href="#id12">2.8 sexUse</a><a class="headerlink" href="#sexuse" title="Permalink to this headline">¶</a></h3>
+<p>Define whether the item can be used during sex, like a dildo or a pill.</p>
+<p>This element accepts <a class="reference internal" href="#boolean-values">boolean-values</a>.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;sexUse&gt;</span>true<span class="nt">&lt;/sexUse&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="combatuseallies">
+<h3><a class="toc-backref" href="#id13">2.9 combatUseAllies</a><a class="headerlink" href="#combatuseallies" title="Permalink to this headline">¶</a></h3>
+<p>Define whether the item can be used, either on yourself or your allies, during
+combat.</p>
+<p>This element accepts <a class="reference internal" href="#boolean-values">boolean-values</a>.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;combatUseAllies&gt;</span>true<span class="nt">&lt;/combatUseAllies&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="combatuseenemies">
+<h3><a class="toc-backref" href="#id14">2.10 combatUseEnemies</a><a class="headerlink" href="#combatuseenemies" title="Permalink to this headline">¶</a></h3>
+<p>Define whether the item can be used on your opponents during combat.</p>
+<p>This element accepts <a class="reference internal" href="#boolean-values">boolean-values</a>.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;combatUseEnemies&gt;</span>false<span class="nt">&lt;/combatUseEnemies&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="consumedonuse">
+<h3><a class="toc-backref" href="#id15">2.11 consumedOnUse</a><a class="headerlink" href="#consumedonuse" title="Permalink to this headline">¶</a></h3>
+<p>Define whether the item should be consumed on use. <em>(Editor Note: is it a consumable?)</em></p>
+<p>This element accepts <a class="reference internal" href="#id1">1 Boolean Values</a>.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;consumedOnUse&gt;</span>true<span class="nt">&lt;/consumedOnUse&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rarity">
+<h3><a class="toc-backref" href="#id16">2.12 rarity</a><a class="headerlink" href="#rarity" title="Permalink to this headline">¶</a></h3>
+<p>The rarity of this item. Values can be found here:
+<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/inventory/Rarity.java">src/com/lilithsthrone/game/inventory/Rarity.java</a></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;rarity&gt;</span>COMMON<span class="nt">&lt;/rarity&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="imagename">
+<h3><a class="toc-backref" href="#id17">2.13 imageName</a><a class="headerlink" href="#imagename" title="Permalink to this headline">¶</a></h3>
+<p>The file name of this item’s image when in the character’s inventory. The only
+supported file type is .svg. I use the free program “Inkscape” to make .svg
+images for the game.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;imageName&gt;</span>pill.svg<span class="nt">&lt;/imageName&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="colours">
+<h3><a class="toc-backref" href="#id18">2.14 colours</a><a class="headerlink" href="#colours" title="Permalink to this headline">¶</a></h3>
+<p>Your item can be coloured any way you like, but if you’d like the game to
+automatically re-colour your item, you can specify available colours here.</p>
+<ul class="simple">
+<li><p><em>Red</em> is used as base colour for the primary colour of the graphic in-game,
+and the game will only recognise and change the following colours:</p>
+<ul>
+<li><p>#ff2a2a</p></li>
+<li><p>#ff5555</p></li>
+<li><p>#ff8080</p></li>
+<li><p>#ffaaaa</p></li>
+<li><p>#ffd5d5</p></li>
+</ul>
+</li>
+<li><p><em>Orange</em> is used as base colour for the secondary colour of the graphic
+in-game, and the game will only recognise and change the following colours:</p>
+<ul>
+<li><p>#ff7f2a</p></li>
+<li><p>#ff9955</p></li>
+<li><p>#ffb380</p></li>
+<li><p>#ffccaa</p></li>
+<li><p>#ffe6d5</p></li>
+</ul>
+</li>
+<li><p><em>Yellow</em> is used as base colour for the tertiary colour of the graphic
+in-game, and the game will only recognise and change the following colours:</p>
+<ul>
+<li><p>#ffd42a</p></li>
+<li><p>#ffdd55</p></li>
+<li><p>#ffe680</p></li>
+<li><p>#ffeeaa</p></li>
+<li><p>#fff6d5</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>any gradients that you use should be called:</strong> <code class="docutils literal notranslate"><span class="pre">innoGrad1</span></code>, <code class="docutils literal notranslate"><span class="pre">innoGrad2</span></code>, etc.</p>
+<p>A visual representation of these colours is available on the <a class="reference external" href="https://www.lilithsthrone.com/wiki/doku.php?id=modding_wiki:modding:creating_clothes">wiki</a>.</p>
+<p>Colour lists to be used can be found here: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/utils/colours">src/com/lilithsthrone/utils/colours</a></p>
+<p>Each defaults to <code class="docutils literal notranslate"><span class="pre">CLOTHING_BLACK</span></code>.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;colourPrimary&gt;</span>CLOTHING_PURPLE_LIGHT<span class="nt">&lt;/colourPrimary&gt;</span>
+<span class="nt">&lt;colourSecondary/&gt;</span>
+<span class="nt">&lt;colourTertiary/&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="effecttooltiplines">
+<h3><a class="toc-backref" href="#id19">2.15 effectTooltipLines</a><a class="headerlink" href="#effecttooltiplines" title="Permalink to this headline">¶</a></h3>
+<p>You can use this section to describe any extra features of this item. These
+effects are shown in the tooltip when the player hovers over the item icon, so
+try and keep them short (as they should fit on one line). It should probably
+only be used to describe what happens in the <a class="reference internal" href="#apply-effects">apply-effects</a> element. No characters
+are passed in as parsing arguments, so you should NOT use any character-specific
+parsing elements (such as <code class="docutils literal notranslate"><span class="pre">[npc.name]</span></code>).</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;effectTooltipLines&gt;</span>
+    <span class="nt">&lt;line&gt;</span><span class="cp">&lt;![CDATA[[#ATTRIBUTE_FERTILITY.getFormattedValue(50)] for 24 hours]]&gt;</span><span class="nt">&lt;/line&gt;</span>
+    <span class="nt">&lt;line&gt;</span><span class="cp">&lt;![CDATA[[#ATTRIBUTE_VIRILITY.getFormattedValue(50)] for 24 hours]]&gt;</span><span class="nt">&lt;/line&gt;</span>
+    <span class="nt">&lt;line&gt;</span><span class="cp">&lt;![CDATA[[style.boldBad(Removes status effect:)]]]&gt;</span><span class="nt">&lt;/line&gt;</span>
+    <span class="nt">&lt;line&gt;</span><span class="cp">&lt;![CDATA[&#39;&lt;i&gt;[#SE_PROMISCUITY_PILL.getName(null)]&lt;/i&gt;&#39;]]&gt;</span><span class="nt">&lt;/line&gt;</span>
+<span class="nt">&lt;/effectTooltipLines&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="applyeffects">
+<span id="apply-effects"></span><h3><a class="toc-backref" href="#id20">2.16 applyEffects</a><a class="headerlink" href="#applyeffects" title="Permalink to this headline">¶</a></h3>
+<p>This is what is called and parsed every time this item is used on someone. The
+character being subjected to the effects is given the tag <code class="docutils literal notranslate"><span class="pre">npc</span></code>, while the
+character using the item on the target is <code class="docutils literal notranslate"><span class="pre">npc2</span></code>. If self-using the item, <code class="docutils literal notranslate"><span class="pre">npc</span></code>
+and <code class="docutils literal notranslate"><span class="pre">npc2</span></code> will be the same character. All of the returned text is displayed to
+the player.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;applyEffects&gt;</span><span class="cp">&lt;![CDATA[</span>
+<span class="cp">    [##npc.removeStatusEffect(SE_PROMISCUITY_PILL)]</span>
+<span class="cp">    [##npc.addStatusEffect(SE_VIXENS_VIRILITY, 60*24*60)]</span>
+<span class="cp">    &lt;p style=&#39;margin-bottom:0; padding-bottom:0;&#39;&gt;</span>
+<span class="cp">            The small pill easily slides down [npc.her] throat, and within moments [npc.she] [npc.verb(feel)]</span>
+<span class="cp">            #IF(npc.hasVagina())</span>
+<span class="cp">                     a soothing, warm glow spreading out from [npc.her] ovaries into [npc.her] lower torso. [npc.Her] mind fogs over with an overwhelming desire to feel potent sperm spurting deep into [npc.her]</span>
+<span class="cp">                    #IF(npc.isVisiblyPregnant())</span>
+<span class="cp">                             pussy,</span>
+<span class="cp">                    #ELSE</span>
+<span class="cp">                             womb,</span>
+<span class="cp">                    #ENDIF</span>
+<span class="cp">                     and before [npc.she] can stop it, a horny whimper escapes from between [npc.her] [npc.lips].</span>
+<span class="cp">                    #IF(npc.hasPenisIgnoreDildo())</span>
+<span class="cp">                             At the same time, [npc.her] manhood begins to throb with need, and [npc.she] [npc.verb(feel)]</span>
+<span class="cp">                    #ENDIF</span>
+<span class="cp">            #ENDIF</span>
+<span class="cp">            #IF(npc.hasPenisIgnoreDildo())</span>
+<span class="cp">                     an overpowering desire to sink deep into a fertile female&#39;s cunt and fill her with [npc.cum+].</span>
+<span class="cp">            #ENDIF</span>
+<span class="cp">            #IF(!npc.hasPenisIgnoreDildo() &amp;&amp; !npc.hasVagina())</span>
+<span class="cp">                    a desperate heat in [npc.her] genderless mound.</span>
+<span class="cp">            #ENDIF</span>
+<span class="cp">    &lt;/p&gt;</span>
+<span class="cp">    &lt;p style=&#39;text-align:center; margin-top:0; padding-top:0;&#39;&gt;</span>
+<span class="cp">            [style.colourPinkLight([npc.Name] [npc.is] now experiencing &lt;i&gt;&#39;[#SE_VIXENS_VIRILITY.getName(npc)]&#39;&lt;/i&gt; for the next 24 hours!)]</span>
+<span class="cp">    &lt;/p&gt;</span>
+<span class="cp">]]&gt;</span><span class="nt">&lt;/applyEffects&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="itemtags">
+<span id="item-tags"></span><h3><a class="toc-backref" href="#id21">2.17 itemTags</a><a class="headerlink" href="#itemtags" title="Permalink to this headline">¶</a></h3>
+<p>Special item tags that apply to this item. Values can be found here: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/inventory/ItemTag.java">src/com/lilithsthrone/game/inventory/ItemTag.java</a></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;itemTags&gt;</span>
+    <span class="nt">&lt;tag&gt;</span>DOMINION_ALLEYWAY_SPAWN<span class="nt">&lt;/tag&gt;</span>
+    <span class="nt">&lt;tag&gt;</span>SUBMISSION_TUNNEL_SPAWN<span class="nt">&lt;/tag&gt;</span>
+    <span class="nt">&lt;tag&gt;</span>BAT_CAVERNS_SPAWN<span class="nt">&lt;/tag&gt;</span>
+    <span class="nt">&lt;tag&gt;</span>ATTRIBUTE_TF_ITEM<span class="nt">&lt;/tag&gt;</span>
+    <span class="nt">&lt;tag&gt;</span>SOLD_BY_RALPH<span class="nt">&lt;/tag&gt;</span>
+<span class="nt">&lt;/itemTags&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="usedescription">
+<h2><a class="toc-backref" href="#id22">3 useDescription</a><a class="headerlink" href="#usedescription" title="Permalink to this headline">¶</a></h2>
+<p>Descriptions that are displayed when using this item.</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">selfUse</span></code></dt><dd><p>is used when a character uses this item on themselves</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">otherUse</span></code></dt><dd><p>is used when the item is applied on someone else.</p>
+</dd>
+</dl>
+<p>You must define at least one of both of these elements, and if more than one of
+each is defined, then the use description will be chosen randomly from all those
+you’ve defined.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;useDescriptions&gt;</span>
+    <span class="nt">&lt;selfUse&gt;</span><span class="cp">&lt;![CDATA[</span>
+<span class="cp">    [npc.Name] [npc.verb(pop)] a breeder pill out of its little foil wrapper, before quickly placing it in [npc.her] mouth and swallowing it down.</span>
+<span class="cp">    ]]&gt;</span><span class="nt">&lt;/selfUse&gt;</span>
+    <span class="nt">&lt;otherUse&gt;</span><span class="cp">&lt;![CDATA[</span>
+<span class="cp">    [npc.Name] [npc.verb(pop)] a breeder pill out of its little foil wrapper, before bringing it up to [npc2.namePos] [npc2.lips], forcing it into [npc2.her] mouth, and making sure that [npc2.she] [npc2.verb(swallow)] it down.</span>
+<span class="cp">    ]]&gt;</span><span class="nt">&lt;/otherUse&gt;</span>
+<span class="nt">&lt;/useDescriptions&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Miscanelaous Items</a><ul>
+<li><a class="reference internal" href="#boolean-values">1 Boolean Values</a></li>
+<li><a class="reference internal" href="#coreattributes">2 coreAttributes</a><ul>
+<li><a class="reference internal" href="#authortag">2.1 authorTag</a></li>
+<li><a class="reference internal" href="#value">2.2 value</a></li>
+<li><a class="reference internal" href="#determiner">2.3 determiner</a></li>
+<li><a class="reference internal" href="#name">2.4 name</a></li>
+<li><a class="reference internal" href="#nameplural">2.5 namePlural</a></li>
+<li><a class="reference internal" href="#description">2.6 description</a></li>
+<li><a class="reference internal" href="#usedescriptor">2.7 useDescriptor</a></li>
+<li><a class="reference internal" href="#sexuse">2.8 sexUse</a></li>
+<li><a class="reference internal" href="#combatuseallies">2.9 combatUseAllies</a></li>
+<li><a class="reference internal" href="#combatuseenemies">2.10 combatUseEnemies</a></li>
+<li><a class="reference internal" href="#consumedonuse">2.11 consumedOnUse</a></li>
+<li><a class="reference internal" href="#rarity">2.12 rarity</a></li>
+<li><a class="reference internal" href="#imagename">2.13 imageName</a></li>
+<li><a class="reference internal" href="#colours">2.14 colours</a></li>
+<li><a class="reference internal" href="#effecttooltiplines">2.15 effectTooltipLines</a></li>
+<li><a class="reference internal" href="#applyeffects">2.16 applyEffects</a></li>
+<li><a class="reference internal" href="#itemtags">2.17 itemTags</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#usedescription">3 useDescription</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="clothing.html"
+                        title="previous chapter">Item Clothing</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="tattoos.html"
+                        title="next chapter">Tattoos</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/items_items.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="tattoos.html" title="Tattoos"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="clothing.html" title="Item Clothing"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Lilith&#39;s Throne Mod Documentation  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="items.html" >Items folder</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Miscanelaous Items</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Bicobus.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

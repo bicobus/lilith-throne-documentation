@@ -1,0 +1,1078 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Item Clothing &#8212; Lilith&#39;s Throne Mod Documentation  documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <link rel="canonical" href="https://bicobus.github.io/lilith-throne-documentation/clothing.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Miscanelaous Items" href="items_items.html" />
+    <link rel="prev" title="Items folder" href="items.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="items_items.html" title="Miscanelaous Items"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="items.html" title="Items folder"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Lilith&#39;s Throne Mod Documentation  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="items.html" accesskey="U">Items folder</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Item Clothing</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="item-clothing">
+<h1>Item Clothing<a class="headerlink" href="#item-clothing" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Author</dt>
+<dd class="field-odd"><p>innoxia, bicobus</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>Clothing and anything that is wearable, even inside.</p>
+<p>For a working example, please consult your <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/res/mods/innoxia/items/clothing">ext.clothingexample</a> folder.</p>
+<div class="section" id="general-information">
+<h2>General Information<a class="headerlink" href="#general-information" title="Permalink to this headline">¶</a></h2>
+<p>PLEASE NOTE: Any clothing item whose rarity is set to LEGENDARY or above will
+not show up in the game, as no shopkeepers have been being defined as selling
+items of that quality. You can spawn it from the debug menu if you wish. The
+debug menu is accessed by typing <code class="docutils literal notranslate"><span class="pre">buggy</span></code> at any point in the game. It is best
+to enter the debug menu when not in the middle of combat, sex, or
+movement-locked dialogue, as it will break you out of it.</p>
+</div>
+<div class="section" id="coreattributes">
+<h2>coreAttributes<a class="headerlink" href="#coreattributes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="authortag">
+<h3>authorTag<a class="headerlink" href="#authortag" title="Permalink to this headline">¶</a></h3>
+<p>Author attribution, if you want one.</p>
+<p>Please refer to the explanation on the index about <a class="reference external" href="index.rst">author tag</a>.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;authorTag&gt;</span><span class="cp">&lt;![CDATA[A tag discreetly sewn into the T-shirt&#39;s inner lining informs you that it was made by &#39;Innoxia&#39;.]]&gt;</span><span class="nt">&lt;/authorTag&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="value">
+<h3>value<a class="headerlink" href="#value" title="Permalink to this headline">¶</a></h3>
+<p>Please refer to the general information about item <a class="reference external" href="index.rst">value</a>.</p>
+<dl class="simple">
+<dt>Example</dt><dd><p>I’ve defined this as 60, which is about the price for a basic pair
+of socks or something similar.</p>
+</dd>
+</dl>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;value&gt;</span>60<span class="nt">&lt;/value&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="determiner">
+<h3>determiner<a class="headerlink" href="#determiner" title="Permalink to this headline">¶</a></h3>
+<p>The determiner which is displayed before this item’s name. While usually “a” or
+“an”, for things like socks or gloves, you’ll want to use “a pair of”. I use the
+<code class="docutils literal notranslate"><span class="pre">CDATA</span></code> tag for all text values, as it allows html markup to be embedded
+without causing issues.</p>
+<dl class="simple">
+<dt>Example</dt><dd><p>I’ve defined this as “a pair of”, so in-game, this item will be
+referred to as “a pair of socks”.</p>
+</dd>
+</dl>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;determiner&gt;</span><span class="cp">&lt;![CDATA[a pair of]]&gt;</span><span class="nt">&lt;/determiner&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="name">
+<h3>name<a class="headerlink" href="#name" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>singular</strong> name of this clothing.</p>
+<dl class="simple">
+<dt>Example</dt><dd><p>I’ve named this “template sock”, as the singular for “template
+socks” is of course “sock”…</p>
+</dd>
+</dl>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;name</span> <span class="na">appendColourName=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[template sock]]&gt;</span><span class="nt">&lt;/name&gt;</span>
+</pre></div>
+</div>
+<p>You can leave out the <code class="docutils literal notranslate"><span class="pre">appendColourName</span></code> attribute, but if you never want this
+clothing to be described by its colour, then set it as false. (i.e. If set to
+false, this clothing would always be called “template socks” instead of, for
+example, “white template socks”.)</p>
+</div>
+<div class="section" id="nameplural">
+<h3>namePlural<a class="headerlink" href="#nameplural" title="Permalink to this headline">¶</a></h3>
+<p>The plural form of the name. The attribute <code class="docutils literal notranslate"><span class="pre">pluralByDefault</span></code> determines
+whether this item is naturally referred to as a plural (use true for things like
+socks or gloves).</p>
+<dl class="simple">
+<dt>Example</dt><dd><p>I’ve named the plural as “template socks”, and defined <code class="docutils literal notranslate"><span class="pre">pluralByDefault</span></code> as
+true, so that this item will be referred to by this plural name in all but
+extremely exceptional circumstances.</p>
+</dd>
+</dl>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;namePlural</span> <span class="na">pluralByDefault=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[template socks]]&gt;</span><span class="nt">&lt;/namePlural&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="description">
+<h3>description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h3>
+<p>This is the description which is shown in tooltips and on the item’s inspection
+page.</p>
+<dl class="simple">
+<dt>Example</dt><dd><p>The description for ordinary, “boring” items of clothing might be a
+little dry, but as they won’t be read by the player much, it doesn’t really
+matter.</p>
+</dd>
+</dl>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;description&gt;</span><span class="cp">&lt;![CDATA[An ordinary pair of socks, intended to be worn on the feet in order to absorb perspiration and provide both insulation and comfort. A silly person may choose to wear them on their hands...]]&gt;</span><span class="nt">&lt;/description&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="physicalresistance">
+<h3>physicalResistance<a class="headerlink" href="#physicalresistance" title="Permalink to this headline">¶</a></h3>
+<p>The default physical resistance for this piece of clothing. Usually use 0, but
+if it’s armour, then values of 1 up to 5 would be fitting (any more than that
+might be very OP). Physical resistance is a very powerful stat, so please keep
+within the range of 0-5. For all normal clothing, the value should be 0. This
+accepts decimal values, so for things like leather jackets (which aren’t really
+armour, but are still protective), you can use 0.5 or so.</p>
+<dl class="simple">
+<dt>Example</dt><dd><p>Left as 0, as it’s nomral, unarmoured clothing.</p>
+</dd>
+</dl>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;physicalResistance&gt;</span>0<span class="nt">&lt;/physicalResistance&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="femininity">
+<h3>2.8 femininity<a class="headerlink" href="#femininity" title="Permalink to this headline">¶</a></h3>
+<p>Use <code class="docutils literal notranslate"><span class="pre">FEMININE</span></code> for if this clothing is intended for feminine characters,
+<code class="docutils literal notranslate"><span class="pre">MASCULINE</span></code> for masculine, and <code class="docutils literal notranslate"><span class="pre">ANDROGYNOUS</span></code> if it’s able to be worn by anyone
+without penalties.</p>
+<dl class="simple">
+<dt>Example</dt><dd><p>Normal socks could be worn by both males and females without issue,
+so I set this to <code class="docutils literal notranslate"><span class="pre">ANDROGYNOUS</span></code>.</p>
+</dd>
+</dl>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;femininity&gt;</span>ANDROGYNOUS<span class="nt">&lt;/femininity&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="equipslots">
+<h3>2.9 equipSlots<a class="headerlink" href="#equipslots" title="Permalink to this headline">¶</a></h3>
+<p>The slots that this clothing is able to be fit into. The game only supports up
+to 4 unique slots, so if you define more than 4, the rest of them won’t show up
+in-game. These definitions preserve ordering, so use the top one for the most
+common slot to be fitted into. This is especially important for NPCs, as they
+will use the top slot for determining which slot this clothing should fit into.</p>
+<p>Possible slots are found here:
+<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/inventory/InventorySlot.java">src/com/lilithsthrone/game/inventory/InventorySlot.java</a></p>
+<dl class="simple">
+<dt>Example</dt><dd><p>I defined <code class="docutils literal notranslate"><span class="pre">SOCK</span></code> as the top slot, as this is the intended slot for
+socks. As I also want the player to be able to equip socks onto their hands, I
+defined <code class="docutils literal notranslate"><span class="pre">HAND</span></code> as a secondary slot.</p>
+</dd>
+</dl>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;equipSlots&gt;</span>
+    <span class="nt">&lt;slot&gt;</span>SOCK<span class="nt">&lt;/slot&gt;</span>
+    <span class="nt">&lt;slot&gt;</span>HAND<span class="nt">&lt;/slot&gt;</span>
+<span class="nt">&lt;/equipSlots&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rarity">
+<h3>2.10 rarity<a class="headerlink" href="#rarity" title="Permalink to this headline">¶</a></h3>
+<p>The rarity of this item. Anything less than <code class="docutils literal notranslate"><span class="pre">EPIC</span></code> may end up being modified
+in the code. Possible rarities are found here: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/inventory/Rarity.java">ext.rarity</a>.</p>
+<dl class="simple">
+<dt>Example</dt><dd><p>Socks are most definitely <code class="docutils literal notranslate"><span class="pre">COMMON</span></code>, but I’ve defined these as
+<code class="docutils literal notranslate"><span class="pre">LEGENDARY</span></code> so as to prevent them from naturally spawning in the game.</p>
+</dd>
+</dl>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;rarity&gt;</span>LEGENDARY<span class="nt">&lt;/rarity&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="clothingset">
+<h3>2.11 clothingSet<a class="headerlink" href="#clothingset" title="Permalink to this headline">¶</a></h3>
+<p>The set that this clothing belongs to. See <a class="reference external" href="setBonuses.rst">setBonuses.rst</a>.</p>
+<p>Navigate to <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/res/setBonuses">res/setBonuses</a> to see existing sets.</p>
+<ul class="simple">
+<li><p>Example: Just use the name of the set.</p></li>
+</ul>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;clothingSet&gt;</span>innoxia_template<span class="nt">&lt;/clothingSet&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="imagename">
+<h3>2.12 imageName<a class="headerlink" href="#imagename" title="Permalink to this headline">¶</a></h3>
+<p>The file paths for this clothing’s image. Please refer to the <a class="reference external" href="index.rst">documentation
+about images</a>.</p>
+<dl class="simple">
+<dt>Example</dt><dd><p>I’ve defined this as “sock.svg”, which should be placed in the same
+folder location alongside this xml file.</p>
+</dd>
+</dl>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;imageName&gt;</span>socks.svg<span class="nt">&lt;/imageName&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="imageequippedname">
+<h3>2.13 imageEquippedName<a class="headerlink" href="#imageequippedname" title="Permalink to this headline">¶</a></h3>
+<p>The file paths for this clothing’s image while equipped. The “slot” attribute
+determines the InventorySlot in which the defined file will be used.</p>
+<dl class="simple">
+<dt>Example</dt><dd><p>When equipped to the <code class="docutils literal notranslate"><span class="pre">SOCK</span></code> slot, the sock will be displayed using
+the <code class="docutils literal notranslate"><span class="pre">sock.svg</span></code> file. When equipped to the “HAND” slot, it will instead use the
+<code class="docutils literal notranslate"><span class="pre">sock_hand.svg</span></code> file. Again, this file must be placed in the same folder
+location alongside this xml file.</p>
+</dd>
+</dl>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;imageEquippedName</span> <span class="na">slot=</span><span class="s">&quot;SOCK&quot;</span><span class="nt">&gt;</span>socks.svg<span class="nt">&lt;/imageEquippedName&gt;</span>
+<span class="nt">&lt;imageEquippedName</span> <span class="na">slot=</span><span class="s">&quot;HAND&quot;</span><span class="nt">&gt;</span>socks_hand.svg<span class="nt">&lt;/imageEquippedName&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="stickers">
+<h3>2.14 stickers<a class="headerlink" href="#stickers" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">Stickers</span></code> are additional svgs which can be overlaid on top of (or beneath the)
+base svg image. Definitions are all within the <code class="docutils literal notranslate"><span class="pre">stickers</span></code> element.</p>
+<div class="section" id="category">
+<h4>2.14.1 category<a class="headerlink" href="#category" title="Permalink to this headline">¶</a></h4>
+<p>All stickers defined within this category are <strong>mutually exclusive with one another, but not with stickers defined in other ``category`` elements</strong>. The <code class="docutils literal notranslate"><span class="pre">id</span></code>
+should be unique to each category, and can be defined as whatever you want, but
+for formatting purposes, it would be preferable for it to just contain basic
+alpha-numerical values and underscores. The <code class="docutils literal notranslate"><span class="pre">priority</span></code> variable determines the
+position of this category in UI rendering order (in the inventory’s clothing dye
+screen), with lower values being rendered nearer to the top of the category
+list.</p>
+<dl>
+<dt>Variables</dt><dd><ul class="simple">
+<li><p>id (string)</p></li>
+<li><p>priority (integer)</p></li>
+</ul>
+</dd>
+<dt>Example</dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;category</span> <span class="na">id=</span><span class="s">&quot;top_txt&quot;</span> <span class="na">priority=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+  <span class="c">&lt;!-- ... --&gt;</span>
+<span class="nt">&lt;/category&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<div class="section" id="categoryname">
+<h5>2.14.1.1 categoryName<a class="headerlink" href="#categoryname" title="Permalink to this headline">¶</a></h5>
+<p>This is used in-game as the title for this sticker category in the sticker
+application menu UI. As such, please try to make this human-readable.</p>
+<dl>
+<dt>Example</dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;categoryName&gt;</span><span class="cp">&lt;![CDATA[Top Text]]&gt;</span><span class="nt">&lt;/categoryName&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="sticker">
+<h5>2.14.1.2 sticker<a class="headerlink" href="#sticker" title="Permalink to this headline">¶</a></h5>
+<p>A sticker element. Each sticker are exclusive with other stickers present in the
+same category. Stickers of different cagetories can be combined.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">id</span></code> element should be unique to stickers within this category element.
+Define this variable to <code class="docutils literal notranslate"><span class="pre">none</span></code> (lit.) to give to the player the ability to leave
+the selection blank.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">priority</span></code> variable determines the position of this sticker in UI rendering
+order (in the inventory’s clothing dye screen), with lower values being rendered
+nearer to the left of the buttons list. A <code class="docutils literal notranslate"><span class="pre">priority</span></code> of <code class="docutils literal notranslate"><span class="pre">0</span></code> will set the sticker
+at the top of the list, regardless of it’s position in your xml file.</p>
+<p><code class="docutils literal notranslate"><span class="pre">defaultSticker</span></code> defines whether this sticker is applied to this clothing item
+by default when spawned in.</p>
+<p><code class="docutils literal notranslate"><span class="pre">zLayer</span></code> defines the rendering z-layer priority. These <code class="docutils literal notranslate"><span class="pre">zLayer</span></code> values are
+compared against one another when rendering, with higher values being drawn on
+top of stickers with lower values. <strong>The base svg has a zLayer value of 0</strong>,
+meaning that negative values will be drawn beneath the base svg. Defining
+<code class="docutils literal notranslate"><span class="pre">zLayer</span></code> as 0 is not advised (although it is handled by always being drawn on
+top of the base layer).</p>
+<p><code class="docutils literal notranslate"><span class="pre">colourDisabled</span></code> and <code class="docutils literal notranslate"><span class="pre">colourSelected</span></code> are optional variables which you can use
+to define the colour of the text within the button used to select this sticker
+in the clothing dye UI. You can leave these blank or delete them entirely to use
+default button colours. The default values, if you were to define them using
+these variables, would look like: <code class="docutils literal notranslate"><span class="pre">colourDisabled=&quot;TEXT_GREY&quot;</span> <span class="pre">colourSelected=&quot;GENERIC_GOOD&quot;</span></code></p>
+<p><strong>Note:</strong> If you do not define an <a class="reference internal" href="#sticker-imagename">sticker-imageName</a> sub-element, or if you leave it
+blank, the default selected colour will be <code class="docutils literal notranslate"><span class="pre">TEXT_GREY</span></code> instead of
+<code class="docutils literal notranslate"><span class="pre">GENERIC_GOOD</span></code>.</p>
+<p>Available colours can be found here: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/utils/colours/PresetColour.java">https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/utils/colours/PresetColour.java</a></p>
+<p>You can also define custom colours instead of a PresetColour id, in which case
+you <strong>must</strong> use a standard RGB hex code as the value.</p>
+<p>e.g. <code class="docutils literal notranslate"><span class="pre">colourDisabled=&quot;777777&quot;</span> <span class="pre">colourSelected=&quot;57DB7E&quot;</span></code></p>
+<dl>
+<dt>Variables</dt><dd><ul class="simple">
+<li><p>id (string)</p></li>
+<li><p>priority (integer)</p></li>
+<li><p>defaultSticker (boolean)</p></li>
+<li><p>zlayer (integer)</p></li>
+<li><p>colourDisabled (constant)</p></li>
+<li><p>colourSelected (constant)</p></li>
+</ul>
+</dd>
+<dt>Example</dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;sticker</span> <span class="na">id=</span><span class="s">&quot;rental&quot;</span> <span class="na">priority=</span><span class="s">&quot;1&quot;</span> <span class="na">defaultSticker=</span><span class="s">&quot;true&quot;</span> <span class="na">zLayer=</span><span class="s">&quot;1&quot;</span> <span class="na">colourDisabled=</span><span class="s">&quot;&quot;</span> <span class="na">colourSelected=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
+  <span class="c">&lt;!-- ... --&gt;</span>
+<span class="nt">&lt;/sticker&gt;</span>
+<span class="nt">&lt;sticker</span> <span class="na">id=</span><span class="s">&quot;dommy&quot;</span> <span class="na">priority=</span><span class="s">&quot;2&quot;</span> <span class="na">defaultSticker=</span><span class="s">&quot;false&quot;</span> <span class="na">zLayer=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+  <span class="c">&lt;!-- ... --&gt;</span>
+<span class="nt">&lt;/sticker&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<div class="section" id="stickername">
+<h6>2.14.1.2.1 stickerName<a class="headerlink" href="#stickername" title="Permalink to this headline">¶</a></h6>
+<p>This is used in-game as the title for this sticker’s button in the sticker
+application menu UI. As such, please try to make this human-readable.</p>
+<dl>
+<dt>Example</dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;stickerName&gt;</span><span class="cp">&lt;![CDATA[Rental]]&gt;</span><span class="nt">&lt;/stickerName&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="nameprefix">
+<h6>2.14.1.2.2 namePrefix<a class="headerlink" href="#nameprefix" title="Permalink to this headline">¶</a></h6>
+<p>Define a <code class="docutils literal notranslate"><span class="pre">namePrefix</span></code> to add a prefix to the base clothing’s name when this
+sticker is applied.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">priority</span></code> variable defines the order in which multiple sticker <code class="docutils literal notranslate"><span class="pre">namePrefix</span></code>
+are displayed. A <strong>lower value</strong> means they will be <strong>displayed first</strong>. This can be
+left undefined.</p>
+<dl>
+<dt>Variables</dt><dd><ul class="simple">
+<li><p>priority (integer)</p></li>
+</ul>
+</dd>
+<dt>Example</dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;namePrefix</span> <span class="na">priority=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[Rental]]&gt;</span><span class="nt">&lt;/namePrefix&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="namepostfix">
+<h6>2.14.1.2.3 namePostfix<a class="headerlink" href="#namepostfix" title="Permalink to this headline">¶</a></h6>
+<p>Exactly the same as <a class="reference internal" href="#nameprefix">2.14.1.2.2 namePrefix</a>, but the text is appended after the base
+clothing name.</p>
+</div>
+<div class="section" id="descriptionmodification">
+<h6>2.14.1.2.4 descriptionmodification<a class="headerlink" href="#descriptionmodification" title="Permalink to this headline">¶</a></h6>
+<p>You can set whether this sticker should define a new description for the
+clothing.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">fullReplacement</span></code> is true, then the clothing’s description is completely
+replaced with <code class="docutils literal notranslate"><span class="pre">descriptionModification</span></code> while this sticker is applied. If
+<code class="docutils literal notranslate"><span class="pre">fullReplacement</span></code> is false, then it is appended to the base clothing description
+(so long as another sticker has not applied a <code class="docutils literal notranslate"><span class="pre">fullReplacement</span></code>).</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">priority</span></code> element defines in what order the description appending is
+performed, or, if <code class="docutils literal notranslate"><span class="pre">fullReplacement</span></code> is true for multiple active stickers, which
+sticker’s description has priority.</p>
+<dl>
+<dt>Variables</dt><dd><ul class="simple">
+<li><p>fullReplacement (boolean)</p></li>
+<li><p>priority (integer)</p></li>
+</ul>
+</dd>
+<dt>Example</dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;descriptionModification</span> <span class="na">fullReplacement=</span><span class="s">&quot;false&quot;</span> <span class="na">priority=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[&lt;i&gt;Rental &lt;/i&gt;]]&gt;</span><span class="nt">&lt;/descriptionModification&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="sticker-imagename">
+<span id="id2"></span><h6>2.14.1.2.5 imageName<a class="headerlink" href="#sticker-imagename" title="Permalink to this headline">¶</a></h6>
+<p>The path name for this sticker, which should be in the same folder location as
+this xml file.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">slot</span></code> variable can be omitted, in which case the default slot for the
+clothing item is used.</p>
+<p>If the clothing can be equipped into multiple slots, you don’t <strong>need</strong> to define
+an <code class="docutils literal notranslate"><span class="pre">imageName</span></code> element for every slot, but if you don’t, the game will end up
+using any of your defined <code class="docutils literal notranslate"><span class="pre">imageName</span></code> at random (which is not a problem if you
+only define one <code class="docutils literal notranslate"><span class="pre">imageName</span></code> that’s suitable for any of the clothing’s base
+<code class="docutils literal notranslate"><span class="pre">imageName</span></code>).</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">zLayer</span></code> attribute defines the rendering order for this svg image. You do
+not need to define this attribute, as if it is missing, this svg will use the
+sticker’s <code class="docutils literal notranslate"><span class="pre">zLayer</span></code> attribute which you’ve already defined up above in the root
+<code class="docutils literal notranslate"><span class="pre">sticker</span></code> element. I have included it here just as an example.</p>
+<p><strong>**Note:**</strong> You can add as many <code class="docutils literal notranslate"><span class="pre">imageName</span></code> elements as you like.</p>
+<dl>
+<dt>Variables</dt><dd><ul class="simple">
+<li><p>zLayer (interger)</p></li>
+<li><p>slot (constant)</p></li>
+</ul>
+</dd>
+<dt>Example</dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;imageName</span> <span class="na">zLayer=</span><span class="s">&quot;1&quot;</span> <span class="na">slot=</span><span class="s">&quot;TORSO_UNDER&quot;</span><span class="nt">&gt;</span>text_rental.svg<span class="nt">&lt;/imageName&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="itemtagsadded">
+<h6>2.14.1.2.6 itemTagsAdded<a class="headerlink" href="#itemtagsadded" title="Permalink to this headline">¶</a></h6>
+<p>If this sticker should add any ItemTags to the clothing, then you can define
+them in here. Use <code class="docutils literal notranslate"><span class="pre">&lt;tag&gt;</span></code> elements within the <code class="docutils literal notranslate"><span class="pre">itemTagsAdded</span></code> element (e.g.
+<code class="docutils literal notranslate"><span class="pre">&lt;tag&gt;SOLD_BY_NYAN&lt;/tag&gt;</span></code>) using <code class="docutils literal notranslate"><span class="pre">ItemTag</span></code> names as defined here:
+<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/inventory/ItemTag.java">https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/inventory/ItemTag.java</a></p>
+<dl>
+<dt>Example</dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;itemTagsAdded&gt;</span>
+  <span class="nt">&lt;tag&gt;</span>SOLD_BY_NYAN<span class="nt">&lt;/tag&gt;</span>
+<span class="nt">&lt;/itemTagsAdded&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="itemtagsremoved">
+<h6>2.14.1.2.7 itemTagsRemoved<a class="headerlink" href="#itemtagsremoved" title="Permalink to this headline">¶</a></h6>
+<p>If this sticker should remove any <code class="docutils literal notranslate"><span class="pre">ItemTags</span></code> to the clothing, then you can
+define them in here. Use <code class="docutils literal notranslate"><span class="pre">&lt;tag&gt;</span></code> elements in the same manner as <a class="reference internal" href="#itemtagsadded">2.14.1.2.6 itemTagsAdded</a>.</p>
+<p><strong>Warning:</strong> <em>If you define either a single sticker or multiple stickers to have</em>
+<em>conflicting tag behaviour – i.e. both adding and removing identical tags –,</em>
+<em>then behaviour is undefined and you will end up with the ``ItemTag`` applied or</em>
+<em>removed at random.</em></p>
+</div>
+<div class="section" id="unavailabilitytext">
+<h6>2.14.1.2.8 unavailabilityText<a class="headerlink" href="#unavailabilitytext" title="Permalink to this headline">¶</a></h6>
+<p>Sticker are available to be used by the player by default, but if you want there
+to be requirements for using this sticker, then define this element as a <code class="docutils literal notranslate"><span class="pre">CDATA</span></code>
+text element, with any non-whitespace text returned signalling to the game that
+this sticker is unavailable. The returned text will be displayed to the player
+in the button’s tooltip, so it should describe why this sticker is unavailable.</p>
+<p>You can define a <code class="docutils literal notranslate"><span class="pre">showDisabledButton</span></code> attribute, which by default is set to
+true, and which defines whether or not this sticker’s selection button is shown
+to the player when disabled.</p>
+<p>Please note that no <code class="docutils literal notranslate"><span class="pre">npc</span></code> tag can be used, as this clothing might not belong to
+anyone.</p>
+<dl class="simple">
+<dt>Variables</dt><dd><ul class="simple">
+<li><p>showDisabledButton (boolean)</p></li>
+</ul>
+</dd>
+</dl>
+<p>An example where the player could only use the sticker while being feminine
+would be:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;unavailabilityText</span> <span class="na">showDisabledButton=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[</span>
+<span class="cp">    #IF(!pc.isFeminine())</span>
+<span class="cp">    Only feminine characters can apply this sticker!</span>
+<span class="cp">    #ENDIF</span>
+<span class="cp">]]&gt;</span><span class="nt">&lt;/unavailabilityText&gt;</span>
+</pre></div>
+</div>
+<p>And for this example, the disabled button is not shown to the player, so there’s
+no need for an elaborate description, as the player will never see it:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;unavailabilityText</span> <span class="na">showDisabledButton=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[</span>
+<span class="cp">    #IF(pc.getSubspeciesOverrideRace()!=RACE_DEMON &amp;&amp; !pc.isFeminine())</span>
+<span class="cp">            unavailable</span>
+<span class="cp">    #ENDIF</span>
+<span class="cp">]]&gt;</span><span class="nt">&lt;/unavailabilityText&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="availabilitytext">
+<h6>2.14.1.2.9 availabilityText<a class="headerlink" href="#availabilitytext" title="Permalink to this headline">¶</a></h6>
+<p>The counterpart to <a class="reference internal" href="#unavailabilitytext">2.14.1.2.8 unavailabilityText</a>, this text is shown when
+<a class="reference internal" href="#unavailabilitytext">2.14.1.2.8 unavailabilityText</a> is returning an empty String, and therefore this sticker is
+available. Use a <code class="docutils literal notranslate"><span class="pre">CDATA</span></code> text element.</p>
+<p>Counterpart examples to the two above:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;availabilityText&gt;</span><span class="cp">&lt;![CDATA[</span>
+<span class="cp">    You have unlocked this sticker due to being feminine!</span>
+<span class="cp">]]&gt;</span><span class="nt">&lt;/availabilityText&gt;</span>
+
+<span class="nt">&lt;availabilityText&gt;</span><span class="cp">&lt;![CDATA[</span>
+<span class="cp">    #IF(pc.getSubspeciesOverrideRace()==RACE_DEMON)</span>
+<span class="cp">            You have unlocked this sticker due to being a demon!</span>
+<span class="cp">    #ELSE</span>
+<span class="cp">            You have unlocked this sticker due to being feminine!</span>
+<span class="cp">    #ENDIF</span>
+<span class="cp">]]&gt;</span><span class="nt">&lt;/availabilityText&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="echantmentlimit">
+<h3>2.15 echantmentLimit<a class="headerlink" href="#echantmentlimit" title="Permalink to this headline">¶</a></h3>
+<p>How many enchantments can be fit into this item. It’s typically best to let the
+game handle the default number of enchantments, which typically results in 100.</p>
+<dl class="simple">
+<dt>Example</dt><dd><p>I have not defined this, as I’ll let the game keep the 100
+enchantments default value.</p>
+</dd>
+</dl>
+<p>Using default value</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;enchantmentLimit/&gt;</span>
+</pre></div>
+</div>
+<p>Using custom value</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;enchantmentLimit&gt;</span>100<span class="nt">&lt;/enchantmentLimit&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="effects">
+<h3>2.16 effects<a class="headerlink" href="#effects" title="Permalink to this headline">¶</a></h3>
+<p>The default effects that this clothing spawns in with. To know what to put in
+here, it would probably be easiest to enchant clothing in your game, save the
+game, then copy over that clothing’s ’effects’ in your save file.</p>
+<dl class="simple">
+<dt>Example</dt><dd><p>The first defined effect will give +3 to physical damage, while the
+second will give the wearer the masturbation fetish while worn.</p>
+</dd>
+</dl>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;effects&gt;</span>
+    <span class="nt">&lt;effect</span> <span class="na">itemEffectType=</span><span class="s">&quot;CLOTHING&quot;</span> <span class="na">limit=</span><span class="s">&quot;0&quot;</span> <span class="na">potency=</span><span class="s">&quot;MAJOR_BOOST&quot;</span> <span class="na">primaryModifier=</span><span class="s">&quot;CLOTHING_ATTRIBUTE&quot;</span> <span class="na">secondaryModifier=</span><span class="s">&quot;DAMAGE_PHYSICAL&quot;</span> <span class="na">timer=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;effect</span> <span class="na">itemEffectType=</span><span class="s">&quot;CLOTHING&quot;</span> <span class="na">limit=</span><span class="s">&quot;0&quot;</span> <span class="na">potency=</span><span class="s">&quot;MAJOR_BOOST&quot;</span> <span class="na">primaryModifier=</span><span class="s">&quot;TF_MOD_FETISH_BEHAVIOUR&quot;</span> <span class="na">secondaryModifier=</span><span class="s">&quot;TF_MOD_FETISH_MASTURBATION&quot;</span> <span class="na">timer=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/effects&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="blockedpartslist">
+<h3>2.17 blockedPartsList<a class="headerlink" href="#blockedpartslist" title="Permalink to this headline">¶</a></h3>
+<p>This section determines how the clothing interacts with other clothing and the
+wearer’s body.</p>
+<dl>
+<dt>Example</dt><dd><p>I’ve defined this section as being the one to be used when equipped
+to the “SOCK” slot.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;blockedPartsList</span> <span class="na">slot=</span><span class="s">&quot;SOCK&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;blockedParts&gt;</span>
+                <span class="nt">&lt;displacementType&gt;</span>REMOVE_OR_EQUIP<span class="nt">&lt;/displacementType&gt;</span>
+                <span class="nt">&lt;clothingAccessRequired&gt;</span>
+                        <span class="nt">&lt;clothingAccess&gt;</span>FEET<span class="nt">&lt;/clothingAccess&gt;</span>
+                <span class="nt">&lt;/clothingAccessRequired&gt;</span>
+                <span class="nt">&lt;blockedBodyParts&gt;</span>
+                        <span class="nt">&lt;bodyPart&gt;</span>FEET<span class="nt">&lt;/bodyPart&gt;</span>
+                <span class="nt">&lt;/blockedBodyParts&gt;</span>
+                <span class="nt">&lt;clothingAccessBlocked/&gt;</span>
+                <span class="nt">&lt;concealedSlots/&gt;</span>
+        <span class="nt">&lt;/blockedParts&gt;</span>
+<span class="nt">&lt;/blockedPartsList&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p>This is another section to determines how the clothing interacts with other
+clothing and the wearer’s body.</p>
+<dl>
+<dt>Example</dt><dd><p>I’ve defined this section as being the one to be used when equipped
+to the “HAND” slot.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;blockedPartsList</span> <span class="na">slot=</span><span class="s">&quot;HAND&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;blockedParts&gt;</span>
+                <span class="nt">&lt;displacementType&gt;</span>REMOVE_OR_EQUIP<span class="nt">&lt;/displacementType&gt;</span>
+                <span class="nt">&lt;clothingAccessRequired&gt;</span>
+                        <span class="nt">&lt;clothingAccess&gt;</span>FINGERS<span class="nt">&lt;/clothingAccess&gt;</span>
+                <span class="nt">&lt;/clothingAccessRequired&gt;</span>
+                <span class="nt">&lt;blockedBodyParts/&gt;</span>
+                <span class="nt">&lt;clothingAccessBlocked/&gt;</span>
+                <span class="nt">&lt;concealedSlots/&gt;</span>
+        <span class="nt">&lt;/blockedParts&gt;</span>
+<span class="nt">&lt;/blockedPartsList&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<div class="section" id="blockedparts">
+<span id="blocked-parts"></span><h4>2.17.1 blockedParts<a class="headerlink" href="#blockedparts" title="Permalink to this headline">¶</a></h4>
+<p>You can add as many <code class="docutils literal notranslate"><span class="pre">blockedParts</span></code> elements as you like, but they should each have
+a different <a class="reference internal" href="#displacementtype">2.17.2 displacementType</a>, and <strong>there should be at least one, of type</strong>
+<code class="docutils literal notranslate"><span class="pre">REMOVE_OR_EQUIP</span></code>.</p>
+</div>
+<div class="section" id="displacementtype">
+<span id="displacement-type"></span><h4>2.17.2 displacementType<a class="headerlink" href="#displacementtype" title="Permalink to this headline">¶</a></h4>
+<p>If this clothing is displaced in the following way (in this case, by being
+removed), then the <a class="reference internal" href="#blockedbodyparts">2.17.4 blockedBodyParts</a>, <a class="reference internal" href="#clothingaccessblocked">2.17.5 clothingAccessBlocked</a>, and
+<a class="reference internal" href="#concealedslots">2.17.6 concealedSlots</a> will all be revealed. If multiple <a class="reference internal" href="#blockedparts">2.17.1 blockedParts</a> block or
+conceal the same slot, only one <code class="docutils literal notranslate"><span class="pre">blockedParts</span></code> needs to be displaced to reveal
+it. (e.g. If a pair of trousers has <code class="docutils literal notranslate"><span class="pre">UNZIPS</span></code> and <code class="docutils literal notranslate"><span class="pre">PULLS_DOWN</span></code> displacementTypes,
+and both of these contain the <code class="docutils literal notranslate"><span class="pre">concealedSlots</span></code> <code class="docutils literal notranslate"><span class="pre">slot</span></code> <code class="docutils literal notranslate"><span class="pre">PENIS</span></code>, then the penis
+will be revealed if either <code class="docutils literal notranslate"><span class="pre">UNZIPS</span></code> or <code class="docutils literal notranslate"><span class="pre">PULLS_DOWN</span></code> is activated.)</p>
+<p>A full list of displacementTypes can be found here:
+<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/inventory/clothing/DisplacementType.java">src/com/lilithsthrone/game/inventory/clothing/DisplacementType.java</a></p>
+</div>
+<div class="section" id="clothingaccessrequired">
+<span id="clothing-access-required"></span><h4>2.17.3 clothingAccessRequired<a class="headerlink" href="#clothingaccessrequired" title="Permalink to this headline">¶</a></h4>
+<p>The access required to perform this <a class="reference internal" href="#displacementtype">2.17.2 displacementType</a>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">clothingAccess</span></code> values can be found here:
+<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/inventory/clothing/ClothingAccess.java">src/com/lilithsthrone/game/inventory/clothing/ClothingAccess.java</a></p>
+</div>
+<div class="section" id="blockedbodyparts">
+<span id="blocked-body-parts"></span><h4>2.17.4 blockedBodyParts<a class="headerlink" href="#blockedbodyparts" title="Permalink to this headline">¶</a></h4>
+<p>The body parts that are blocked by this <a class="reference internal" href="#displacementtype">2.17.2 displacementType</a>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">bodyPart</span></code> values can be found here:
+<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/character/body/CoverableArea.java">src/com/lilithsthrone/game/character/body/CoverableArea.java</a></p>
+</div>
+<div class="section" id="clothingaccessblocked">
+<span id="clothing-access-blocked"></span><h4>2.17.5 clothingAccessBlocked<a class="headerlink" href="#clothingaccessblocked" title="Permalink to this headline">¶</a></h4>
+<p>The access that this <a class="reference internal" href="#displacementtype">2.17.2 displacementType</a> blocks. Again, clothingAccess values can
+be found here: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/inventory/clothing/ClothingAccess.java">src/com/lilithsthrone/game/inventory/clothing/ClothingAccess.java</a></p>
+<p>This element must contain a list of tag <code class="docutils literal notranslate"><span class="pre">clothingAccess</span></code> for values inserted
+here.</p>
+<dl>
+<dt>Example</dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;clothingAccess&gt;</span>MOUTH<span class="nt">&lt;/clothingAccess&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="concealedslots">
+<span id="concealed-slots"></span><h4>2.17.6 concealedSlots<a class="headerlink" href="#concealedslots" title="Permalink to this headline">¶</a></h4>
+<p>The slots that this ’displacementType’ conceals. Possible slots are found here:
+<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/inventory/InventorySlot.java">src/com/lilithsthrone/game/inventory/InventorySlot.java</a></p>
+<p>You can also use a preset list by adding an attribute named “values” to this
+element (an example – “CS Example” – is in the <a class="reference internal" href="#blockedparts">2.17.1 blockedParts</a> section below
+this one). The preset lists that you can use are found here:
+<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/inventory/clothing/PresetConcealmentLists.java">src/com/lilithsthrone/game/inventory/clothing/PresetConcealmentLists.java</a></p>
+<p>Use the tag <code class="docutils literal notranslate"><span class="pre">slot</span></code> for values inserted here.</p>
+<dl>
+<dt>Example</dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;slot&gt;</span>HEAD<span class="nt">&lt;/slot&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="incompatibleslots">
+<h3>2.18 incompatibleSlots<a class="headerlink" href="#incompatibleslots" title="Permalink to this headline">¶</a></h3>
+<p>Inventory slots that are incompatible with this clothing. The game’s swimsuit
+makes use of this, and, while fitting into the <code class="docutils literal notranslate"><span class="pre">CHEST</span></code> slot, also blocks
+<code class="docutils literal notranslate"><span class="pre">GROIN</span></code> and <code class="docutils literal notranslate"><span class="pre">STOMACH</span></code>. Possible slots are found here:
+<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/InventorySlot.java">https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/InventorySlot.java</a></p>
+<dl class="simple">
+<dt>Example</dt><dd><p>You need to define an <code class="docutils literal notranslate"><span class="pre">incompatibleSlots</span></code> element for each slot
+that the clothing can be equipped into, so here, I’ve defined an empty one for
+“SOCK”, and another empty one for “HAND”.</p>
+</dd>
+<dt>Example 2</dt><dd><p>If you want to add slots, then use the element like so (which
+would block the FINGER slot when equipped into the WRIST slot):</p>
+</dd>
+</dl>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;incompatibleSlots</span> <span class="na">slot=</span><span class="s">&quot;WRIST&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;slot&gt;</span>FINGER<span class="nt">&lt;/slot&gt;</span>
+<span class="nt">&lt;/incompatibleSlots&gt;</span>
+<span class="nt">&lt;incompatibleSlots</span> <span class="na">slot=</span><span class="s">&quot;SOCK&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;incompatibleSlots</span> <span class="na">slot=</span><span class="s">&quot;HAND&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="colours">
+<h3>2.19 colours<a class="headerlink" href="#colours" title="Permalink to this headline">¶</a></h3>
+<p>Please consult the relevant <a class="reference external" href="index.rst">documentation</a>.</p>
+<p>Your clothing can be coloured any way you like, but if you’d like the player to
+be able to dye your clothing, you can specify available colours here.
+<code class="docutils literal notranslate"><span class="pre">primaryColours</span></code>, <code class="docutils literal notranslate"><span class="pre">secondaryColours</span></code>, and <code class="docutils literal notranslate"><span class="pre">tertiaryColours</span></code> can all spawn in as
+a default colour, while their ’Dye’ counterparts are only available if the
+player chooses to dye the clothing in that colour. The game detects specific
+colour values, and recolours them to the value chosen by the player. These
+values are as follows:</p>
+<p>Colour types can be found in the files present in the following folder:
+<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/utils/colours">src/com/lilithsthrone/utils/colours</a></p>
+<p><strong>Important:</strong> please use the <code class="docutils literal notranslate"><span class="pre">Colour</span></code> values that start with <code class="docutils literal notranslate"><span class="pre">CLOTHING_</span></code>.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;primaryColours</span> <span class="na">recolouringAllowed=</span><span class="s">&quot;true&quot;</span> <span class="na">values=</span><span class="s">&quot;JUST_WHITE&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;primaryColoursDye</span> <span class="na">values=</span><span class="s">&quot;ALL&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;secondaryColours</span> <span class="na">values=</span><span class="s">&quot;JUST_BLACK&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;secondaryColoursDye</span> <span class="na">values=</span><span class="s">&quot;ALL&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;tertiaryColours</span> <span class="na">values=</span><span class="s">&quot;JUST_WHITE&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;tertiaryColoursDye&gt;</span>
+    <span class="nt">&lt;colour&gt;</span>CLOTHING_WHITE<span class="nt">&lt;/colour&gt;</span>
+    <span class="nt">&lt;colour&gt;</span>CLOTHING_BLACK<span class="nt">&lt;/colour&gt;</span>
+    <span class="nt">&lt;colour&gt;</span>CLOTHING_GREY<span class="nt">&lt;/colour&gt;</span>
+    <span class="nt">&lt;colour&gt;</span>CLOTHING_RED<span class="nt">&lt;/colour&gt;</span>
+    <span class="c">&lt;!-- ... --&gt;</span>
+    <span class="nt">&lt;colour&gt;</span>CLOTHING_PINK_LIGHT<span class="nt">&lt;/colour&gt;</span>
+<span class="nt">&lt;/tertiaryColoursDye&gt;</span>
+</pre></div>
+</div>
+<div class="section" id="customcolours">
+<h4>2.19.1 customColours<a class="headerlink" href="#customcolours" title="Permalink to this headline">¶</a></h4>
+<p>You can define any number of custom colours to replace the shades you’ve
+coloured your svg with.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;customColours&gt;</span>
+    <span class="nt">&lt;customColour</span> <span class="na">copyColourIndex=</span><span class="s">&quot;0&quot;</span> <span class="na">c0=</span><span class="s">&quot;#6C5353&quot;</span> <span class="na">c1=</span><span class="s">&quot;#916F6F&quot;</span> <span class="na">c2=</span><span class="s">&quot;#AC9393&quot;</span> <span class="na">c3=</span><span class="s">&quot;#C8B7B7&quot;</span> <span class="na">c4=</span><span class="s">&quot;#E3DBDB&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;defaultColours&gt;</span>
+                    <span class="nt">&lt;colour&gt;</span>CLOTHING_GREY<span class="nt">&lt;/colour&gt;</span> <span class="c">&lt;!-- The colours which this clothing should spawn in with. --&gt;</span>
+            <span class="nt">&lt;/defaultColours&gt;</span>
+            <span class="nt">&lt;extraColours</span> <span class="na">values=</span><span class="s">&quot;ALL&quot;</span><span class="nt">/&gt;</span> <span class="c">&lt;!-- The colours which this clothing can be dyed to. --&gt;</span>
+    <span class="nt">&lt;/customColour&gt;</span>
+<span class="nt">&lt;/customColours&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="patterns">
+<h3>2.20 patterns<a class="headerlink" href="#patterns" title="Permalink to this headline">¶</a></h3>
+<p>This section details how to define patterns. If your svg file does not have a
+<code class="docutils literal notranslate"><span class="pre">patternLayer</span></code> defined, you can safely delete this whole section:</p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">defaultPatterns</span></code></dt><dd><p>lists the patterns that this clothing can spawn with.</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">patternChance</span></code></dt><dd><p>is the chance that this clothing will spawn with a
+pattern. Values are from 0 to 1, and should end with an “f”. i.e. 0.5f is a
+50% chance, 0.75f is 75%, 0.1275 is 12.75%, etc.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">colourNameDerivedFromPattern</span></code></dt><dd><p>sets whether the pattern’s primary colour
+should be used for the clothing’s name, instead of the “colour” value. i.e.
+If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, then a green+black tiger-striped item of clothing would be
+called “green”, even if the base colour was something else.</p>
+</dd>
+</dl>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">pattern</span></code></dt><dd><p>Pattern values can be found as svg file names in the folder
+<code class="docutils literal notranslate"><span class="pre">res/patterns</span></code></p>
+</dd>
+</dl>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;defaultPatterns</span> <span class="na">patternChance=</span><span class="s">&quot;0&quot;</span> <span class="na">colourNameDerivedFromPattern=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;pattern&gt;</span>camo<span class="nt">&lt;/pattern&gt;</span>
+<span class="nt">&lt;/defaultPatterns&gt;</span>
+</pre></div>
+</div>
+<div class="section" id="patternprimarycolours-patternsecondarycolours-and-patterntertiarycolours">
+<h4>2.20.1 patternPrimaryColours, patternSecondaryColours, and patternTertiaryColours<a class="headerlink" href="#patternprimarycolours-patternsecondarycolours-and-patterntertiarycolours" title="Permalink to this headline">¶</a></h4>
+<p>Colours work the same as explained in the <a class="reference internal" href="#colours">2.19 colours</a> section.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;patternPrimaryColours&gt;</span>
+    <span class="nt">&lt;colour&gt;</span>CLOTHING_GREEN<span class="nt">&lt;/colour&gt;</span>
+<span class="nt">&lt;/patternPrimaryColours&gt;</span>
+<span class="nt">&lt;patternSecondaryColours</span> <span class="na">values=</span><span class="s">&quot;ALL&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;patternTertiaryColours/&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="custompatterncolours">
+<h4>2.20.2 customPatternColours<a class="headerlink" href="#custompatterncolours" title="Permalink to this headline">¶</a></h4>
+<p>Custom pattern colours can be defined just like the customColours up above.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;customPatternColours/&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="itemtags">
+<h3>2.21 itemTags<a class="headerlink" href="#itemtags" title="Permalink to this headline">¶</a></h3>
+<p>These tags determine where in the world your clothing can be found, and what
+special attributes your clothing should have. Possible tags are found here:
+<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/inventory/ItemTag.java">src/com/lilithsthrone/game/inventory/ItemTag.java</a></p>
+<p><code class="docutils literal notranslate"><span class="pre">itemTags</span></code> without a <code class="docutils literal notranslate"><span class="pre">slot</span></code> defined will have these tags added to every
+equippable slot. Should only be used for generic tags like those related to
+which vendors sell it.</p>
+<p><code class="docutils literal notranslate"><span class="pre">itemTags</span></code> with a <code class="docutils literal notranslate"><span class="pre">slot</span></code> defined will have these tags applied ONLY when the
+clothing is equipped into that slot. In this example, equipping the socks onto
+your hands hinders arm movement. This is not entirely logical, and I added this
+just for demonstration purposes.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;itemTags&gt;</span>
+    <span class="nt">&lt;tag&gt;</span>NOT_FOR_SALE<span class="nt">&lt;/tag&gt;</span>
+<span class="nt">&lt;/itemTags&gt;</span>
+<span class="nt">&lt;itemTags</span> <span class="na">slot=</span><span class="s">&quot;HAND&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;tag&gt;</span>HINDERS_ARM_MOVEMENT<span class="nt">&lt;/tag&gt;</span>
+<span class="nt">&lt;/itemTags&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="sexattributesself">
+<span id="sex-attributes-self"></span><h2>3 sexAttributesSelf<a class="headerlink" href="#sexattributesself" title="Permalink to this headline">¶</a></h2>
+<p>See the <code class="docutils literal notranslate"><span class="pre">res/clothing/innoxia/buttPLugs/butt_plug.xml</span></code> file for a working
+example of this element.</p>
+<p>These are the sex attributes applicable to the wearer (i.e. when inserted in the
+wearer’s orifices or when the wearer is penetrating this clothing type. Mainly
+used for insertable dildos.)</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;sexAttributesSelf&gt;</span>
+    <span class="nt">&lt;penetration&gt;</span>
+            <span class="nt">&lt;length&gt;</span>15<span class="nt">&lt;/length&gt;</span>
+            <span class="nt">&lt;girth&gt;</span>5<span class="nt">&lt;/girth&gt;</span>
+            <span class="nt">&lt;modifiers&gt;</span>
+                    <span class="nt">&lt;mod&gt;</span>VEINY<span class="nt">&lt;/mod&gt;</span>
+            <span class="nt">&lt;/modifiers&gt;</span>
+    <span class="nt">&lt;/penetration&gt;</span>
+    <span class="nt">&lt;orifice&gt;</span>
+            <span class="nt">&lt;depth&gt;</span>0<span class="nt">&lt;/depth&gt;</span>
+            <span class="nt">&lt;capacity&gt;</span>0<span class="nt">&lt;/capacity&gt;</span>
+            <span class="nt">&lt;elasticity&gt;</span>3<span class="nt">&lt;/elasticity&gt;</span>
+            <span class="nt">&lt;plasticity&gt;</span>3<span class="nt">&lt;/plasticity&gt;</span>
+            <span class="nt">&lt;wetness&gt;</span>0<span class="nt">&lt;/wetness&gt;</span>
+            <span class="nt">&lt;modifiers&gt;</span>
+                    <span class="nt">&lt;mod&gt;</span>PUFFY<span class="nt">&lt;/mod&gt;</span>
+            <span class="nt">&lt;/modifiers&gt;</span>
+    <span class="nt">&lt;/orifice&gt;</span>
+<span class="nt">&lt;/sexAttributesSelf&gt;</span>
+</pre></div>
+</div>
+<div class="section" id="penetration">
+<h3>3.1 penetration<a class="headerlink" href="#penetration" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>length</dt><dd><p>value in cm</p>
+</dd>
+<dt>grith</dt><dd><p>0-6 corresponding to <code class="docutils literal notranslate"><span class="pre">PenetrationGirth</span> <span class="pre">Enum</span></code> values</p>
+</dd>
+<dt>modifiers</dt><dd><p>For adding modifiers, add <code class="docutils literal notranslate"><span class="pre">mod</span></code> tags containing
+<code class="docutils literal notranslate"><span class="pre">PenetrationModifier</span> <span class="pre">Enum</span></code> values</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="orifice">
+<h3>3.2 orifice<a class="headerlink" href="#orifice" title="Permalink to this headline">¶</a></h3>
+<p><strong>Warning!</strong> As of <em>v0.3.7</em>, orifice sex toy support is not fully implemented into
+the game!</p>
+<dl class="simple">
+<dt>depth</dt><dd><p>value in cm</p>
+</dd>
+<dt>capacity</dt><dd><p>value in cm, corresponding to the diameter of the orifice</p>
+</dd>
+<dt>elasticity</dt><dd><p>0-7 corresponding to <code class="docutils literal notranslate"><span class="pre">OrificeElasticity</span> <span class="pre">Enum</span></code> values</p>
+</dd>
+<dt>plasticity</dt><dd><p>0-7 corresponding to <code class="docutils literal notranslate"><span class="pre">OrificePlasticity</span> <span class="pre">Enum</span></code> values</p>
+</dd>
+<dt>wetness</dt><dd><p>0-7 corresponding to <code class="docutils literal notranslate"><span class="pre">Wetness</span> <span class="pre">Enum</span></code> values</p>
+</dd>
+<dt>modifiers</dt><dd><p>list of <code class="docutils literal notranslate"><span class="pre">mod</span></code> tags, each containing <code class="docutils literal notranslate"><span class="pre">OrificeModifier</span> <span class="pre">Enum</span></code> values</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="sexattributesother">
+<span id="sex-attributes-other"></span><h2>4 sexAttributesOther<a class="headerlink" href="#sexattributesother" title="Permalink to this headline">¶</a></h2>
+<p>These are the sex attributes applicable to someone who is interacting with the
+wearer (i.e. the penetration/orifice which is available for people other than
+the wearer. Mainly used for strap-on dildos.)</p>
+<p>See the <code class="docutils literal notranslate"><span class="pre">res/clothing/norin/strapless_dildo/strapless_dildo.xml</span></code> file for a
+working example of the following excerpt.</p>
+<p>For an explanation of the effects of the different sub elements, please refer to
+<a class="reference internal" href="#sex-attributes-self">sex-attributes-self</a>.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;sexAttributesOther&gt;</span>
+    <span class="nt">&lt;penetration&gt;</span>
+            <span class="nt">&lt;length&gt;</span>25<span class="nt">&lt;/length&gt;</span>
+            <span class="nt">&lt;girth&gt;</span>3<span class="nt">&lt;/girth&gt;</span>
+            <span class="nt">&lt;modifiers/&gt;</span>
+    <span class="nt">&lt;/penetration&gt;</span>
+    <span class="nt">&lt;orifice/&gt;</span>
+<span class="nt">&lt;/sexAttributesOther&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="replacementtext">
+<h2>5 replacementText<a class="headerlink" href="#replacementtext" title="Permalink to this headline">¶</a></h2>
+<p>The following sections are for defining the descriptions of displacing or
+replacing your clothing. The attribute <code class="docutils literal notranslate"><span class="pre">type</span></code> defines which <code class="docutils literal notranslate"><span class="pre">DisplacementType</span></code>
+your descriptions are applied to. For standard equipping and unequipping, use
+<code class="docutils literal notranslate"><span class="pre">REMOVE_OR_EQUIP</span></code>. Types can be found here:
+<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/inventory/clothing/DisplacementType.java">src/com/lilithsthrone/game/inventory/clothing/DisplacementType.java</a></p>
+<dl>
+<dt>Example</dt><dd><p>This is the equip text for when socks are equipped to the <code class="docutils literal notranslate"><span class="pre">SOCK</span></code>
+slot:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;replacementText</span> <span class="na">slot=</span><span class="s">&quot;SOCK&quot;</span> <span class="na">type=</span><span class="s">&quot;REMOVE_OR_EQUIP&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;self&gt;</span>
+                <span class="cp">&lt;![CDATA[[npc.Name] [npc.verb(pull)] the socks on to cover [npc.her] [npc.feet].]]&gt;</span>
+        <span class="nt">&lt;/self&gt;</span>
+        <span class="nt">&lt;other&gt;</span>
+                <span class="cp">&lt;![CDATA[[npc.Name] [npc.verb(pull)] the socks onto [npc2.namePos] [npc2.feet].]]&gt;</span>
+        <span class="nt">&lt;/other&gt;</span>
+        <span class="nt">&lt;otherRough&gt;</span>
+                <span class="cp">&lt;![CDATA[[npc.Name] roughly [npc.verb(pull)] the socks onto [npc2.namePos] [npc2.feet].]]&gt;</span>
+        <span class="nt">&lt;/otherRough&gt;</span>
+<span class="nt">&lt;/replacementText&gt;</span>
+</pre></div>
+</div>
+</dd>
+<dt>Example</dt><dd><p>This is the equip text for when socks are equipped to the “HAND”
+slot:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;replacementText</span> <span class="na">slot=</span><span class="s">&quot;HAND&quot;</span> <span class="na">type=</span><span class="s">&quot;REMOVE_OR_EQUIP&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;self&gt;</span>
+                <span class="cp">&lt;![CDATA[[npc.Name] [npc.verb(pull)] the socks on to cover [npc.her] [npc.hands].]]&gt;</span>
+        <span class="nt">&lt;/self&gt;</span>
+        <span class="nt">&lt;other&gt;</span>
+                <span class="cp">&lt;![CDATA[[npc.Name] [npc.verb(pull)] the socks onto [npc2.namePos] [npc2.hands].]]&gt;</span>
+        <span class="nt">&lt;/other&gt;</span>
+        <span class="nt">&lt;otherRough&gt;</span>
+                <span class="cp">&lt;![CDATA[[npc.Name] roughly [npc.verb(pull)] the socks onto [npc2.namePos] [npc2.hands].]]&gt;</span>
+        <span class="nt">&lt;/otherRough&gt;</span>
+<span class="nt">&lt;/replacementText&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="displacementtext">
+<h2>6 displacementText<a class="headerlink" href="#displacementtext" title="Permalink to this headline">¶</a></h2>
+<p>This section is used for removal and displacement.</p>
+<dl>
+<dt>Example</dt><dd><p>This is the unequip text for when socks are removed from the “SOCK”
+slot:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;displacementText</span> <span class="na">slot=</span><span class="s">&quot;SOCK&quot;</span> <span class="na">type=</span><span class="s">&quot;REMOVE_OR_EQUIP&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;self&gt;</span>
+                <span class="cp">&lt;![CDATA[[npc.Name] [npc.verb(pull)] off [npc.her] socks.]]&gt;</span>
+        <span class="nt">&lt;/self&gt;</span>
+        <span class="nt">&lt;other&gt;</span>
+                <span class="cp">&lt;![CDATA[[npc.Name] [npc.verb(pull)] off [npc2.namePos] socks.]]&gt;</span>
+        <span class="nt">&lt;/other&gt;</span>
+        <span class="nt">&lt;otherRough&gt;</span>
+                <span class="cp">&lt;![CDATA[[npc.Name] roughly [npc.verb(pull)] off [npc2.namePos] socks.]]&gt;</span>
+        <span class="nt">&lt;/otherRough&gt;</span>
+<span class="nt">&lt;/displacementText&gt;</span>
+</pre></div>
+</div>
+</dd>
+<dt>Example</dt><dd><p>This is the unequip text for when socks are removed from the “HAND”
+slot:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;displacementText</span> <span class="na">slot=</span><span class="s">&quot;HAND&quot;</span> <span class="na">type=</span><span class="s">&quot;REMOVE_OR_EQUIP&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;self&gt;</span>
+                <span class="cp">&lt;![CDATA[[npc.Name] [npc.verb(pull)] the socks from off of [npc.her] [npc.hands].]]&gt;</span>
+        <span class="nt">&lt;/self&gt;</span>
+        <span class="nt">&lt;other&gt;</span>
+                <span class="cp">&lt;![CDATA[[npc.Name] [npc.verb(pull)] the socks from off of [npc2.namePos] [npc2.hands].]]&gt;</span>
+        <span class="nt">&lt;/other&gt;</span>
+        <span class="nt">&lt;otherRough&gt;</span>
+                <span class="cp">&lt;![CDATA[[npc.Name] roughly [npc.verb(pull)] the socks from off of [npc2.namePos] [npc2.hands].]]&gt;</span>
+        <span class="nt">&lt;/otherRough&gt;</span>
+<span class="nt">&lt;/displacementText&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Item Clothing</a><ul>
+<li><a class="reference internal" href="#general-information">General Information</a></li>
+<li><a class="reference internal" href="#coreattributes">coreAttributes</a><ul>
+<li><a class="reference internal" href="#authortag">authorTag</a></li>
+<li><a class="reference internal" href="#value">value</a></li>
+<li><a class="reference internal" href="#determiner">determiner</a></li>
+<li><a class="reference internal" href="#name">name</a></li>
+<li><a class="reference internal" href="#nameplural">namePlural</a></li>
+<li><a class="reference internal" href="#description">description</a></li>
+<li><a class="reference internal" href="#physicalresistance">physicalResistance</a></li>
+<li><a class="reference internal" href="#femininity">2.8 femininity</a></li>
+<li><a class="reference internal" href="#equipslots">2.9 equipSlots</a></li>
+<li><a class="reference internal" href="#rarity">2.10 rarity</a></li>
+<li><a class="reference internal" href="#clothingset">2.11 clothingSet</a></li>
+<li><a class="reference internal" href="#imagename">2.12 imageName</a></li>
+<li><a class="reference internal" href="#imageequippedname">2.13 imageEquippedName</a></li>
+<li><a class="reference internal" href="#stickers">2.14 stickers</a><ul>
+<li><a class="reference internal" href="#category">2.14.1 category</a><ul>
+<li><a class="reference internal" href="#categoryname">2.14.1.1 categoryName</a></li>
+<li><a class="reference internal" href="#sticker">2.14.1.2 sticker</a><ul>
+<li><a class="reference internal" href="#stickername">2.14.1.2.1 stickerName</a></li>
+<li><a class="reference internal" href="#nameprefix">2.14.1.2.2 namePrefix</a></li>
+<li><a class="reference internal" href="#namepostfix">2.14.1.2.3 namePostfix</a></li>
+<li><a class="reference internal" href="#descriptionmodification">2.14.1.2.4 descriptionmodification</a></li>
+<li><a class="reference internal" href="#sticker-imagename">2.14.1.2.5 imageName</a></li>
+<li><a class="reference internal" href="#itemtagsadded">2.14.1.2.6 itemTagsAdded</a></li>
+<li><a class="reference internal" href="#itemtagsremoved">2.14.1.2.7 itemTagsRemoved</a></li>
+<li><a class="reference internal" href="#unavailabilitytext">2.14.1.2.8 unavailabilityText</a></li>
+<li><a class="reference internal" href="#availabilitytext">2.14.1.2.9 availabilityText</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#echantmentlimit">2.15 echantmentLimit</a></li>
+<li><a class="reference internal" href="#effects">2.16 effects</a></li>
+<li><a class="reference internal" href="#blockedpartslist">2.17 blockedPartsList</a><ul>
+<li><a class="reference internal" href="#blockedparts">2.17.1 blockedParts</a></li>
+<li><a class="reference internal" href="#displacementtype">2.17.2 displacementType</a></li>
+<li><a class="reference internal" href="#clothingaccessrequired">2.17.3 clothingAccessRequired</a></li>
+<li><a class="reference internal" href="#blockedbodyparts">2.17.4 blockedBodyParts</a></li>
+<li><a class="reference internal" href="#clothingaccessblocked">2.17.5 clothingAccessBlocked</a></li>
+<li><a class="reference internal" href="#concealedslots">2.17.6 concealedSlots</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#incompatibleslots">2.18 incompatibleSlots</a></li>
+<li><a class="reference internal" href="#colours">2.19 colours</a><ul>
+<li><a class="reference internal" href="#customcolours">2.19.1 customColours</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#patterns">2.20 patterns</a><ul>
+<li><a class="reference internal" href="#patternprimarycolours-patternsecondarycolours-and-patterntertiarycolours">2.20.1 patternPrimaryColours, patternSecondaryColours, and patternTertiaryColours</a></li>
+<li><a class="reference internal" href="#custompatterncolours">2.20.2 customPatternColours</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#itemtags">2.21 itemTags</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#sexattributesself">3 sexAttributesSelf</a><ul>
+<li><a class="reference internal" href="#penetration">3.1 penetration</a></li>
+<li><a class="reference internal" href="#orifice">3.2 orifice</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#sexattributesother">4 sexAttributesOther</a></li>
+<li><a class="reference internal" href="#replacementtext">5 replacementText</a></li>
+<li><a class="reference internal" href="#displacementtext">6 displacementText</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="items.html"
+                        title="previous chapter">Items folder</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="items_items.html"
+                        title="next chapter">Miscanelaous Items</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/clothing.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="items_items.html" title="Miscanelaous Items"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="items.html" title="Items folder"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Lilith&#39;s Throne Mod Documentation  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="items.html" >Items folder</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Item Clothing</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Bicobus.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

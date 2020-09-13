@@ -1,0 +1,709 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Items Weapons &#8212; Lilith&#39;s Throne Mod Documentation  documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <link rel="canonical" href="https://bicobus.github.io/lilith-throne-documentation/weapons.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Outfits" href="outfits.html" />
+    <link rel="prev" title="Tattoos" href="tattoos.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="outfits.html" title="Outfits"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="tattoos.html" title="Tattoos"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Lilith&#39;s Throne Mod Documentation  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="items.html" accesskey="U">Items folder</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Items Weapons</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="items-weapons">
+<h1><a class="toc-backref" href="#id2">Items Weapons</a><a class="headerlink" href="#items-weapons" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Author</dt>
+<dd class="field-odd"><p>innoxia, bicobus</p>
+</dd>
+</dl>
+</div></blockquote>
+<div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#items-weapons" id="id2">Items Weapons</a></p>
+<ul>
+<li><p><a class="reference internal" href="#coreattributes" id="id3">1 coreAttributes</a></p>
+<ul>
+<li><p><a class="reference internal" href="#authortag" id="id4">1.1 authorTag</a></p></li>
+<li><p><a class="reference internal" href="#value" id="id5">1.2 value</a></p></li>
+<li><p><a class="reference internal" href="#melee" id="id6">1.3 melee</a></p></li>
+<li><p><a class="reference internal" href="#twohanded" id="id7">1.4 twoHanded</a></p></li>
+<li><p><a class="reference internal" href="#determiner" id="id8">1.5 determiner</a></p></li>
+<li><p><a class="reference internal" href="#name" id="id9">1.6 name</a></p></li>
+<li><p><a class="reference internal" href="#nameplural" id="id10">1.7 namePlural</a></p></li>
+<li><p><a class="reference internal" href="#description" id="id11">1.8 description</a></p></li>
+<li><p><a class="reference internal" href="#attackdescriptor" id="id12">1.9 attackDescriptor</a></p></li>
+<li><p><a class="reference internal" href="#attacktooltipdescription" id="id13">1.10 attackTooltipDescription</a></p></li>
+<li><p><a class="reference internal" href="#rarity" id="id14">1.11 rarity</a></p></li>
+<li><p><a class="reference internal" href="#weaponset" id="id15">1.12 weaponSet</a></p></li>
+<li><p><a class="reference internal" href="#equiptext" id="id16">1.13 equipText</a></p></li>
+<li><p><a class="reference internal" href="#unequiptext" id="id17">1.14 unequipText</a></p></li>
+<li><p><a class="reference internal" href="#imagename" id="id18">1.15 imageName</a></p></li>
+<li><p><a class="reference internal" href="#imageequippedname" id="id19">1.16 imageEquippedname</a></p></li>
+<li><p><a class="reference internal" href="#physicalresistance" id="id20">1.17 physicalResistance</a></p></li>
+<li><p><a class="reference internal" href="#damage" id="id21">1.18 damage</a></p></li>
+<li><p><a class="reference internal" href="#arcanecost" id="id22">1.19 arcaneCost</a></p></li>
+<li><p><a class="reference internal" href="#damagevariance" id="id23">1.20 damageVariance</a></p></li>
+<li><p><a class="reference internal" href="#availabledamagetypes" id="id24">1.21 availableDamageTypes</a></p></li>
+<li><p><a class="reference internal" href="#spells" id="id25">1.22 spells</a></p></li>
+<li><p><a class="reference internal" href="#combatmoves" id="id26">1.23 combatMoves</a></p></li>
+<li><p><a class="reference internal" href="#enchantmentlimit" id="id27">1.24 enchantmentLimit</a></p></li>
+<li><p><a class="reference internal" href="#effects" id="id28">1.25 effects</a></p></li>
+<li><p><a class="reference internal" href="#extraeffects" id="id29">1.26 extraEffects</a></p></li>
+<li><p><a class="reference internal" href="#onhiteffect" id="id30">1.27 onHitEffect</a></p></li>
+<li><p><a class="reference internal" href="#oncriticalhiteffect" id="id31">1.28 onCriticalHitEffect</a></p></li>
+<li><p><a class="reference internal" href="#colours" id="id32">1.29 colours</a></p></li>
+<li><p><a class="reference internal" href="#customcolours" id="id33">1.30 customColours</a></p></li>
+<li><p><a class="reference internal" href="#itemtags" id="id34">1.31 itemTags</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#hitdescription" id="id35">2 hitDescription</a></p></li>
+<li><p><a class="reference internal" href="#missdescription" id="id36">3 missDescription</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="coreattributes">
+<h2><a class="toc-backref" href="#id3">1 coreAttributes</a><a class="headerlink" href="#coreattributes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="authortag">
+<h3><a class="toc-backref" href="#id4">1.1 authorTag</a><a class="headerlink" href="#authortag" title="Permalink to this headline">¶</a></h3>
+<p>How attribution to the mod author (<em>you</em>) should be displayed in the item’s
+tooltip. If left blank or not included, a default attribution based on folder
+name will be used.</p>
+<p>This tag is optionnal.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;authorTag&gt;</span><span class="cp">&lt;![CDATA[A discreet inscription at the base of the dagger&#39;s blade informs you that it was made by &#39;Innoxia&#39;.]]&gt;</span><span class="nt">&lt;/authorTag&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="value">
+<h3><a class="toc-backref" href="#id5">1.2 value</a><a class="headerlink" href="#value" title="Permalink to this headline">¶</a></h3>
+<p>How much this weapon is worth.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;value&gt;</span>3000<span class="nt">&lt;/value&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="melee">
+<h3><a class="toc-backref" href="#id6">1.3 melee</a><a class="headerlink" href="#melee" title="Permalink to this headline">¶</a></h3>
+<p>Use “true” if this is a melee weapon, and “false” if it’s ranged. (Without
+quotation marks.)</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;melee&gt;</span>true<span class="nt">&lt;/melee&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="twohanded">
+<h3><a class="toc-backref" href="#id7">1.4 twoHanded</a><a class="headerlink" href="#twohanded" title="Permalink to this headline">¶</a></h3>
+<p>Use “true” if this weapon is two-handed, and thus cannot be simultaneously
+wielded with an offhand weapon, and “false” if it’s one-handed. (Without
+quotation marks.)</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;twoHanded&gt;</span>false<span class="nt">&lt;/twoHanded&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="determiner">
+<h3><a class="toc-backref" href="#id8">1.5 determiner</a><a class="headerlink" href="#determiner" title="Permalink to this headline">¶</a></h3>
+<p>What’s appended before the weapon’s name in an instance of “Innoxia was holding
+X Demon’s Dagger”, where X is the determiner. This will usually be either “a” or
+“an”, but for other weapons may be different.</p>
+<p>An example might be: “Innoxia was holding X scissors”, where X (the determiner)
+would now need to be “a pair of”.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;determiner&gt;</span><span class="cp">&lt;![CDATA[a]]&gt;</span><span class="nt">&lt;/determiner&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="name">
+<h3><a class="toc-backref" href="#id9">1.6 name</a><a class="headerlink" href="#name" title="Permalink to this headline">¶</a></h3>
+<p>The name of this weapon.</p>
+<p><code class="docutils literal notranslate"><span class="pre">appendDamageName</span></code> defaults to true and can be left out. If you ever want this
+weapon to not be described by its damage type, then set it as false. That is
+this dagger would always be called “Demon’s Dagger” instead of, for example,
+“Forceful Demon’s Dagger”.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;name</span> <span class="na">appendDamageName=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[Demon&#39;s Dagger]]&gt;</span><span class="nt">&lt;/name&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="nameplural">
+<h3><a class="toc-backref" href="#id10">1.7 namePlural</a><a class="headerlink" href="#nameplural" title="Permalink to this headline">¶</a></h3>
+<p>The plural name of this weapon. If <code class="docutils literal notranslate"><span class="pre">pluralByDefault</span></code>’s “false” is changed to
+“true”, then the game will always the plural name when referring to this weapon.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;namePlural</span> <span class="na">pluralByDefault=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[Demon&#39;s Daggers]]&gt;</span><span class="nt">&lt;/namePlural&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="description">
+<h3><a class="toc-backref" href="#id11">1.8 description</a><a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h3>
+<p>The description/lore of this weapon.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;description&gt;</span><span class="cp">&lt;![CDATA[A demon&#39;s dagger, with a blade made out of enchanted ethereal energy. Daggers such as this one are carried by the elite demon Enforcers, and, while intended primarily to be a symbol of power and status, they are nonetheless completely functional.]]&gt;</span><span class="nt">&lt;/description&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="attackdescriptor">
+<h3><a class="toc-backref" href="#id12">1.9 attackDescriptor</a><a class="headerlink" href="#attackdescriptor" title="Permalink to this headline">¶</a></h3>
+<p>How the weapon is used. This should be a single verb, and is used as the title
+of attacking actions in combat.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;attackDescriptor&gt;</span>stab<span class="nt">&lt;/attackDescriptor&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="attacktooltipdescription">
+<h3><a class="toc-backref" href="#id13">1.10 attackTooltipDescription</a><a class="headerlink" href="#attacktooltipdescription" title="Permalink to this headline">¶</a></h3>
+<p>The description that’s displayed when hovering over the attack action in combat.
+Follow the same guidelines as equipText (a couple of entries further down this
+page).</p>
+<p>As this tooltip is only ever seen from the player’s perspective, you can always
+write in the first-person narrative. (Still use npc2 for the target, though.)</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;attackTooltipDescription&gt;</span><span class="cp">&lt;![CDATA[Strike out with your Demon&#39;s Dagger at [npc2.name].]]&gt;</span><span class="nt">&lt;/attackTooltipDescription&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rarity">
+<h3><a class="toc-backref" href="#id14">1.11 rarity</a><a class="headerlink" href="#rarity" title="Permalink to this headline">¶</a></h3>
+<p>The rarity of this weapon.</p>
+<p>Values can be found here: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/Rarity.java">https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/Rarity.java</a></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;rarity&gt;</span>EPIC<span class="nt">&lt;/rarity&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="weaponset">
+<h3><a class="toc-backref" href="#id15">1.12 weaponSet</a><a class="headerlink" href="#weaponset" title="Permalink to this headline">¶</a></h3>
+<p>Which set this weapon is a part of.</p>
+<p>Values can be found here: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/clothing/ClothingSet.java">https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/clothing/ClothingSet.java</a></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;weaponSet/&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="equiptext">
+<h3><a class="toc-backref" href="#id16">1.13 equipText</a><a class="headerlink" href="#equiptext" title="Permalink to this headline">¶</a></h3>
+<p>The description that’s used when equipping this weapon. The description should
+be generic, able to be used by both the player and NPCs. Just make sure to use
+the tag <code class="docutils literal notranslate"><span class="pre">[npc.verb()]</span></code> whenever using a verb, which will then, for example,
+parse like this:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[npc.verb(run)]</span></code> if npc is player = “run”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[npc.verb(run)]</span></code> if npc is not the player = “runs”</p></li>
+</ul>
+<p>Always use the first-person singular verb.</p>
+<p>The target <code class="docutils literal notranslate"><span class="pre">npc</span></code> OR <code class="docutils literal notranslate"><span class="pre">npc1</span></code> should be used for the character using the weapon.
+e.g. If the player is the one attacking (and is called Innoxia), then
+<code class="docutils literal notranslate"><span class="pre">[npc.Name]</span></code> will return “Innoxia”.</p>
+<p>The target <code class="docutils literal notranslate"><span class="pre">npc2</span></code> should be used for the character being attacked. e.g. If Brax
+is the one being attacked, then <code class="docutils literal notranslate"><span class="pre">[npc2.Name]</span></code> will return “Brax”.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;equipText&gt;</span><span class="cp">&lt;![CDATA[[npc.Name] [npc.verb(unsheathe)] the dagger, readying it for use in combat.]]&gt;</span><span class="nt">&lt;/equipText&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="unequiptext">
+<h3><a class="toc-backref" href="#id17">1.14 unequipText</a><a class="headerlink" href="#unequiptext" title="Permalink to this headline">¶</a></h3>
+<p>The description that’s used when equipping this weapon. Follow the same
+guidelines as equipText.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;unequipText&gt;</span><span class="cp">&lt;![CDATA[[npc.Name] [npc.verb(sheathe)] the dagger, before putting it away.]]&gt;</span><span class="nt">&lt;/unequipText&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="imagename">
+<h3><a class="toc-backref" href="#id18">1.15 imageName</a><a class="headerlink" href="#imagename" title="Permalink to this headline">¶</a></h3>
+<p>The file name of this weapon’s image when in the character’s inventory. The only
+supported file type is .svg. I use the free program “Inkscape” to make .svg
+images for the game.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;imageName&gt;</span>dagger_sheathed.svg<span class="nt">&lt;/imageName&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="imageequippedname">
+<h3><a class="toc-backref" href="#id19">1.16 imageEquippedname</a><a class="headerlink" href="#imageequippedname" title="Permalink to this headline">¶</a></h3>
+<p>The file name of this weapon’s image when equipped. Can be (and usually is) the
+same as the imageName (which in this example would be <code class="docutils literal notranslate"><span class="pre">dagger_sheathed.svg</span></code>).</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;imageEquippedName&gt;</span>dagger.svg<span class="nt">&lt;/imageEquippedName&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="physicalresistance">
+<h3><a class="toc-backref" href="#id20">1.17 physicalResistance</a><a class="headerlink" href="#physicalresistance" title="Permalink to this headline">¶</a></h3>
+<p>How much natural physical resistance this weapon provides when equipped. Should
+only really be above 0 for shields or other such protective weapons.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;physicalResistance&gt;</span>0<span class="nt">&lt;/physicalResistance&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="damage">
+<h3><a class="toc-backref" href="#id21">1.18 damage</a><a class="headerlink" href="#damage" title="Permalink to this headline">¶</a></h3>
+<p>The base damage that this weapon deals.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;damage&gt;</span>20<span class="nt">&lt;/damage&gt;</span>
+</pre></div>
+</div>
+<p>If you want to define additional AoE damages, add <code class="docutils literal notranslate"><span class="pre">aoe</span></code> elements.</p>
+<p>A working example of AoE damages can be found in
+<code class="docutils literal notranslate"><span class="pre">res/weapons/innoxia/lightningGlobe/lightning_globe.xml</span></code>.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;aoe</span> <span class="na">chance=</span><span class="s">&quot;50&quot;</span><span class="nt">&gt;</span>10<span class="nt">&lt;/aoe&gt;</span> 50% chance of hitting an additional enemy (who has not been hit yet) for 10 damage
+<span class="nt">&lt;aoe</span> <span class="na">chance=</span><span class="s">&quot;25&quot;</span><span class="nt">&gt;</span>5<span class="nt">&lt;/aoe&gt;</span> 25% chance of hitting an additional enemy (who has not been hit yet) for 5 damage
+</pre></div>
+</div>
+</div>
+<div class="section" id="arcanecost">
+<h3><a class="toc-backref" href="#id22">1.19 arcaneCost</a><a class="headerlink" href="#arcanecost" title="Permalink to this headline">¶</a></h3>
+<p>How many arcane essences are required, and drained, by firing this weapon.
+Ranged weapons should usually use the value 1, while melee weapons should
+usually be 0.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;arcaneCost&gt;</span>0<span class="nt">&lt;/arcaneCost&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="damagevariance">
+<h3><a class="toc-backref" href="#id23">1.20 damageVariance</a><a class="headerlink" href="#damagevariance" title="Permalink to this headline">¶</a></h3>
+<p>The variance in base damage when this weapon is actually used to attack.</p>
+<p>Values can be found here:
+<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/combat/DamageVariance.java">https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/combat/DamageVariance.java</a></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;damageVariance&gt;</span>MEDIUM<span class="nt">&lt;/damageVariance&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="availabledamagetypes">
+<h3><a class="toc-backref" href="#id24">1.21 availableDamageTypes</a><a class="headerlink" href="#availabledamagetypes" title="Permalink to this headline">¶</a></h3>
+<p>The available damage types that this weapon can spawn in with.</p>
+<p>Values can be found here (MISC should not be used):
+<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/combat/DamageType.java">src/com/lilithsthrone/game/combat/DamageType.java</a></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;availableDamageTypes&gt;</span>
+    <span class="nt">&lt;damageType&gt;</span>PHYSICAL<span class="nt">&lt;/damageType&gt;</span>
+    <span class="nt">&lt;damageType&gt;</span>ICE<span class="nt">&lt;/damageType&gt;</span>
+    <span class="nt">&lt;damageType&gt;</span>FIRE<span class="nt">&lt;/damageType&gt;</span>
+    <span class="nt">&lt;damageType&gt;</span>POISON<span class="nt">&lt;/damageType&gt;</span>
+<span class="nt">&lt;/availableDamageTypes&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="spells">
+<span id="id1"></span><h3><a class="toc-backref" href="#id25">1.22 spells</a><a class="headerlink" href="#spells" title="Permalink to this headline">¶</a></h3>
+<p>The spells that are unlocked when equipping this weapon. IF you want to add any,
+use the format:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;spells</span> <span class="na">changeOnReforge=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span> <span class="c">&lt;!-- ref:cor --&gt;</span>
+    <span class="nt">&lt;spell</span> <span class="na">damageType=</span><span class="s">&quot;FIRE&quot;</span><span class="nt">&gt;</span>FIREBALL<span class="nt">&lt;/spell&gt;</span> <span class="c">&lt;!-- ref:dmt --&gt;</span>
+    <span class="nt">&lt;spell</span> <span class="na">damageType=</span><span class="s">&quot;ICE&quot;</span><span class="nt">&gt;</span>ICE_SHARD<span class="nt">&lt;/spell&gt;</span>
+    <span class="nt">&lt;spell</span> <span class="na">damageType=</span><span class="s">&quot;LUST&quot;</span><span class="nt">&gt;</span>ARCANE_AROUSAL<span class="nt">&lt;/spell&gt;</span>
+    <span class="nt">&lt;spell</span> <span class="na">damageType=</span><span class="s">&quot;PHYSICAL&quot;</span><span class="nt">&gt;</span>SLAM<span class="nt">&lt;/spell&gt;</span>
+    <span class="nt">&lt;spell</span> <span class="na">damageType=</span><span class="s">&quot;POISON&quot;</span><span class="nt">&gt;</span>POISON_VAPOURS<span class="nt">&lt;/spell&gt;</span>
+<span class="nt">&lt;/spells&gt;</span>
+</pre></div>
+</div>
+<p>The changeOnReforge variable determines whether this weapon should regenerate
+spells whenever the player changes the damage type. (i.e. If they reforge a
+<code class="docutils literal notranslate"><span class="pre">FIRE</span></code> dagger to an <code class="docutils literal notranslate"><span class="pre">ICE</span></code> dagger, if changeOnReforge is true, then the granted
+spell <code class="docutils literal notranslate"><span class="pre">FIREBALL</span></code> will automatically switch to <code class="docutils literal notranslate"><span class="pre">ICE_SHARD</span></code>).</p>
+<p>The damageType variable corresponds to the damageType which causes the spell to
+be unlocked when this weapon is spawned in. You can have multiple entries of the
+same damageType, like so:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;spell</span> <span class="na">damageType=</span><span class="s">&quot;FIRE&quot;</span><span class="nt">&gt;</span>FIREBALL<span class="nt">&lt;/spell&gt;</span>
+<span class="nt">&lt;spell</span> <span class="na">damageType=</span><span class="s">&quot;FIRE&quot;</span><span class="nt">&gt;</span>FLASH<span class="nt">&lt;/spell&gt;</span>
+<span class="nt">&lt;spell</span> <span class="na">damageType=</span><span class="s">&quot;FIRE&quot;</span><span class="nt">&gt;</span>ICE_SHARD<span class="nt">&lt;/spell&gt;</span>
+<span class="nt">&lt;spell</span> <span class="na">damageType=</span><span class="s">&quot;FIRE&quot;</span><span class="nt">&gt;</span>STEAL<span class="nt">&lt;/spell&gt;</span>
+</pre></div>
+</div>
+<p>Note that the <code class="docutils literal notranslate"><span class="pre">damageType</span></code> does not have to correspond to the spell’s school (so
+<code class="docutils literal notranslate"><span class="pre">FIRE</span></code> can unlock <code class="docutils literal notranslate"><span class="pre">ICE_SHARD</span></code>, etc.).</p>
+<p>Values for spells can be found here: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/combat/Spell.java">https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/combat/Spell.java</a></p>
+<p>For an empty spell list, use an empty element:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;spells/&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="combatmoves">
+<span id="combat-moves"></span><h3><a class="toc-backref" href="#id26">1.23 combatMoves</a><a class="headerlink" href="#combatmoves" title="Permalink to this headline">¶</a></h3>
+<p>The combat moves that are unlocked when equipping this weapon. The <code class="docutils literal notranslate"><span class="pre">combatMoves</span></code>
+element is similar to the <a class="reference internal" href="#spells">spells</a> element.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;combatMoves</span> <span class="na">changeOnReforge=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;move</span> <span class="na">damageType=</span><span class="s">&quot;PHYSICAL&quot;</span><span class="nt">&gt;</span>ASSAULT_RIFLE_MAG_DUMP<span class="nt">&lt;/move&gt;</span>
+<span class="nt">&lt;/combatMoves&gt;</span>
+</pre></div>
+</div>
+<p>The changeOnReforge variable determines whether this weapon should regenerate
+combat moves whenever the player changes the damage type. Using the example
+above, if they reforge a <code class="docutils literal notranslate"><span class="pre">PHYSICAL</span></code> dagger to an <code class="docutils literal notranslate"><span class="pre">ICE</span></code> dagger and
+changeOnReforge is true, then the granted combat move <code class="docutils literal notranslate"><span class="pre">ASSAULT_RIFLE_MAG_DUMP</span></code>
+will be lost.</p>
+<p>The damageType variable corresponds to the damageType which causes the move to
+be unlocked when this weapon is spawned in. You can have multiple entries of the
+same damageType, like so:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;move</span> <span class="na">damageType=</span><span class="s">&quot;FIRE&quot;</span><span class="nt">&gt;</span>EXAMPLE_MOVE_1<span class="nt">&lt;/move&gt;</span>
+<span class="nt">&lt;move</span> <span class="na">damageType=</span><span class="s">&quot;FIRE&quot;</span><span class="nt">&gt;</span>EXAMPLE_MOVE_2<span class="nt">&lt;/move&gt;</span>
+<span class="nt">&lt;move</span> <span class="na">damageType=</span><span class="s">&quot;FIRE&quot;</span><span class="nt">&gt;</span>EXAMPLE_MOVE_3<span class="nt">&lt;/move&gt;</span>
+<span class="nt">&lt;move</span> <span class="na">damageType=</span><span class="s">&quot;FIRE&quot;</span><span class="nt">&gt;</span>EXAMPLE_MOVE_4<span class="nt">&lt;/move&gt;</span>
+</pre></div>
+</div>
+<p>Values for combat moves can be found here: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/combat/CMWeaponSpecials.java">https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/combat/CMWeaponSpecials.java</a></p>
+<p><strong>Note:</strong> combat moves are not yet moddable. There will be a way to add modded
+combat moves soon!</p>
+<p>For an item with no combat move, simply write an empty element:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;combatMoves/&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="enchantmentlimit">
+<h3><a class="toc-backref" href="#id27">1.24 enchantmentLimit</a><a class="headerlink" href="#enchantmentlimit" title="Permalink to this headline">¶</a></h3>
+<p>How many effects this weapon can be enchanted with. Weapons standard is 5, for
+balance purpose.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;enchantmentLimit&gt;</span>5<span class="nt">&lt;/enchantmentLimit&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="effects">
+<h3><a class="toc-backref" href="#id28">1.25 effects</a><a class="headerlink" href="#effects" title="Permalink to this headline">¶</a></h3>
+<p>The effects that this weapon spawns in with. Remember that the player can
+remove, change or add effects. To know what to put in here, it would probably be
+easiest to enchant clothing in your game, save the game, then copy over that
+clothing’s ’effects’ in your save file.</p>
+<p>There are two special values for secondaryModifier, which are:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">RESISTANCE_WEAPON</span></code></dt><dd><p>applies the related resistance of this weapon’s damage
+type.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">DAMAGE_WEAPON</span></code></dt><dd><p>applies the related damage type.</p>
+</dd>
+</dl>
+<p>For example, if this dagger spawned in as type <code class="docutils literal notranslate"><span class="pre">POISON</span></code>, and I’d replaced both
+instances of <code class="docutils literal notranslate"><span class="pre">CRITICAL_CHANCE</span></code> with <code class="docutils literal notranslate"><span class="pre">DAMAGE_WEAPON</span></code>, then this dagger would
+spawn with two +5 Poison Damage effects.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;effects&gt;</span>
+    <span class="nt">&lt;effect</span> <span class="na">itemEffectType=</span><span class="s">&quot;CLOTHING&quot;</span> <span class="na">limit=</span><span class="s">&quot;0&quot;</span> <span class="na">potency=</span><span class="s">&quot;MAJOR_BOOST&quot;</span> <span class="na">primaryModifier=</span><span class="s">&quot;CLOTHING_ATTRIBUTE&quot;</span> <span class="na">secondaryModifier=</span><span class="s">&quot;CRITICAL_CHANCE&quot;</span> <span class="na">timer=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;effect</span> <span class="na">itemEffectType=</span><span class="s">&quot;CLOTHING&quot;</span> <span class="na">limit=</span><span class="s">&quot;0&quot;</span> <span class="na">potency=</span><span class="s">&quot;MAJOR_BOOST&quot;</span> <span class="na">primaryModifier=</span><span class="s">&quot;CLOTHING_ATTRIBUTE&quot;</span> <span class="na">secondaryModifier=</span><span class="s">&quot;CRITICAL_CHANCE&quot;</span> <span class="na">timer=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/effects&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="extraeffects">
+<h3><a class="toc-backref" href="#id29">1.26 extraEffects</a><a class="headerlink" href="#extraeffects" title="Permalink to this headline">¶</a></h3>
+<p>You can use this section to describe any extra features of this weapon. These
+effects are shown in the tooltip when the player hovers over the weapon icon, so
+try and keep them short (as they should fit on one line). It should probably
+only be used to describe what happens in the <a class="reference internal" href="#onhiteffect">1.27 onHitEffect</a> element. No characters
+are passed in as parsing arguments, so you should <strong>not</strong> use any
+character-specific parsing elements (such as <code class="docutils literal notranslate"><span class="pre">[npc.name]</span></code>). For this weapon, no
+extra effects need to be described, but if you need to use this section, use the
+following format:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;extraEffects&gt;</span>
+    <span class="nt">&lt;effect&gt;</span><span class="cp">&lt;![CDATA[Stab time!]]&gt;</span><span class="nt">&lt;/effect&gt;</span>
+<span class="nt">&lt;/extraEffects&gt;</span>
+</pre></div>
+</div>
+<p>Empty extra effect:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;extraEffects/&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="onhiteffect">
+<span id="on-hit-effect"></span><h3><a class="toc-backref" href="#id30">1.27 onHitEffect</a><a class="headerlink" href="#onhiteffect" title="Permalink to this headline">¶</a></h3>
+<p>This is applied every time this weapon hits a target. It does <strong>not</strong> apply when
+the weapon critically hits. The returned text is appended to the hit
+description. <code class="docutils literal notranslate"><span class="pre">npc</span></code> corresponds to the attacker, and <code class="docutils literal notranslate"><span class="pre">npc2</span></code> to the target, for
+use in effects/parsing. For this weapon, no hit effects need to be added, but if
+you need to use this section, use the following format:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;onHitEffect&gt;</span><span class="cp">&lt;![CDATA[</span>
+<span class="cp">[##npc2.setHealth(0)]</span>
+<span class="cp">[npc2.Name] is instantly defeated!</span>
+<span class="cp">]]&gt;</span><span class="nt">&lt;/onHitEffect&gt;</span>
+</pre></div>
+</div>
+<p>An empty effect</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;onHitEffect/&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="oncriticalhiteffect">
+<h3><a class="toc-backref" href="#id31">1.28 onCriticalHitEffect</a><a class="headerlink" href="#oncriticalhiteffect" title="Permalink to this headline">¶</a></h3>
+<p>This is applied every time this weapon critically hits a target. It does <strong>not</strong>
+apply when the weapon does a non-critical hit.</p>
+<p>The returned text is appended to the hit description. <code class="docutils literal notranslate"><span class="pre">npc</span></code> corresponds to the
+attacker, and <code class="docutils literal notranslate"><span class="pre">npc2</span></code> to the target, for use in effects/parsing. Use the same
+format as <a class="reference internal" href="#on-hit-effect">on-hit-effect</a>.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;onCriticalHitEffect/&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="colours">
+<h3><a class="toc-backref" href="#id32">1.29 colours</a><a class="headerlink" href="#colours" title="Permalink to this headline">¶</a></h3>
+<p>Please consult the relevant <a class="reference external" href="index.rst">documentation</a> about colours.</p>
+<p>Your clothing can be coloured any way you like, but if you’d like the player to
+be able to dye your clothing, you can specify available colours here.
+<code class="docutils literal notranslate"><span class="pre">primaryColours</span></code> and <code class="docutils literal notranslate"><span class="pre">secondaryColours</span></code> all spawn in as a default colour, while
+their <code class="docutils literal notranslate"><span class="pre">Dye</span></code> counterparts are only available if the player chooses to dye the
+clothing in that colour. The game detects specific colour values, and recolours
+them to the value chosen by the player. These values are as follows:</p>
+<ul class="simple">
+<li><p>Red is used as base colour for changing the <code class="docutils literal notranslate"><span class="pre">DAMAGE</span> <span class="pre">TYPE</span></code>’s colour of the
+graphic in-game, and the game will only recognise and change the following
+colours:</p>
+<ul>
+<li><p>#ff2a2a</p></li>
+<li><p>#ff5555</p></li>
+<li><p>#ff8080</p></li>
+<li><p>#ffaaaa</p></li>
+<li><p>#ffd5d5</p></li>
+</ul>
+</li>
+<li><p>Orange is used as base colour for changing the <code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code> colour of the graphic
+in-game, and the game will only recognise and change the following colours:</p>
+<ul>
+<li><p>#ff7f2a</p></li>
+<li><p>#ff9955</p></li>
+<li><p>#ffb380</p></li>
+<li><p>#ffccaa</p></li>
+<li><p>#ffe6d5</p></li>
+</ul>
+</li>
+<li><p>Yellow is used as base colour for changing the <code class="docutils literal notranslate"><span class="pre">SECONDARY</span></code> colour of the graphic
+in-game, and the game will only recognise and change the following colours:</p>
+<ul>
+<li><p>#ffd42a</p></li>
+<li><p>#ffdd55</p></li>
+<li><p>#ffe680</p></li>
+<li><p>#ffeeaa</p></li>
+<li><p>#fff6d5</p></li>
+</ul>
+</li>
+<li><p>Green is used as base colour for changing the <code class="docutils literal notranslate"><span class="pre">TERTIARY</span></code> colour of the graphic
+in-game, and the game will only recognise and change the following colours:</p>
+<ul>
+<li><p>#abc837</p></li>
+<li><p>#bcd35f</p></li>
+<li><p>#cdde87</p></li>
+<li><p>#dde9af</p></li>
+<li><p>#eef4d7</p></li>
+</ul>
+</li>
+</ul>
+<p>As you can see above, weapons differ from clothing in that their <code class="docutils literal notranslate"><span class="pre">Red</span></code> colour is
+recoloured based on the weapon’s damage type! The <code class="docutils literal notranslate"><span class="pre">primaryColours</span></code>,
+<code class="docutils literal notranslate"><span class="pre">secondaryColours</span></code>, and <code class="docutils literal notranslate"><span class="pre">tertiaryColours</span></code> defined below are for recolouring the
+<code class="docutils literal notranslate"><span class="pre">Orange</span></code>, <code class="docutils literal notranslate"><span class="pre">Yellow</span></code>, and <code class="docutils literal notranslate"><span class="pre">Green</span></code> values, respectively.</p>
+<p><strong>Any gradients that you use should be called:</strong> <code class="docutils literal notranslate"><span class="pre">innoGrad1</span></code>, <code class="docutils literal notranslate"><span class="pre">innoGrad2</span></code>, etc.</p>
+<p>You can see a visual representation of these colours (as used in clothing) here:
+<a class="reference external" href="https://www.lilithsthrone.com/wiki/doku.php?id=modding_wiki:modding:creating_clothes">https://www.lilithsthrone.com/wiki/doku.php?id=modding_wiki:modding:creating_clothes</a></p>
+<p>Colour lists to be used can be found here:
+<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/utils/ColourListPresets.java">https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/utils/ColourListPresets.java</a></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;primaryColours</span> <span class="na">recolouringAllowed=</span><span class="s">&quot;true&quot;</span> <span class="na">values=</span><span class="s">&quot;JUST_STEEL&quot;</span><span class="nt">/&gt;</span> <span class="c">&lt;!-- You can leave the attribute &#39;recolouringAllowed&#39; out of colour definitions. If you want the player to be unable to change this colour, then set it as false. This is only used in very niche situations (such as for the filly choker).--&gt;</span>
+
+<span class="nt">&lt;primaryColoursDye</span> <span class="na">values=</span><span class="s">&quot;ALL_METAL&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;secondaryColours</span> <span class="na">values=</span><span class="s">&quot;JUST_BLACK&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;secondaryColoursDye</span> <span class="na">values=</span><span class="s">&quot;ALL&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="customcolours">
+<h3><a class="toc-backref" href="#id33">1.30 customColours</a><a class="headerlink" href="#customcolours" title="Permalink to this headline">¶</a></h3>
+<p>You can define any number of custom colours to replace the shades you’ve
+coloured your svg with. If you have used the primary/secondary/tertiary elements
+up above, then do not use their associated colour hexes. (i.e. If you’ve defined
+a primaryColours element, do not use #ff7f2a, #ff9955, #ffb380, #ffccaa, or
+#ffe6d5 in the customColour attributes.)</p>
+<p>You should NEVER use the primary recolouring shades, as they are always reserved
+for the damage type’s colour: #ff2a2a, #ff5555, #ff8080, #ffaaaa, or #ffd5d5</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;customColours&gt;</span>
+    <span class="c">&lt;!-- The &#39;copyColourIndex&#39; attribute defines which colour index should be copied into this colour slot on weapon generation. This particular colour, having an index of 0, will always be coloured the same as the primary colour when generated. Indexes go from 0-&gt;X, where X is the number of defined colours. i.e. If you only define primary and secondary, the first custom colour (i.e. this one) will have an index of 2. --&gt;</span>
+    <span class="nt">&lt;customColour</span> <span class="na">copyColourIndex=</span><span class="s">&quot;0&quot;</span> <span class="na">c0=</span><span class="s">&quot;#6C5D53&quot;</span> <span class="na">c1=</span><span class="s">&quot;#917C6F&quot;</span> <span class="na">c2=</span><span class="s">&quot;#AC9D93&quot;</span> <span class="na">c3=</span><span class="s">&quot;#C8BEB7&quot;</span> <span class="na">c4=</span><span class="s">&quot;#E3DEDB&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;defaultColours&gt;</span>
+                    <span class="nt">&lt;colour&gt;</span>CLOTHING_STEEL<span class="nt">&lt;/colour&gt;</span>
+            <span class="nt">&lt;/defaultColours&gt;</span>
+            <span class="nt">&lt;extraColours</span> <span class="na">values=</span><span class="s">&quot;ALL_METAL&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/customColour&gt;</span>
+     <span class="c">&lt;!-- This particular copyColourIndex, having an index of 1, will always be coloured the same as the secondary colour when generated --&gt;</span>
+    <span class="nt">&lt;customColour</span> <span class="na">copyColourIndex=</span><span class="s">&quot;1&quot;</span> <span class="na">recolouringAllowed=</span><span class="s">&quot;true&quot;</span> <span class="na">c0=</span><span class="s">&quot;#6C5353&quot;</span> <span class="na">c1=</span><span class="s">&quot;#916F6F&quot;</span> <span class="na">c2=</span><span class="s">&quot;#AC9393&quot;</span> <span class="na">c3=</span><span class="s">&quot;#C8B7B7&quot;</span> <span class="na">c4=</span><span class="s">&quot;#E3DBDB&quot;</span><span class="nt">&gt;</span> <span class="c">&lt;!-- These are the colours which you&#39;ve used in your svg and would like replaced with the colours you define below. c0 is the darkest shade. Shades can go up to any number, but setting just 5 shades should work best. --&gt;</span>
+            <span class="nt">&lt;defaultColours&gt;</span>
+                    <span class="nt">&lt;colour&gt;</span>CLOTHING_BLACK<span class="nt">&lt;/colour&gt;</span> <span class="c">&lt;!-- The colours which this clothing should spawn in with. --&gt;</span>
+            <span class="nt">&lt;/defaultColours&gt;</span>
+            <span class="nt">&lt;extraColours</span> <span class="na">values=</span><span class="s">&quot;ALL&quot;</span><span class="nt">/&gt;</span> <span class="c">&lt;!-- The colours which this weapon can be dyed to. --&gt;</span>
+    <span class="nt">&lt;/customColour&gt;</span>
+<span class="nt">&lt;/customColours&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="itemtags">
+<h3><a class="toc-backref" href="#id34">1.31 itemTags</a><a class="headerlink" href="#itemtags" title="Permalink to this headline">¶</a></h3>
+<p>Special item tags that apply to this weapon. Values can be found here: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/ItemTag.java">https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/ItemTag.java</a></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;itemTags&gt;</span>
+    <span class="nt">&lt;tag&gt;</span>SOLD_BY_VICKY<span class="nt">&lt;/tag&gt;</span>
+    <span class="nt">&lt;tag&gt;</span>WEAPON_BLADE<span class="nt">&lt;/tag&gt;</span>
+<span class="nt">&lt;/itemTags&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="hitdescription">
+<h2><a class="toc-backref" href="#id35">2 hitDescription</a><a class="headerlink" href="#hitdescription" title="Permalink to this headline">¶</a></h2>
+<p>Descriptions that are used when hitting an enemy. One of the <code class="docutils literal notranslate"><span class="pre">hitText</span></code> values
+will be randomly selected each time the attacker hits their target. Follow the
+same guidelines as <code class="docutils literal notranslate"><span class="pre">equipText</span></code>.</p>
+<p>You can add hit descriptions which will only be shown on a critical hit by using
+the <code class="docutils literal notranslate"><span class="pre">criticalHitText</span></code> element. This is optional, and you don’t need to define
+any critical hit descriptions. If none are define and a critical hit occurs, a
+regular <code class="docutils literal notranslate"><span class="pre">hitText</span></code> will be used instead.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;hitDescriptions&gt;</span>
+    <span class="nt">&lt;hitText&gt;</span><span class="cp">&lt;![CDATA[</span>
+<span class="cp">    Thrusting out with [npc.her] Demon&#39;s Dagger, [npc.name] [npc.verb(manage)] to stab [npc2.name] in the chest; the ethereal arcane blade passing through [npc2.her] torso to drain [npc2.her] energy!</span>
+<span class="cp">    ]]&gt;</span><span class="nt">&lt;/hitText&gt;</span>
+    <span class="nt">&lt;hitText&gt;</span><span class="cp">&lt;![CDATA[</span>
+<span class="cp">    Striking out at [npc2.name] with [npc.her] Demon&#39;s Dagger, [npc.name] [npc.verb(manage)] to slash through [npc2.her] [npc2.arm] with the ethereal blade and drain [npc2.her] energy!</span>
+<span class="cp">    ]]&gt;</span><span class="nt">&lt;/hitText&gt;</span>
+    <span class="nt">&lt;hitText&gt;</span><span class="cp">&lt;![CDATA[</span>
+<span class="cp">    With a quick step forwards, [npc.name] [npc.verb(lunge)] out at [npc2.name] with [npc.her] Demon&#39;s Dagger, sinking the ethereal blade into [npc2.her] shoulder and causing [npc2.herHim] to lose some energy!</span>
+<span class="cp">    ]]&gt;</span><span class="nt">&lt;/hitText&gt;</span>
+    <span class="nt">&lt;criticalHitText&gt;</span><span class="cp">&lt;![CDATA[</span>
+<span class="cp">    Expertly sidestepping around [npc2.namePos] attempt to block [npc.her] attack, [npc.name] [npc.verb(deal)] a devastating strike with [npc.her] Demon&#39;s Dagger!</span>
+<span class="cp">    ]]&gt;</span><span class="nt">&lt;/criticalHitText&gt;</span>
+<span class="nt">&lt;/hitDescriptions&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="missdescription">
+<h2><a class="toc-backref" href="#id36">3 missDescription</a><a class="headerlink" href="#missdescription" title="Permalink to this headline">¶</a></h2>
+<p>Descriptions that are used when missing an enemy. One of the missText values will be randomly selected each time the attacker misses their target. Follow the same guidelines as equipText.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;missDescriptions&gt;</span>
+    <span class="nt">&lt;missText&gt;</span><span class="cp">&lt;![CDATA[</span>
+<span class="cp">    Thrusting out with [npc.her] Demon&#39;s Dagger, [npc.name] [npc.verb(attempt)] to stab [npc2.name] in the chest, but [npc.verb(end)] up missing [npc2.herHim]!</span>
+<span class="cp">    ]]&gt;</span><span class="nt">&lt;/missText&gt;</span>
+    <span class="nt">&lt;missText&gt;</span><span class="cp">&lt;![CDATA[</span>
+<span class="cp">    Striking out at [npc2.name] with [npc.her] Demon&#39;s Dagger, [npc.name] [npc.verb(let)] out a frustrated cry as [npc.she] [npc.verb(miss)] [npc.her] target!</span>
+<span class="cp">    ]]&gt;</span><span class="nt">&lt;/missText&gt;</span>
+    <span class="nt">&lt;missText&gt;</span><span class="cp">&lt;![CDATA[</span>
+<span class="cp">    With a quick step forwards, [npc.name] [npc.verb(lunge)] out at [npc2.name] with [npc.her] Demon&#39;s Dagger, but [npc.she] [npc.verb(miss)] [npc.her] target!</span>
+<span class="cp">    ]]&gt;</span><span class="nt">&lt;/missText&gt;</span>
+<span class="nt">&lt;/missDescriptions&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Items Weapons</a><ul>
+<li><a class="reference internal" href="#coreattributes">1 coreAttributes</a><ul>
+<li><a class="reference internal" href="#authortag">1.1 authorTag</a></li>
+<li><a class="reference internal" href="#value">1.2 value</a></li>
+<li><a class="reference internal" href="#melee">1.3 melee</a></li>
+<li><a class="reference internal" href="#twohanded">1.4 twoHanded</a></li>
+<li><a class="reference internal" href="#determiner">1.5 determiner</a></li>
+<li><a class="reference internal" href="#name">1.6 name</a></li>
+<li><a class="reference internal" href="#nameplural">1.7 namePlural</a></li>
+<li><a class="reference internal" href="#description">1.8 description</a></li>
+<li><a class="reference internal" href="#attackdescriptor">1.9 attackDescriptor</a></li>
+<li><a class="reference internal" href="#attacktooltipdescription">1.10 attackTooltipDescription</a></li>
+<li><a class="reference internal" href="#rarity">1.11 rarity</a></li>
+<li><a class="reference internal" href="#weaponset">1.12 weaponSet</a></li>
+<li><a class="reference internal" href="#equiptext">1.13 equipText</a></li>
+<li><a class="reference internal" href="#unequiptext">1.14 unequipText</a></li>
+<li><a class="reference internal" href="#imagename">1.15 imageName</a></li>
+<li><a class="reference internal" href="#imageequippedname">1.16 imageEquippedname</a></li>
+<li><a class="reference internal" href="#physicalresistance">1.17 physicalResistance</a></li>
+<li><a class="reference internal" href="#damage">1.18 damage</a></li>
+<li><a class="reference internal" href="#arcanecost">1.19 arcaneCost</a></li>
+<li><a class="reference internal" href="#damagevariance">1.20 damageVariance</a></li>
+<li><a class="reference internal" href="#availabledamagetypes">1.21 availableDamageTypes</a></li>
+<li><a class="reference internal" href="#spells">1.22 spells</a></li>
+<li><a class="reference internal" href="#combatmoves">1.23 combatMoves</a></li>
+<li><a class="reference internal" href="#enchantmentlimit">1.24 enchantmentLimit</a></li>
+<li><a class="reference internal" href="#effects">1.25 effects</a></li>
+<li><a class="reference internal" href="#extraeffects">1.26 extraEffects</a></li>
+<li><a class="reference internal" href="#onhiteffect">1.27 onHitEffect</a></li>
+<li><a class="reference internal" href="#oncriticalhiteffect">1.28 onCriticalHitEffect</a></li>
+<li><a class="reference internal" href="#colours">1.29 colours</a></li>
+<li><a class="reference internal" href="#customcolours">1.30 customColours</a></li>
+<li><a class="reference internal" href="#itemtags">1.31 itemTags</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#hitdescription">2 hitDescription</a></li>
+<li><a class="reference internal" href="#missdescription">3 missDescription</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="tattoos.html"
+                        title="previous chapter">Tattoos</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="outfits.html"
+                        title="next chapter">Outfits</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/weapons.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="outfits.html" title="Outfits"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="tattoos.html" title="Tattoos"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Lilith&#39;s Throne Mod Documentation  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="items.html" >Items folder</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Items Weapons</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Bicobus.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,709 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Outfits &#8212; Lilith&#39;s Throne Mod Documentation  documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <link rel="canonical" href="https://bicobus.github.io/lilith-throne-documentation/outfits.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="setBonuses" href="setBonuses.html" />
+    <link rel="prev" title="Items Weapons" href="weapons.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="setBonuses.html" title="setBonuses"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="weapons.html" title="Items Weapons"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Lilith&#39;s Throne Mod Documentation  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Outfits</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="outfits">
+<h1><a class="toc-backref" href="#id3">Outfits</a><a class="headerlink" href="#outfits" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Author</dt>
+<dd class="field-odd"><p>innoxia, bicobus</p>
+</dd>
+</dl>
+</div></blockquote>
+<div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#outfits" id="id3">Outfits</a></p>
+<ul>
+<li><p><a class="reference internal" href="#coreattributes" id="id4">1 coreAttributes</a></p>
+<ul>
+<li><p><a class="reference internal" href="#name" id="id5">1.1 name</a></p></li>
+<li><p><a class="reference internal" href="#description" id="id6">1.2 description</a></p></li>
+<li><p><a class="reference internal" href="#femininity" id="id7">1.3 femininity</a></p></li>
+<li><p><a class="reference internal" href="#worldtypes" id="id8">1.4 worldTypes</a></p></li>
+<li><p><a class="reference internal" href="#outfittypes" id="id9">1.5 outfitTypes</a></p></li>
+<li><p><a class="reference internal" href="#acceptablelegconfigurations" id="id10">1.6 acceptableLegConfigurations</a></p></li>
+<li><p><a class="reference internal" href="#conditional" id="id11">1.7 conditional</a></p></li>
+<li><p><a class="reference internal" href="#weight" id="id12">1.8 weight</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#generationattributes" id="id13">2 generationAttributes</a></p>
+<ul>
+<li><p><a class="reference internal" href="#conditional-statements" id="id14">2.1 Conditional statements</a></p></li>
+<li><p><a class="reference internal" href="#presetcolourgroups" id="id15">2.2 presetColourGroups</a></p></li>
+<li><p><a class="reference internal" href="#mainweapons-and-offhandweapons" id="id16">2.3 mainWeapons and offhandWeapons</a></p></li>
+<li><p><a class="reference internal" href="#guaranteedclothingequips" id="id17">2.4 guaranteedClothingEquips</a></p>
+<ul>
+<li><p><a class="reference internal" href="#clothing-tags" id="id18">2.4.1 clothing tags</a></p>
+<ul>
+<li><p><a class="reference internal" href="#colours-group" id="id19">2.4.1.1 Colours group</a></p></li>
+<li><p><a class="reference internal" href="#enchantmentknown" id="id20">2.4.1.2 enchantmentKnown</a></p></li>
+<li><p><a class="reference internal" href="#id" id="id21">2.4.1.3 id</a></p></li>
+<li><p><a class="reference internal" href="#isdirty" id="id22">2.4.1.4 isDirty</a></p></li>
+<li><p><a class="reference internal" href="#id1" id="id23">2.4.1.5 name</a></p></li>
+<li><p><a class="reference internal" href="#pattern" id="id24">2.4.1.6 pattern</a></p></li>
+<li><p><a class="reference internal" href="#pattern-colour" id="id25">2.4.1.7 pattern colour</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#genericclothingtype" id="id26">2.5 genericClothingType</a></p>
+<ul>
+<li><p><a class="reference internal" href="#itemtag" id="id27">2.5.1 itemTag</a></p>
+<ul>
+<li><p><a class="reference internal" href="#tag" id="id28">2.5.1.1 tag</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#acceptablefemininities" id="id29">2.5.2 acceptableFemininities</a></p></li>
+<li><p><a class="reference internal" href="#slot" id="id30">2.5.3 slot</a></p></li>
+<li><p><a class="reference internal" href="#rarity" id="id31">2.5.4 rarity</a></p></li>
+<li><p><a class="reference internal" href="#id2" id="id32">2.5.5 conditional</a></p></li>
+<li><p><a class="reference internal" href="#primary-secondary-and-tertiary-colours" id="id33">2.5.6 primary, secondary and tertiary colours</a></p></li>
+<li><p><a class="reference internal" href="#colours" id="id34">2.5.7 colours</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#clothingtype" id="id35">2.6 clothingType</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Outfits are a way to make randomly generated NPCs’ outfit generation less
+chaotic.</p>
+<p>As a final note, I will add support for allowing the automatic generation of
+piercings in the next update.</p>
+<div class="section" id="coreattributes">
+<h2><a class="toc-backref" href="#id4">1 coreAttributes</a><a class="headerlink" href="#coreattributes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="name">
+<h3><a class="toc-backref" href="#id5">1.1 name</a><a class="headerlink" href="#name" title="Permalink to this headline">¶</a></h3>
+<p>Names are only used for debugging purposes. Still, in case the name is used
+elsewhere later on, it’s best to give your outfit a suitable (lowercase) name.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;name&gt;</span><span class="cp">&lt;![CDATA[casual dress with toys]]&gt;</span><span class="nt">&lt;/name&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="description">
+<h3><a class="toc-backref" href="#id6">1.2 description</a><a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h3>
+<p>Again, descriptions are only used for debugging purposes. Still, in case the
+name is used elsewhere later on, it’s best to give your outfit a suitable
+description.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;description&gt;</span><span class="cp">&lt;![CDATA[A dress hides the fact that the wearer has a toy or two inserted into their orifices...]]&gt;</span><span class="nt">&lt;/description&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="femininity">
+<h3><a class="toc-backref" href="#id7">1.3 femininity</a><a class="headerlink" href="#femininity" title="Permalink to this headline">¶</a></h3>
+<p>The femininity needed for someone to generate this outfit.</p>
+<p>The three acceptables values are respectively:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">MASCULINE</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ANDROGYNOUS</span></code> (anyone can use this outfit)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">FEMININE</span></code></p></li>
+</ol>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;femininity&gt;</span>FEMININE<span class="nt">&lt;/femininity&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="worldtypes">
+<h3><a class="toc-backref" href="#id8">1.4 worldTypes</a><a class="headerlink" href="#worldtypes" title="Permalink to this headline">¶</a></h3>
+<p>The worlds in which this outfit may be used for randomly generated characters.
+You can leave this empty, or delete the element entirely, if you do not want
+this outfit to be restricted based on <code class="docutils literal notranslate"><span class="pre">WorldType</span></code> (so it can be used anywhere).
+Values can be found here:
+<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/world/WorldType.java">src/com/lilithsthrone/world/WorldType.java</a></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;worldTypes&gt;</span>
+    <span class="nt">&lt;world&gt;</span>DOMINION<span class="nt">&lt;/world&gt;</span>
+    <span class="nt">&lt;world&gt;</span>SUBMISSION<span class="nt">&lt;/world&gt;</span>
+<span class="nt">&lt;/worldTypes&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="outfittypes">
+<h3><a class="toc-backref" href="#id9">1.5 outfitTypes</a><a class="headerlink" href="#outfittypes" title="Permalink to this headline">¶</a></h3>
+<p>Outfit types that this outfit can be used in. For a list of acceptable
+<code class="docutils literal notranslate"><span class="pre">OutfitTypes</span></code>, consult:
+<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/inventory/outfit/OutfitType.java">src/com/lilithsthrone/game/inventory/clothing/OutfitType.java</a></p>
+<p>Note: At the time of creation (<em>v0.3.0.6</em>), only the <code class="docutils literal notranslate"><span class="pre">MUGGER</span></code> outfitType is
+used in the game. All outfit types will be added eventually.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;outfitTypes&gt;</span>
+    <span class="nt">&lt;type&gt;</span>CASUAL_DATE<span class="nt">&lt;/type&gt;</span>
+<span class="nt">&lt;/outfitTypes&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="acceptablelegconfigurations">
+<h3><a class="toc-backref" href="#id10">1.6 acceptableLegConfigurations</a><a class="headerlink" href="#acceptablelegconfigurations" title="Permalink to this headline">¶</a></h3>
+<p>Which leg configurations can equip this outfit. For a list of
+<code class="docutils literal notranslate"><span class="pre">legConfigurations</span></code>, see:
+<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/character/body/valueEnums/LegConfiguration.java">src/com/lilithsthrone/game/character/body/valueEnums/LegConfiguration.java</a></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;acceptableLegConfigurations&gt;</span>
+    <span class="nt">&lt;legConfiguration&gt;</span>BIPEDAL<span class="nt">&lt;/legConfiguration&gt;</span>
+<span class="nt">&lt;/acceptableLegConfigurations&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="conditional">
+<h3><a class="toc-backref" href="#id11">1.7 conditional</a><a class="headerlink" href="#conditional" title="Permalink to this headline">¶</a></h3>
+<p>The condition that needs to be satisfied for someone to generate this outfit.
+<code class="docutils literal notranslate"><span class="pre">npc.hasFetish(FETISH_EXHIBITIONIST)</span></code> should probably always be taken into
+account. This conditional instance does <strong>not</strong> support the <code class="docutils literal notranslate"><span class="pre">clothingConditionalX</span></code>
+elements.</p>
+<ul class="simple">
+<li><p>Accepted method calls for the “npc” can be found here:
+<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/character/GameCharacter.java">src/com/lilithsthrone/game/character/GameCharacter.java</a></p></li>
+<li><p>Accepted method calls for the main game (using the <code class="docutils literal notranslate"><span class="pre">game</span></code> tag) can be found
+here: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/Game.java">src/com/lilithsthrone/game/Game.java</a></p></li>
+<li><p>And also here: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/dialogue/utils/UtilText.java">com/lilithsthrone/game/dialogue/utils/UtilText.java</a></p></li>
+</ul>
+<p>The method <code class="docutils literal notranslate"><span class="pre">initScriptEngine()</span></code> in <code class="docutils literal notranslate"><span class="pre">UtilText.java</span></code> shows you what you can get a
+handle on.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;conditional&gt;</span><span class="cp">&lt;![CDATA[!npc.hasFetish(FETISH_EXHIBITIONIST) &amp;&amp; npc.hasFetish(FETISH_MASTURBATION) &amp;&amp; npc.getFetishDesire(FETISH_SUBMISSIVE).isPositive()]]&gt;</span><span class="nt">&lt;/conditional&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="weight">
+<h3><a class="toc-backref" href="#id12">1.8 weight</a><a class="headerlink" href="#weight" title="Permalink to this headline">¶</a></h3>
+<p>How likely this outfit is to be randomly chosen out of all available ones.
+Default outfits have a weight of 100. As there could be several outfits added to
+the weighting method, the chance of this outfit being selected is not able to be
+precisely determined.</p>
+<p>A bigger number makes the outfits more common. There is no upper limit.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;weight&gt;</span>100<span class="nt">&lt;/weight&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="generationattributes">
+<h2><a class="toc-backref" href="#id13">2 generationAttributes</a><a class="headerlink" href="#generationattributes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="conditional-statements">
+<h3><a class="toc-backref" href="#id14">2.1 Conditional statements</a><a class="headerlink" href="#conditional-statements" title="Permalink to this headline">¶</a></h3>
+<p>You can define any number of conditional statements to use elsewhere in this
+file. They must be enclosed in CDATA tags, and must use a format of
+<code class="docutils literal notranslate"><span class="pre">clothingConditionalX</span></code> or <code class="docutils literal notranslate"><span class="pre">condX</span></code>, where <code class="docutils literal notranslate"><span class="pre">X</span></code> is a unique <code class="docutils literal notranslate"><span class="pre">String</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">cond1</span></code>,
+<code class="docutils literal notranslate"><span class="pre">condUnderwear</span></code>, <code class="docutils literal notranslate"><span class="pre">clothingConditionalMeleeWeapons</span></code> are all valid tags). If they
+have the attribute: <code class="docutils literal notranslate"><span class="pre">constant=&quot;true&quot;</span></code>, then they are evaluated once at the start
+of clothing generation. If not, they are re-evaluated every time.</p>
+<p>Example:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;cond1</span> <span class="na">constant=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[RND.nextInt(100)&lt;=50]]&gt;</span><span class="nt">&lt;/cond1&gt;</span>
+<span class="nt">&lt;cond2</span> <span class="na">constant=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[RND.nextInt(100)&lt;=75]]&gt;</span><span class="nt">&lt;/cond2&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="presetcolourgroups">
+<h3><a class="toc-backref" href="#id15">2.2 presetColourGroups</a><a class="headerlink" href="#presetcolourgroups" title="Permalink to this headline">¶</a></h3>
+<p>Preset colour groups have one of their defined <code class="docutils literal notranslate"><span class="pre">randomColour</span></code> randomly chosen
+for further use in this XML file. You can have up to 20 <code class="docutils literal notranslate"><span class="pre">presetColourGroupX</span></code>,
+however the numbers must be consecutive. (i.e. You can have
+<code class="docutils literal notranslate"><span class="pre">presetColourGroup1</span></code>, <code class="docutils literal notranslate"><span class="pre">presetColourGroup2</span></code>, and <code class="docutils literal notranslate"><span class="pre">presetColourGroup3</span></code>, but <strong>not</strong>
+<code class="docutils literal notranslate"><span class="pre">presetColourGroup1</span></code>, <code class="docutils literal notranslate"><span class="pre">presetColourGroup2</span></code>, and <code class="docutils literal notranslate"><span class="pre">presetColourGroup4</span></code>, as that
+skips out a “3”.)</p>
+<p>Accepted values can be found in the files present in the
+<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/utils/colours">src/com/lilithsthrone/utils/colours</a> directory.</p>
+<p>The optional <code class="docutils literal notranslate"><span class="pre">singleColour</span></code> attribute, when set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, means that this group
+will always return the same, randomly chosen colour from its list.</p>
+<p>Preceding <code class="docutils literal notranslate"><span class="pre">presetColourGroups</span></code> can be used, but not succeeding ones. (i.e.
+<code class="docutils literal notranslate"><span class="pre">presetColourGroup3</span></code> could not be used in <code class="docutils literal notranslate"><span class="pre">presetColourGroup2</span></code>.)</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;presetColourGroup1</span> <span class="na">singleColour=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;randomColour&gt;</span>CLOTHING_PINK<span class="nt">&lt;/randomColour&gt;</span>
+    <span class="nt">&lt;randOMCOLOUR&gt;</span>CLOTHING_PINK_LIGHT<span class="nt">&lt;/randomColour&gt;</span>
+    <span class="nt">&lt;randomColour&gt;</span>CLOTHING_RED_DARK<span class="nt">&lt;/randomColour&gt;</span>
+<span class="nt">&lt;/presetColourGroup1&gt;</span>
+
+<span class="nt">&lt;presetColourGroup2&gt;</span>
+    <span class="nt">&lt;randomColour&gt;</span>CLOTHING_BLACK<span class="nt">&lt;/randomColour&gt;</span>
+    <span class="nt">&lt;randomColour&gt;</span>presetColourGroup1<span class="nt">&lt;/randomColour&gt;</span>
+<span class="nt">&lt;/presetColourGroup2&gt;</span>
+
+<span class="nt">&lt;presetColourGroup3&gt;</span>
+    <span class="nt">&lt;randomColour&gt;</span>CLOTHING_GOLD<span class="nt">&lt;/randomColour&gt;</span>
+    <span class="nt">&lt;randomColour&gt;</span>CLOTHING_SILVER<span class="nt">&lt;/randomColour&gt;</span>
+<span class="nt">&lt;/presetColourGroup3&gt;</span>
+
+<span class="nt">&lt;presetColourGroup4&gt;</span>
+    <span class="nt">&lt;randomColour&gt;</span>CLOTHING_WHITE<span class="nt">&lt;/randomColour&gt;</span>
+    <span class="nt">&lt;randomColour&gt;</span>CLOTHING_PINK_LIGHT<span class="nt">&lt;/randomColour&gt;</span>
+<span class="nt">&lt;/presetColourGroup4&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="mainweapons-and-offhandweapons">
+<h3><a class="toc-backref" href="#id16">2.3 mainWeapons and offhandWeapons</a><a class="headerlink" href="#mainweapons-and-offhandweapons" title="Permalink to this headline">¶</a></h3>
+<p>Weapons can be added in a similar (although more limited) manner to clothing.
+This file doesn’t use any weapons. Look at
+<code class="docutils literal notranslate"><span class="pre">res/outfits/innoxia/genericMugger/dominion_masculine.xml</span></code> for a weapon example.</p>
+<p>The content present in <code class="docutils literal notranslate"><span class="pre">mainWeapons</span></code> and <code class="docutils literal notranslate"><span class="pre">offhandWeapons</span></code> follow the same rules.
+The main weapons block defines which item should be inserted into the
+character’s main attack slot, where ass the off hand block defines which item to
+be inserted into the character’s off hand. Each block receive one or several
+<code class="docutils literal notranslate"><span class="pre">weapon</span></code> sub elements.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">weapon</span></code> block require the following elements to be present:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">conditional</span></code></dt><dd><p>references to the conditional statement present in the
+document.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">types</span></code></dt><dd><p>A list of valid item to be chosen from. It expects <a class="reference external" href="index.rst">item identifiers</a>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">damageTypes</span></code></dt><dd><p>Possible choices available at
+<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/combat/DamageType.java">src/com/lilithsthrone/game/combat/DamageType.java</a></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">primaryColours</span></code></dt><dd><p>contains a list of <code class="docutils literal notranslate"><span class="pre">colour</span></code> elements, which makes
+references to the preset groups defined previously.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">secondaryColours</span></code></dt><dd><p>contains a list of <code class="docutils literal notranslate"><span class="pre">colour</span></code> elements, which makes
+references to the preset groups defined previously.</p>
+</dd>
+<dt>colours</dt><dd><p>element can be used in addition to, or as a replacement of, the
+primary/secondary/tertiary colours elements.</p>
+</dd>
+</dl>
+<p>Individual colours or <code class="docutils literal notranslate"><span class="pre">presetColourGroups</span></code> can be listed in each sub-element
+related to colours.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span>&lt;mainWeapons&gt;
+    &lt;weapon&gt;
+            &lt;conditional&gt;&lt;![CDATA[cond1 &amp;&amp; !cond2]]&gt;&lt;/conditional&gt;
+            &lt;types&gt;
+                    &lt;type&gt;innoxia_pipe_pipe&lt;/type&gt;
+                    &lt;type&gt;innoxia_bat_wooden&lt;/type&gt;
+                    &lt;type&gt;innoxia_bat_metal&lt;/type&gt;
+            &lt;/types&gt;
+            &lt;damageTypes&gt;
+                    &lt;damage&gt;PHYSICAL&lt;/damage&gt;
+            &lt;/damageTypes&gt;
+            &lt;primaryColours&gt;
+                    &lt;colour&gt;presetColourGroup1&lt;/colour&gt;
+            &lt;/primaryColours
+            &lt;secondaryColours/&gt;
+            &lt;colours&gt;
+                    &lt;colour&gt;presetColourGroup1&lt;/colour&gt;
+            &lt;/colours&gt;
+    &lt;/weapon&gt;
+&lt;/mainWeapons&gt;
+</pre></div>
+</div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;offhandWeapons/&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="guaranteedclothingequips">
+<h3><a class="toc-backref" href="#id17">2.4 guaranteedClothingEquips</a><a class="headerlink" href="#guaranteedclothingequips" title="Permalink to this headline">¶</a></h3>
+<p>For all of the “conditional” elements from this point onwards, you can use the
+tag “clothing” to access the clothing type being handled.</p>
+<p>All of the pre-set clothing that <em>is guaranteed</em> to be attempted to be equipped.
+The only time these items won’t be equipped is when multiple items of clothing
+are assigned to the same inventory slot (such as a pair of panties and a thong),
+in which case only the first item is used.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;guaranteedClothingEquips&gt;</span>
+    <span class="nt">&lt;uniqueClothing&gt;</span>
+            <span class="nt">&lt;clothing</span> <span class="na">colour=</span><span class="s">&quot;CLOTHING_SILVER&quot;</span> <span class="na">colourSecondary=</span><span class="s">&quot;CLOTHING_PURPLE_LIGHT&quot;</span> <span class="na">colourTertiary=</span><span class="s">&quot;CLOTHING_BLACK&quot;</span> <span class="na">enchantmentKnown=</span><span class="s">&quot;true&quot;</span> <span class="na">id=</span><span class="s">&quot;innoxia_buttPlugs_butt_plug_jewel&quot;</span> <span class="na">isDirty=</span><span class="s">&quot;false&quot;</span> <span class="na">name=</span><span class="s">&quot;[npc.NamePos(true)] butt-plug&quot;</span> <span class="na">pattern=</span><span class="s">&quot;none&quot;</span> <span class="na">patternColour=</span><span class="s">&quot;CLOTHING_BLACK&quot;</span> <span class="na">patternColourSecondary=</span><span class="s">&quot;CLOTHING_BLACK&quot;</span> <span class="na">patternColourTertiary=</span><span class="s">&quot;CLOTHING_BLACK&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;effects&gt;</span>
+                      <span class="nt">&lt;effect</span> <span class="na">itemEffectType=</span><span class="s">&quot;CLOTHING&quot;</span> <span class="na">limit=</span><span class="s">&quot;0&quot;</span> <span class="na">potency=</span><span class="s">&quot;BOOST&quot;</span> <span class="na">primaryModifier=</span><span class="s">&quot;CLOTHING_ATTRIBUTE&quot;</span> <span class="na">secondaryModifier=</span><span class="s">&quot;DAMAGE_POISON&quot;</span> <span class="na">timer=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+                      <span class="nt">&lt;effect</span> <span class="na">itemEffectType=</span><span class="s">&quot;CLOTHING&quot;</span> <span class="na">limit=</span><span class="s">&quot;0&quot;</span> <span class="na">potency=</span><span class="s">&quot;MINOR_BOOST&quot;</span> <span class="na">primaryModifier=</span><span class="s">&quot;CLOTHING_ATTRIBUTE&quot;</span> <span class="na">secondaryModifier=</span><span class="s">&quot;DAMAGE_FIRE&quot;</span> <span class="na">timer=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+                    <span class="nt">&lt;/effects&gt;</span>
+                    <span class="nt">&lt;displacedList/&gt;</span>
+            <span class="nt">&lt;/clothing&gt;</span>
+    <span class="nt">&lt;/uniqueClothing&gt;</span>
+
+    <span class="nt">&lt;uniqueClothing&gt;</span>
+            <span class="nt">&lt;conditional&gt;</span><span class="cp">&lt;![CDATA[npc.hasVagina()]]&gt;</span><span class="nt">&lt;/conditional&gt;</span>
+            <span class="nt">&lt;clothing</span> <span class="na">colour=</span><span class="s">&quot;presetColourGroup2&quot;</span> <span class="na">colourSecondary=</span><span class="s">&quot;CLOTHING_BLACK&quot;</span> <span class="na">colourTertiary=</span><span class="s">&quot;CLOTHING_BLACK&quot;</span> <span class="na">enchantmentKnown=</span><span class="s">&quot;true&quot;</span> <span class="na">id=</span><span class="s">&quot;innoxia_vagina_insertable_dildo&quot;</span> <span class="na">isDirty=</span><span class="s">&quot;false&quot;</span> <span class="na">name=</span><span class="s">&quot;[npc.NamePos(true)] insertable dildo&quot;</span><span class="nt">&gt;&lt;/clothing&gt;</span>
+    <span class="nt">&lt;/uniqueClothing&gt;</span>
+<span class="nt">&lt;/guaranteedClothingEquips&gt;</span>
+</pre></div>
+</div>
+<div class="section" id="clothing-tags">
+<h4><a class="toc-backref" href="#id18">2.4.1 clothing tags</a><a class="headerlink" href="#clothing-tags" title="Permalink to this headline">¶</a></h4>
+<dl class="simple">
+<dt>Sub elements</dt><dd><ul class="simple">
+<li><p>effects : list of enchantments.</p></li>
+<li><p>displacedList : Unknown purpose.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The clothing element expects the following variables:</p>
+<div class="section" id="colours-group">
+<h5><a class="toc-backref" href="#id19">2.4.1.1 Colours group</a><a class="headerlink" href="#colours-group" title="Permalink to this headline">¶</a></h5>
+<p>Each of the following variable must contain a valid <code class="docutils literal notranslate"><span class="pre">CLOTHING_</span></code> colour (constant).</p>
+<dl class="simple">
+<dt>Variables</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">colour</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">colourSecondary</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">colourTertiary</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="enchantmentknown">
+<h5><a class="toc-backref" href="#id20">2.4.1.2 enchantmentKnown</a><a class="headerlink" href="#enchantmentknown" title="Permalink to this headline">¶</a></h5>
+<p>No idea. Ask the discord.</p>
+<p>Boolean.</p>
+</div>
+<div class="section" id="id">
+<h5><a class="toc-backref" href="#id21">2.4.1.3 id</a><a class="headerlink" href="#id" title="Permalink to this headline">¶</a></h5>
+<p>The clothing id. Refer to <a class="reference external" href="index.rst">Item’s identifier</a>.</p>
+</div>
+<div class="section" id="isdirty">
+<h5><a class="toc-backref" href="#id22">2.4.1.4 isDirty</a><a class="headerlink" href="#isdirty" title="Permalink to this headline">¶</a></h5>
+<p>Whether the clothing item should spawn dirty, and in need of cleaning.</p>
+</div>
+<div class="section" id="id1">
+<h5><a class="toc-backref" href="#id23">2.4.1.5 name</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h5>
+<p>How the item should be displayed. The following example will output to
+“Character’s butt-plug”: <code class="docutils literal notranslate"><span class="pre">name=&quot;[npc.NamePos(true)]</span> <span class="pre">butt-plug&quot;</span></code>.</p>
+</div>
+<div class="section" id="pattern">
+<h5><a class="toc-backref" href="#id24">2.4.1.6 pattern</a><a class="headerlink" href="#pattern" title="Permalink to this headline">¶</a></h5>
+<p>The pattern to apply to the item.</p>
+</div>
+<div class="section" id="pattern-colour">
+<h5><a class="toc-backref" href="#id25">2.4.1.7 pattern colour</a><a class="headerlink" href="#pattern-colour" title="Permalink to this headline">¶</a></h5>
+<p>Each variable must contain a valid <code class="docutils literal notranslate"><span class="pre">CLOTHING_</span></code> colour.</p>
+<ul class="simple">
+<li><p>patternColour</p></li>
+<li><p>patternColourSecondary</p></li>
+<li><p>patternColourTertiary</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="genericclothingtype">
+<h3><a class="toc-backref" href="#id26">2.5 genericClothingType</a><a class="headerlink" href="#genericclothingtype" title="Permalink to this headline">¶</a></h3>
+<p>Theses elements automatically populate the possible clothing lists with all
+clothing in the game that satisfies the conditionals.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;genericClothingType&gt;</span>
+    <span class="nt">&lt;itemTags&gt;</span>
+      <span class="nt">&lt;tag&gt;</span>DRESS<span class="nt">&lt;/tag&gt;</span>
+    <span class="nt">&lt;/itemTags&gt;</span>
+    <span class="nt">&lt;acceptableFemininities&gt;</span>
+            <span class="nt">&lt;femininity&gt;</span>FEMININE<span class="nt">&lt;/femininity&gt;</span>
+    <span class="nt">&lt;/acceptableFemininities&gt;</span>
+    <span class="nt">&lt;slot/&gt;</span>
+    <span class="nt">&lt;rarity&gt;</span>COMMON<span class="nt">&lt;/rarity&gt;</span>
+    <span class="nt">&lt;conditional/&gt;</span>
+    <span class="nt">&lt;primaryColours&gt;</span>
+            <span class="nt">&lt;colour&gt;</span>presetColourGroup1<span class="nt">&lt;/colour&gt;</span>
+    <span class="nt">&lt;/primaryColours&gt;</span>
+    <span class="nt">&lt;secondaryColours/&gt;</span>
+    <span class="nt">&lt;tertiaryColours/&gt;</span>
+<span class="nt">&lt;/genericClothingType&gt;</span>
+
+<span class="nt">&lt;genericClothingType&gt;</span> <span class="c">&lt;!-- Generic jewellery. This should probably be used in all outfits, unless you want to manually define your own jewellery. --&gt;</span>
+    <span class="nt">&lt;itemTags/&gt;</span>
+    <span class="nt">&lt;acceptableFemininities&gt;</span>
+            <span class="nt">&lt;femininity&gt;</span>FEMININE<span class="nt">&lt;/femininity&gt;</span>
+            <span class="nt">&lt;femininity&gt;</span>ANDROGYNOUS<span class="nt">&lt;/femininity&gt;</span>
+    <span class="nt">&lt;/acceptableFemininities&gt;</span>
+    <span class="nt">&lt;slot/&gt;</span>
+    <span class="nt">&lt;rarity&gt;</span>COMMON<span class="nt">&lt;/rarity&gt;</span>
+    <span class="nt">&lt;conditional&gt;</span><span class="cp">&lt;![CDATA[clothing.getSlot().isJewellery() &amp;&amp; (RND.nextInt(100)&lt;=25 || clothing.getSlot()==IS_PIERCING_EAR)]]&gt;</span><span class="nt">&lt;/conditional&gt;</span>
+    <span class="nt">&lt;primaryColours&gt;</span>
+            <span class="nt">&lt;colour&gt;</span>presetColourGroup2<span class="nt">&lt;/colour&gt;</span>
+    <span class="nt">&lt;/primaryColours&gt;</span>
+    <span class="nt">&lt;secondaryColours/&gt;</span>
+    <span class="nt">&lt;tertiaryColours/&gt;</span>
+<span class="nt">&lt;/genericClothingType&gt;</span>
+</pre></div>
+</div>
+<div class="section" id="itemtag">
+<h4><a class="toc-backref" href="#id27">2.5.1 itemTag</a><a class="headerlink" href="#itemtag" title="Permalink to this headline">¶</a></h4>
+<p>If tags are defined, then only clothing with the provided tags will be included
+for random selection. May be left empty.</p>
+<p>Accepted values can be found in the following file:
+<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/inventory/ItemTag.java">src/com/lilithsthrone/game/inventory/ItemTag.java</a></p>
+<div class="section" id="tag">
+<h5><a class="toc-backref" href="#id28">2.5.1.1 tag</a><a class="headerlink" href="#tag" title="Permalink to this headline">¶</a></h5>
+<p>If the tag contains the constant <code class="docutils literal notranslate"><span class="pre">DRESS</span></code>, then all items in the game marked as a
+<code class="docutils literal notranslate"><span class="pre">DRESS</span></code> will be included for random selection.</p>
+</div>
+</div>
+<div class="section" id="acceptablefemininities">
+<h4><a class="toc-backref" href="#id29">2.5.2 acceptableFemininities</a><a class="headerlink" href="#acceptablefemininities" title="Permalink to this headline">¶</a></h4>
+<p>If <a class="reference internal" href="#femininity">1.3 femininity</a> are defined, then only clothing suitable for this femininity
+will be included for random selection.</p>
+</div>
+<div class="section" id="slot">
+<h4><a class="toc-backref" href="#id30">2.5.3 slot</a><a class="headerlink" href="#slot" title="Permalink to this headline">¶</a></h4>
+<p>If a slot (of type InventorySlot) is defined, then only clothing that fits into
+this slot will be included for random selection. Use the Enum values as defined
+in <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/inventory/InventorySlot.java">src/com/lilithsthrone/game/inventory/InventorySlot.java</a></p>
+</div>
+<div class="section" id="rarity">
+<h4><a class="toc-backref" href="#id31">2.5.4 rarity</a><a class="headerlink" href="#rarity" title="Permalink to this headline">¶</a></h4>
+<p>If a rarity is defined, then only clothing that has this rarity will be
+included for random selection. Accepted values can be found in the following
+file: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/inventory/Rarity.java">src/com/lilithsthrone/game/inventory/Rarity.java</a></p>
+</div>
+<div class="section" id="id2">
+<h4><a class="toc-backref" href="#id32">2.5.5 conditional</a><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<p>If a condition is defined, then only clothing that satisfies this condition will
+be included for random selection. Wrap the conditional statement in <code class="docutils literal notranslate"><span class="pre">CDATA</span></code> tags
+if used.</p>
+<p>In the following logic, earrings have 100% chance to be equipped. All other
+jewellery have a 25% chance instead. These items are automatically skipped if
+the character doesn’t have the relevant slot accessible. In the case of
+jewellery, ears that are not pierced cannot received earrings.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">clothing</span><span class="p">.</span><span class="na">getSlot</span><span class="p">().</span><span class="na">isJewellery</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">RND</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="o">&lt;=</span><span class="mi">25</span> <span class="o">||</span> <span class="n">clothing</span><span class="p">.</span><span class="na">getSlot</span><span class="p">()</span><span class="o">==</span><span class="n">IS_PIERCING_EAR</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="primary-secondary-and-tertiary-colours">
+<h4><a class="toc-backref" href="#id33">2.5.6 primary, secondary and tertiary colours</a><a class="headerlink" href="#primary-secondary-and-tertiary-colours" title="Permalink to this headline">¶</a></h4>
+<p>Three sub elements:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">primaryColours</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secondaryColours</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tertiaryColours</span></code></p></li>
+</ul>
+<p>Each accepts a preset color defined earlier in the document.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;primaryColours&gt;</span>
+    <span class="nt">&lt;colour&gt;</span>presetColourGroup2<span class="nt">&lt;/colour&gt;</span>
+<span class="nt">&lt;/primaryColours&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="colours">
+<h4><a class="toc-backref" href="#id34">2.5.7 colours</a><a class="headerlink" href="#colours" title="Permalink to this headline">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">colours</span></code> elements can be used in addition to, or as a replacement of, the
+primary/secondary/tertiary colours elements. Individual colours or
+presetColourGroups can be used.</p>
+<p>It is defined as follows:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;colours&gt;</span>
+    <span class="nt">&lt;colour&gt;</span>presetColourGroup1<span class="nt">&lt;/colour&gt;</span>
+<span class="nt">&lt;/colours&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="clothingtype">
+<h3><a class="toc-backref" href="#id35">2.6 clothingType</a><a class="headerlink" href="#clothingtype" title="Permalink to this headline">¶</a></h3>
+<p>Presumably this block filters items based on the list of types, then each
+character that satisfy the <code class="docutils literal notranslate"><span class="pre">conditional</span></code> sub-element is susceptible to be
+selected.</p>
+<p>The colour references serves as a list of preset colours for this outfit’s
+condional.</p>
+<p>The constant present in the <code class="docutils literal notranslate"><span class="pre">type</span></code> sub-elements are capitalized references to
+the item’s path, minus the name of the author. As such, for an item lying in
+<code class="docutils literal notranslate"><span class="pre">res/clothing/innoxia/chest/lacy_plunge_bra.xml</span></code>, it’s type constant will be
+<code class="docutils literal notranslate"><span class="pre">CHEST_LACY_PLUNGE_BRA</span></code>.</p>
+<p>Both <code class="docutils literal notranslate"><span class="pre">genericClothingType</span></code> and <code class="docutils literal notranslate"><span class="pre">clothingType</span></code> are shuffled together before being
+run through and worn. So if two items occupies the same slot, as for example
+several bra, then only one of them will be chosen at random.</p>
+<p><code class="docutils literal notranslate"><span class="pre">primaryColours</span></code> sub-element has an optional attribute <code class="docutils literal notranslate"><span class="pre">value</span></code>, which can be
+used as a pre-set colour list instead of defining individual colours.</p>
+<p><a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/utils/ColourListPresets.java">https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/utils/ColourListPresets.java</a></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;clothingType&gt;</span>
+    <span class="nt">&lt;conditional&gt;</span><span class="cp">&lt;![CDATA[npc.hasBreasts()]]&gt;</span><span class="nt">&lt;/conditional&gt;</span>
+    <span class="nt">&lt;types&gt;</span>
+            <span class="nt">&lt;type&gt;</span>CHEST_PLUNGE_BRA<span class="nt">&lt;/type&gt;</span>
+            <span class="nt">&lt;type&gt;</span>CHEST_LACY_PLUNGE_BRA<span class="nt">&lt;/type&gt;</span>
+            <span class="nt">&lt;type&gt;</span>CHEST_FULLCUP_BRA<span class="nt">&lt;/type&gt;</span>
+    <span class="nt">&lt;/types&gt;</span>
+    <span class="nt">&lt;primaryColours</span> <span class="na">values=</span><span class="s">&quot;LINGERIE&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;secondaryColours/&gt;</span>
+    <span class="nt">&lt;tertiaryColours/&gt;</span>
+<span class="nt">&lt;/clothingType&gt;</span>
+
+<span class="nt">&lt;clothingType&gt;</span>
+    <span class="nt">&lt;conditional&gt;</span><span class="cp">&lt;![CDATA[npc.getFemininityValue()&lt;75]]&gt;</span><span class="nt">&lt;/conditional&gt;</span>
+    <span class="nt">&lt;types&gt;</span>
+            <span class="nt">&lt;type&gt;</span>FOOT_HEELS<span class="nt">&lt;/type&gt;</span>
+    <span class="nt">&lt;/types&gt;</span>
+    <span class="nt">&lt;primaryColours&gt;</span>
+            <span class="nt">&lt;colour&gt;</span>presetColourGroup2<span class="nt">&lt;/colour&gt;</span>
+    <span class="nt">&lt;/primaryColours&gt;</span>
+    <span class="nt">&lt;secondaryColours/&gt;</span>
+    <span class="nt">&lt;tertiaryColours/&gt;</span>
+<span class="nt">&lt;/clothingType&gt;</span>
+
+<span class="nt">&lt;clothingType&gt;</span>
+    <span class="nt">&lt;conditional&gt;</span><span class="cp">&lt;![CDATA[npc.getFemininityValue()&gt;=75]]&gt;</span><span class="nt">&lt;/conditional&gt;</span>
+    <span class="nt">&lt;types&gt;</span>
+            <span class="nt">&lt;type&gt;</span>FOOT_STILETTO_HEELS<span class="nt">&lt;/type&gt;</span>
+    <span class="nt">&lt;/types&gt;</span>
+    <span class="nt">&lt;primaryColours&gt;</span>
+            <span class="nt">&lt;colour&gt;</span>presetColourGroup2<span class="nt">&lt;/colour&gt;</span>
+    <span class="nt">&lt;/primaryColours&gt;</span>
+    <span class="nt">&lt;secondaryColours/&gt;</span>
+    <span class="nt">&lt;tertiaryColours/&gt;</span>
+<span class="nt">&lt;/clothingType&gt;</span>
+
+<span class="nt">&lt;clothingType&gt;</span>
+    <span class="nt">&lt;conditional&gt;</span><span class="cp">&lt;![CDATA[cond1]]&gt;</span><span class="nt">&lt;/conditional&gt;</span>
+    <span class="nt">&lt;types&gt;</span>
+            <span class="nt">&lt;type&gt;</span>FINGER_RING<span class="nt">&lt;/type&gt;</span>
+    <span class="nt">&lt;/types&gt;</span>
+    <span class="nt">&lt;primaryColours&gt;</span>
+            <span class="nt">&lt;colour&gt;</span>presetColourGroup2<span class="nt">&lt;/colour&gt;</span>
+    <span class="nt">&lt;/primaryColours&gt;</span>
+    <span class="nt">&lt;secondaryColours/&gt;</span>
+    <span class="nt">&lt;tertiaryColours/&gt;</span>
+<span class="nt">&lt;/clothingType&gt;</span>
+
+<span class="nt">&lt;clothingType&gt;</span>
+    <span class="nt">&lt;conditional&gt;</span><span class="cp">&lt;![CDATA[!cond1 || cond2]]&gt;</span><span class="nt">&lt;/conditional&gt;</span>
+    <span class="nt">&lt;types&gt;</span>
+            <span class="nt">&lt;type&gt;</span>NECK_HEART_NECKLACE<span class="nt">&lt;/type&gt;</span>
+    <span class="nt">&lt;/types&gt;</span>
+    <span class="nt">&lt;primaryColours&gt;</span>
+            <span class="nt">&lt;colour&gt;</span>presetColourGroup2<span class="nt">&lt;/colour&gt;</span>
+    <span class="nt">&lt;/primaryColours&gt;</span>
+    <span class="nt">&lt;secondaryColours/&gt;</span>
+    <span class="nt">&lt;tertiaryColours/&gt;</span>
+<span class="nt">&lt;/clothingType&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Outfits</a><ul>
+<li><a class="reference internal" href="#coreattributes">1 coreAttributes</a><ul>
+<li><a class="reference internal" href="#name">1.1 name</a></li>
+<li><a class="reference internal" href="#description">1.2 description</a></li>
+<li><a class="reference internal" href="#femininity">1.3 femininity</a></li>
+<li><a class="reference internal" href="#worldtypes">1.4 worldTypes</a></li>
+<li><a class="reference internal" href="#outfittypes">1.5 outfitTypes</a></li>
+<li><a class="reference internal" href="#acceptablelegconfigurations">1.6 acceptableLegConfigurations</a></li>
+<li><a class="reference internal" href="#conditional">1.7 conditional</a></li>
+<li><a class="reference internal" href="#weight">1.8 weight</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#generationattributes">2 generationAttributes</a><ul>
+<li><a class="reference internal" href="#conditional-statements">2.1 Conditional statements</a></li>
+<li><a class="reference internal" href="#presetcolourgroups">2.2 presetColourGroups</a></li>
+<li><a class="reference internal" href="#mainweapons-and-offhandweapons">2.3 mainWeapons and offhandWeapons</a></li>
+<li><a class="reference internal" href="#guaranteedclothingequips">2.4 guaranteedClothingEquips</a><ul>
+<li><a class="reference internal" href="#clothing-tags">2.4.1 clothing tags</a><ul>
+<li><a class="reference internal" href="#colours-group">2.4.1.1 Colours group</a></li>
+<li><a class="reference internal" href="#enchantmentknown">2.4.1.2 enchantmentKnown</a></li>
+<li><a class="reference internal" href="#id">2.4.1.3 id</a></li>
+<li><a class="reference internal" href="#isdirty">2.4.1.4 isDirty</a></li>
+<li><a class="reference internal" href="#id1">2.4.1.5 name</a></li>
+<li><a class="reference internal" href="#pattern">2.4.1.6 pattern</a></li>
+<li><a class="reference internal" href="#pattern-colour">2.4.1.7 pattern colour</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#genericclothingtype">2.5 genericClothingType</a><ul>
+<li><a class="reference internal" href="#itemtag">2.5.1 itemTag</a><ul>
+<li><a class="reference internal" href="#tag">2.5.1.1 tag</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#acceptablefemininities">2.5.2 acceptableFemininities</a></li>
+<li><a class="reference internal" href="#slot">2.5.3 slot</a></li>
+<li><a class="reference internal" href="#rarity">2.5.4 rarity</a></li>
+<li><a class="reference internal" href="#id2">2.5.5 conditional</a></li>
+<li><a class="reference internal" href="#primary-secondary-and-tertiary-colours">2.5.6 primary, secondary and tertiary colours</a></li>
+<li><a class="reference internal" href="#colours">2.5.7 colours</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#clothingtype">2.6 clothingType</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="weapons.html"
+                        title="previous chapter">Items Weapons</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="setBonuses.html"
+                        title="next chapter">setBonuses</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/outfits.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="setBonuses.html" title="setBonuses"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="weapons.html" title="Items Weapons"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Lilith&#39;s Throne Mod Documentation  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Outfits</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Bicobus.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>
