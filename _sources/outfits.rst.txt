@@ -79,7 +79,7 @@ Outfit types that this outfit can be used in.
 .. seealso::
    A list of :ltgithub:`outfitTypes<src/com/lilithsthrone/game/inventory/clothing/OutfitType.java>`.
 
-.. note::
+.. Caution::
 
    At the time of creation (*v0.3.0.6*), only the ``MUGGER`` outfitType is used
    in the game. All outfit types will be added eventually.
@@ -213,7 +213,7 @@ mainWeapons and offhandWeapons
 
 Weapons can be added in a similar (although more limited) manner to clothing.
 This file doesn’t use any weapons. Look at
-``res/outfits/innoxia/genericMugger/dominion_masculine.xml`` for a weapon
+:ltgithub:`res/outfits/innoxia/genericMugger/dominion_masculine.xml` for a weapon
 example.
 
 The content present in ``mainWeapons`` and ``offhandWeapons`` follow the same
@@ -327,7 +327,8 @@ patternColourSecondary
 patternColourTertiary
     Must contain a valid ``CLOTHING_`` colour.
 enchantmentKnown
-    type: boolean. Purpose unknown.
+    type: boolean. Determine if the effects on the item are known to the
+    player, or if the item remains unidentified.
 id
     The clothing ID
 

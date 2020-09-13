@@ -314,8 +314,8 @@ anywhere).</p>
 <p class="admonition-title">See also</p>
 <p>A list of <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/clothing/OutfitType.java">outfitTypes</a>.</p>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
 <p>At the time of creation (<em>v0.3.0.6</em>), only the <code class="docutils literal notranslate"><span class="pre">MUGGER</span></code> outfitType is used
 in the game. All outfit types will be added eventually.</p>
 </div>
@@ -432,7 +432,7 @@ group will always return the same, randomly chosen colour from its list.</p>
 <h3><a class="toc-backref" href="#id15"><span class="section-number">3.2.3. </span>mainWeapons and offhandWeapons</a><a class="headerlink" href="#mainweapons-and-offhandweapons" title="Permalink to this headline">¶</a></h3>
 <p>Weapons can be added in a similar (although more limited) manner to clothing.
 This file doesn’t use any weapons. Look at
-<code class="docutils literal notranslate"><span class="pre">res/outfits/innoxia/genericMugger/dominion_masculine.xml</span></code> for a weapon
+<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/res/outfits/innoxia/genericMugger/dominion_masculine.xml">res/outfits/innoxia/genericMugger/dominion_masculine.xml</a> for a weapon
 example.</p>
 <p>The content present in <code class="docutils literal notranslate"><span class="pre">mainWeapons</span></code> and <code class="docutils literal notranslate"><span class="pre">offhandWeapons</span></code> follow the same
 rules. The main weapons block defines which item should be inserted into the
@@ -530,7 +530,8 @@ in which case only the first item is used.</p>
 </dd>
 <dt>patternColourTertiary</dt><dd><p>Must contain a valid <code class="docutils literal notranslate"><span class="pre">CLOTHING_</span></code> colour.</p>
 </dd>
-<dt>enchantmentKnown</dt><dd><p>type: boolean. Purpose unknown.</p>
+<dt>enchantmentKnown</dt><dd><p>type: boolean. Determine if the effects on the item are known to the
+player, or if the item remains unidentified.</p>
 </dd>
 <dt>id</dt><dd><p>The clothing ID</p>
 <div class="admonition seealso">
