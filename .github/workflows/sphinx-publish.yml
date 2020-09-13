@@ -30,6 +30,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
+          sudo apt install graphviz
       - name: Build Sphinx HTML
         run: |
           cd docs/
