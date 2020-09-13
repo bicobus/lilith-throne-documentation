@@ -64,7 +64,8 @@ Across the different types of items exists shared concepts. Some of those
 concept may be expanded on a per category basis, for example weapons needs more
 colours than the other kinds of items and thus expand the available list.
 
-.. _items-identifier:
+.. index:: ! items-identifier
+   :name: items-identifier
 
 Item’s identifier
 -----------------
@@ -88,7 +89,8 @@ important variable to keep in mind. If you ever rename the folder or the ``xml``
 file, the identifier will change which, in turn, will invalidate all existing
 reference present in the players saves files.
 
-.. _author-tags:
+.. index:: ! author-tags
+   :name: author-tags
 
 author tags
 -----------
@@ -100,7 +102,6 @@ name will be used.
 The content of the element should be a short one line descriptor.
 
 Example
-
      *A tag discreetly sewn into the T-shirt’s inner lining informs you*
      *that it was made by ’Innoxia’.*
 
@@ -156,7 +157,8 @@ Description
 A long form description of the item. Should be present for each object under the
 items category.
 
-.. _items-image:
+.. index:: ! items-image
+   :name: items-image
 
 Item’s image
 ------------
@@ -172,7 +174,8 @@ I use 256 × 256 as a personal preference).
 If the item can be equipped, then an ``imageEquippedname`` must also be
 provided. Please refer to the appropriate documentation for more details.
 
-.. _rarity:
+.. index:: ! rarity
+   :name: rarity
 
 rarity
 ------
@@ -183,7 +186,8 @@ file :ltgithub:`src/com/lilithsthrone/game/inventory/Rarity.java`.
 Please note that any item set with a rarity of LEGENDARY will not appear
 naturally in the game, neither from the shop keepers nor random encounters.
 
-.. _colours:
+.. index:: ! colours
+   :name: colours
 
 colours
 -------
@@ -352,3 +356,4 @@ status effects special case
 Status effects also accept colours, but to a lesser degree. The colours for
 status effects are there to recolor the icon, as such at most three values are
 expected for ``primary``, ``secondary``, and ``tertiary`` colours.
+
