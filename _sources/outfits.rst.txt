@@ -1,16 +1,21 @@
+.. highlight:: xml
+
+.. `outfits`_
+
 =======
 Outfits
 =======
 
-    :Author: innoxia, bicobus
-
-.. contents::
+    :Authors: innoxia, bicobus
 
 Outfits are a way to make randomly generated NPCs’ outfit generation less
 chaotic.
 
 As a final note, I will add support for allowing the automatic generation of
 piercings in the next update.
+
+An annotated example lives at
+:ltgithub:`res/mods/innoxia/outfits/casualDates/dress_toys.xml`
 
 coreAttributes
 --------------
@@ -129,7 +134,7 @@ handle on.
 
 .. code:: xml
 
-    <conditional><![CDATA[!npc.hasFetish(FETISH_EXHIBITIONIST) && npc.hasFetish(FETISH_MASTURBATION) && npc.getFetishDesire(FETISH_SUBMISSIVE).isPositive()]]></conditional>
+    <conditional><![CDATA[!npc.hasFetish(FETISH_EXHIBITIONIST) && npc.hasFetish(FETISH_MASTURBATION) && npc.getFetishDesire(FETISH_SUBMISSIVE).isPositive()]**></conditional>
 
 weight
 ~~~~~~
@@ -151,23 +156,33 @@ generationAttributes
 Conditional statements
 ~~~~~~~~~~~~~~~~~~~~~~
 
+**Node Variables:**
+    .. nodevar:: constant <Boolean> (True)
+
+        Conditional statements are evaluated only one time, at the start of
+        clothing generation, unless this variable is set to ``False``.
+
 You can define any number of conditional statements to use elsewhere in this
-file. They must be enclosed in CDATA tags, and must use a format of
+file. They must be enclosed in ``CDATA`` tags, and must use a format of
 ``clothingConditionalX`` or ``condX``, where ``X`` is a unique ``String`` (e.g.
 ``cond1``, ``condUnderwear``, ``clothingConditionalMeleeWeapons`` are all valid
-tags). If they have the attribute: ``constant="true"``, then they are evaluated
-once at the start of clothing generation. If not, they are re-evaluated every
-time.
+tags).
 
-Example:
+Example
+    .. code:: xml
 
-.. code:: xml
-
-    <cond1 constant="true"><![CDATA[RND.nextInt(100)<=50]]></cond1>
-    <cond2 constant="true"><![CDATA[RND.nextInt(100)<=75]]></cond2>
+        <cond1 constant="true"><![CDATA[RND.nextInt(100)<=50]]></cond1>
+        <cond2 constant="true"><![CDATA[RND.nextInt(100)<=75]**></cond2>
 
 presetColourGroups
 ~~~~~~~~~~~~~~~~~~
+
+**Node Variables:**
+    .. nodevar:: [singleColour] <Boolean> (False)
+
+        The optional :nodevar:`singleColour` attribute, when set to ``True``,
+        means that this group will always return the same, randomly chosen
+        colour from its list.
 
 Preset colour groups have one of their defined ``randomColour`` randomly chosen
 for further use in this XML file. You can have up to 20 ``presetColourGroupX``,
@@ -179,9 +194,6 @@ however the numbers must be consecutive. (i.e. You can have
 Accepted values can be found in the files present in the
 :ltgithub:`src/com/lilithsthrone/utils/colours` diretory.
 
-The optional ``singleColour`` attribute, when set to ``true``, means that this
-group will always return the same, randomly chosen colour from its list.
-
 Preceding ``presetColourGroups`` can be used, but not succeeding ones. (i.e.
 ``presetColourGroup3`` could not be used in ``presetColourGroup2``.)
 
@@ -189,7 +201,7 @@ Preceding ``presetColourGroups`` can be used, but not succeeding ones. (i.e.
 
     <presetColourGroup1 singleColour="true">
     	<randomColour>CLOTHING_PINK</randomColour>
-    	<randOMCOLOUR>CLOTHING_PINK_LIGHT</randomColour>
+    	<randomColour>CLOTHING_PINK_LIGHT</randomColour>
     	<randomColour>CLOTHING_RED_DARK</randomColour>
     </presetColourGroup1>
 
@@ -213,8 +225,8 @@ mainWeapons and offhandWeapons
 
 Weapons can be added in a similar (although more limited) manner to clothing.
 This file doesn’t use any weapons. Look at
-:ltgithub:`res/outfits/innoxia/genericMugger/dominion_masculine.xml` for a weapon
-example.
+:ltgithub:`res/outfits/innoxia/genericMugger/dominion_masculine.xml` for a
+weapon example.
 
 The content present in ``mainWeapons`` and ``offhandWeapons`` follow the same
 rules. The main weapons block defines which item should be inserted into the
@@ -305,53 +317,76 @@ in which case only the first item is used.
 
     	<uniqueClothing>
     		<conditional><![CDATA[npc.hasVagina()]]></conditional>
-    		<clothing colour="presetColourGroup2" colourSecondary="CLOTHING_BLACK" colourTertiary="CLOTHING_BLACK" enchantmentKnown="true" id="innoxia_vagina_insertable_dildo" isDirty="false" name="[npc.NamePos(true)] insertable dildo"></clothing>
+    		<clothing colour="presetColourGroup2" colourSecondary="CLOTHING_BLACK" colourTertiary="CLOTHING_BLACK" enchantmentKnown="true" id="innoxia_vagina_insertable_dildo" isDirty="false" name="[npc.NamePos(true)** insertable dildo"></clothing>
     	</uniqueClothing>
     </guaranteedClothingEquips>
 
-clothing tags
-^^^^^^^^^^^^^
+clothing
+^^^^^^^^
 
-The clothing tag accepts the following variables:
+**Node Variables**:
+    .. nodevar:: colour <constant> ()
 
-colour
-    Must contain a valid ``CLOTHING_`` colour.
-colourSecondary
-    Must contain a valid ``CLOTHING_`` colour.
-colourTertiary
-    Must contain a valid ``CLOTHING_`` colour.
-patternColour
-    Must contain a valid ``CLOTHING_`` colour.
-patternColourSecondary
-    Must contain a valid ``CLOTHING_`` colour.
-patternColourTertiary
-    Must contain a valid ``CLOTHING_`` colour.
-enchantmentKnown
-    type: boolean. Determine if the effects on the item are known to the
-    player, or if the item remains unidentified.
-id
-    The clothing ID
+    .. nodevar:: colourSecondary <constant> ()
 
-    .. seealso:: :ref:`items-identifier`
-isDirty
-    Whether the clothing item should spawn dirty, and in need of cleaning.
-name
-    How the item should be displayed. The following example will output to
-    “Character’s butt-plug”: ``name="[npc.NamePos(true)] butt-plug"``.
-pattern
-    The pattern to apply to the item.
+    .. nodevar:: colourTertiary <constant> ()
+
+    .. nodevar:: patternColour <constant> ()
+
+    .. nodevar:: patternColourSecondary <constant> ()
+
+    .. nodevar:: patternColourTertiary <constant> ()
+
+        All colours variables must contain a valid ``CLOTHING_`` colour.
+
+    .. nodevar:: enchantmentKnown <boolean> ()
+
+        Determine if the effects on the item are known to the
+        player, or if the item remains unidentified.
+
+    .. nodevar:: id <string> ()
+
+        The clothing ID
+
+        .. seealso:: :ref:`items-identifier`
+
+    .. nodevar:: isDirty <boolean> ()
+
+        Whether the clothing item should spawn dirty, and in need of cleaning.
+
+    .. nodevar:: [name] <string> ()
+
+        How the item should be displayed. The following example will output to
+        “Character’s butt-plug”: ``name="[npc.NamePos(true)] butt-plug"``. If
+        not present, the name of the clothing is used instead.
+
+    .. nodevar:: [pattern] <string> (**
+
+        The pattern to apply to the item.
 
 The clothing tags has the following sub elements.
 
 effects
 :::::::
 
-list of enchantments.
+List of enchantments.
 
 displacedList
 :::::::::::::
 
-Unknown purpose.
+Define in which state a piece of clothing is being equipped.
+
+::
+
+   <displacedList>
+        <displacementType value="UNBUTTONS"/>
+    </displacedList>
+
+**displacementType Variables:**
+    .. nodevar:: value <constant> ()
+
+       The list of constants is available at
+       :ltgithub:`src/com/lilithsthrone/game/inventory/clothing/DisplacementType.java`
 
 genericClothingType
 ~~~~~~~~~~~~~~~~~~~
@@ -489,10 +524,12 @@ selected.
 The colour references serves as a list of preset colours for this outfit’s
 condional.
 
-The constant present in the ``type`` sub-elements are capitalized references to
-the item’s path, minus the name of the author. As such, for an item lying in
-``res/clothing/innoxia/chest/lacy_plunge_bra.xml``, it’s type constant will be
-``CHEST_LACY_PLUNGE_BRA``.
+The constants present in the ``type`` sub-elements are either hard coded
+constants or :ref:`items-identifier`.
+
+.. caution:: Some piece of clothing haven't been (yet) converted into a XML
+             format, those have hard coded types available at
+             :ltgithub:`src/com/lilithsthrone/game/inventory/clothing/ClothingType.java`
 
 Both ``genericClothingType`` and ``clothingType`` are shuffled together before
 being run through and worn. So if two items occupies the same slot, as for
@@ -502,7 +539,7 @@ example several bra, then only one of them will be chosen at random.
 used as a pre-set colour list instead of defining individual colours.
 
 .. seealso::
-   :ltgithub:`src/com/lilithsthrone/utils/ColourListPresets.java`
+   :ltgithub:`src/com/lilithsthrone/utils/colours/ColourListPresets.java`
 
 
 .. code:: xml

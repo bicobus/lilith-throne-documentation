@@ -58,7 +58,7 @@ expected:
 - ``false``
 
 Shared tags and information
------------------------------
+---------------------------
 
 Across the different types of items exists shared concepts. Some of those
 concept may be expanded on a per category basis, for example weapons needs more
@@ -168,7 +168,7 @@ Item’s image
 
 The element ``imageName`` will be found through the different objects. It
 informs of the file path for the object’s image. All images *must be* .svg
-format. Colours to be used are described below, above the ``primaryColours``
+format. Colours to be used are described below, above the :ref:`primaryColours <colours>`
 element. I use the free program `InkScape`_ to make my
 .svg images. .svg images scale perfectly up and down to any size, so, while it
 should be a square, it doesn’t really matter what size your canvas is (although
