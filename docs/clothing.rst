@@ -277,6 +277,9 @@ Example
 
         <categoryName><![CDATA[Top Text]]></categoryName>
 
+.. index:: ! sticker
+   :name: sticker
+
 sticker
 :::::::
 
@@ -640,7 +643,7 @@ displacementType
 If this clothing is displaced in the following way (in this case, by being
 removed), then the `blockedBodyParts`_, `clothingAccessBlocked`_, and
 `concealedSlots`_ will all be revealed. If multiple `blockedParts`_ block or
-conceal the same slot, only one ``blockedParts`` needs to be displaced to reveal
+conceal the same slot, only one `blockedParts`_ needs to be displaced to reveal
 it. (e.g. If a pair of trousers has ``UNZIPS`` and ``PULLS_DOWN``
 displacementTypes, and both of these contain the ``concealedSlots`` ``slot``
 ``PENIS``, then the penis will be revealed if either ``UNZIPS`` or
@@ -683,8 +686,8 @@ Example
 concealedSlots
 ^^^^^^^^^^^^^^
 
-The slots that this ’displacementType’ conceals. Possible slots are found here:
-:ltgithub:`src/com/lilithsthrone/game/inventory/InventorySlot.java`
+The slots that this `displacementType`_ conceals. Possible slots are found
+here: :ltgithub:`src/com/lilithsthrone/game/inventory/InventorySlot.java`
 
 
 You can also use a preset list by adding an attribute named “values” to this
@@ -715,7 +718,7 @@ Example
 
 Example 2
     If you want to add slots, then use the element like so (which
-    would block the FINGER slot when equipped into the WRIST slot):
+    would block the ``FINGER`` slot when equipped into the ``WRIST`` slot):
 
 .. code:: xml
 

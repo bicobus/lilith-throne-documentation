@@ -2,3 +2,4 @@ docs/_build/
 *~
 *.html
 .python_version
+__pycache__/
