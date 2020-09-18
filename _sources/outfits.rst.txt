@@ -360,7 +360,7 @@ clothing
         “Character’s butt-plug”: ``name="[npc.NamePos(true)] butt-plug"``. If
         not present, the name of the clothing is used instead.
 
-    .. nodevar:: [pattern] <string> (**
+    .. nodevar:: [pattern] <string> ()
 
         The pattern to apply to the item.
 

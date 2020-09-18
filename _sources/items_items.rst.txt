@@ -2,13 +2,15 @@
 Miscanelaous Items
 ==================
 
-    :Author: innoxia, bicobus
+    :Authors: innoxia, bicobus
 
 .. note::
 
    Item modding is not fully complete yet, as you cannot define any enchantment
    effects for items. I will expand this at some point in the future, but for
    now, this modding framework should be enough for most uses.
+
+An annotated example lives at :ltgithub:`res/items/innoxia/pills/fertility.xml`.
 
 Boolean Values
 --------------
@@ -65,16 +67,18 @@ The singular name of this item.
 
 .. code:: xml
 
-    <name><![CDATA[breeder pill]]></name>
+    <name><![CDATA[breeder pill]**></name>
 
 namePlural
 ~~~~~~~~~~
 
 The plural name of this item.
 
-The variable ``pluralByDefault`` defines whether the item will always be refered
-by it’s plural name (e.g. “a pair of pants”). The argument accepts `Boolean
-Values`_.
+**Node Variables:**
+    .. nodevar:: pluralByDefault <boolean> ()
+
+        The variable ``pluralByDefault`` defines whether the item will always be
+        refered by it’s plural name (e.g. “a pair of pants”).
 
 .. code:: xml
 

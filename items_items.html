@@ -55,7 +55,7 @@
 <h1><span class="section-number">2.2. </span>Miscanelaous Items<a class="headerlink" href="#miscanelaous-items" title="Permalink to this headline">¶</a></h1>
 <blockquote>
 <div><dl class="field-list simple">
-<dt class="field-odd">Author</dt>
+<dt class="field-odd">Authors</dt>
 <dd class="field-odd"><p>innoxia, bicobus</p>
 </dd>
 </dl>
@@ -66,6 +66,7 @@
 effects for items. I will expand this at some point in the future, but for
 now, this modding framework should be enough for most uses.</p>
 </div>
+<p>An annotated example lives at <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/res/items/innoxia/pills/fertility.xml">res/items/innoxia/pills/fertility.xml</a>.</p>
 <div class="section" id="boolean-values">
 <h2><span class="section-number">2.2.1. </span>Boolean Values<a class="headerlink" href="#boolean-values" title="Permalink to this headline">¶</a></h2>
 <p>Boolean values can be used throughought the elements of this document. Those
@@ -108,16 +109,23 @@ would now need to be “a pair of”.</p>
 <div class="section" id="name">
 <h3><span class="section-number">2.2.2.4. </span>name<a class="headerlink" href="#name" title="Permalink to this headline">¶</a></h3>
 <p>The singular name of this item.</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;name&gt;</span><span class="cp">&lt;![CDATA[breeder pill]]&gt;</span><span class="nt">&lt;/name&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;name&gt;</span><span class="cp">&lt;![CDATA[breeder pill]**&gt;</span><span class="nt">&lt;/name&gt;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="nameplural">
 <h3><span class="section-number">2.2.2.5. </span>namePlural<a class="headerlink" href="#nameplural" title="Permalink to this headline">¶</a></h3>
 <p>The plural name of this item.</p>
-<p>The variable <code class="docutils literal notranslate"><span class="pre">pluralByDefault</span></code> defines whether the item will always be refered
-by it’s plural name (e.g. “a pair of pants”). The argument accepts <a class="reference internal" href="#boolean-values">Boolean
-Values</a>.</p>
+<dl>
+<dt><strong>Node Variables:</strong></dt><dd><dl class="std nodevar">
+<dt id="nodevar-pluralByDefault">
+<code class="sig-name descname">pluralByDefault</code> Type: boolean<a class="headerlink" href="#nodevar-pluralByDefault" title="Permalink to this definition">¶</a></dt>
+<dd><p>The variable <code class="docutils literal notranslate"><span class="pre">pluralByDefault</span></code> defines whether the item will always be
+refered by it’s plural name (e.g. “a pair of pants”).</p>
+</dd></dl>
+
+</dd>
+</dl>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;namePlural</span> <span class="na">pluralByDefault=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[breeder pills]]&gt;</span><span class="nt">&lt;/namePlural&gt;</span>
 </pre></div>
 </div>
