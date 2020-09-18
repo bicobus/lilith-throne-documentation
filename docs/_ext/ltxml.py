@@ -1,20 +1,5 @@
 from docutils import nodes
 from sphinx import addnodes
-from sphinx.domains.python import PyField
-from sphinx.util.docfields import Field, GroupedField
-from sphinx.locale import _
-
-
-class ltxmlvar(nodes.FixedTextElement):
-    pass
-
-
-def visit_xmlvar_html(self, node):
-    pass
-
-
-def depart_xmlvar_html(self, node):
-    pass
 
 
 def parse_nodevar(env, sig, signode):
@@ -38,42 +23,16 @@ def parse_nodevar(env, sig, signode):
     if optional:
         signode += nodes.Text(', ')
         signode += addnodes.desc_annotation("Optional", "Optional")
-    return nodevar
+    return nodevar + '; ' + env.docname
 
 
 def setup(app):
-
-    fopt = Field(
-        name='optional',
-        names=('opt', 'optional',),
-        label=_('Optional'),
-        has_arg=False,
-    )
-
-    ftype = PyField(
-        'type',
-        label=_('Type'),
-        has_arg=False,
-        names=('type',),
-        bodyrolename='class'
-    )
-
-    fdef = GroupedField(
-        'default',
-        label=_('Default'),
-        names=('default',),
-        can_collapse=True,
-    )
+    """Sphinx-doc callback."""
 
     app.add_object_type(
         'nodevar',
         'nodevar',
         objname='variable value',
-        indextemplate='pair: %s; node variable value',
-        doc_field_types=[fopt, ftype, fdef],
+        indextemplate='triple: %s; node variable value',
         parse_node=parse_nodevar,
     )
-    # app.add_node(
-    #     ltxmlvar,
-    #     html=(visit_xmlvar_html, depart_xmlvar_html)
-    # )

@@ -14,13 +14,12 @@ If you are unsure of anything, please join the `Lilith's Throne Discord`_ and
 ask for help! You can see another annotated example in the file
 :ltgithub:`res/setBonuses/innoxia/enforcer.xml`.
 
-name
-----
+:index:`name`
+-------------
 
 The name of this set bonus.
 
 .. code:: xml
-    :name: name
 
     <name><![CDATA[Socks of Power]]></name>
 

@@ -18,8 +18,8 @@ sys.path.append(abspath(join(dirname(__file__), "_ext")))
 # -- Project information -----------------------------------------------------
 
 project = "Lilith's Throne Mod Documentation"
-copyright = '2020, Innoxia, Bicobus'
-author = 'Bicobus'
+copyright = '2020, Innoxia and contributors'
+author = 'Innoxia'
 
 
 # -- General configuration ---------------------------------------------------
