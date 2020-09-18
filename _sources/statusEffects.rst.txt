@@ -1,8 +1,10 @@
+.. highlight:: xml
+
 =============
 statusEffects
 =============
 
-    :Author: innoxia, bicobus
+    :Authors: innoxia, bicobus
 
 GENERAL INFORMATION
 -------------------
@@ -12,7 +14,7 @@ access to a variety of content, like combat moves or spell. They can also change
 the attributes of the character.
 
 You can see an annotated example in the file
-``res/statusEffects/innoxia/set_kitty.xml``.
+:ltgithub:`res/statusEffects/innoxia/set_kitty.xml`.
 
 renderingPriority
 -----------------
@@ -90,12 +92,12 @@ Set to ``true`` if you want this status effect to be rendered during sex.
 
     <sexEffect>false</sexEffect>
 
-name
-----
+:index:`name`
+-------------
 
-The name of this set bonus. The character under the effect is passed in as the
-``npc`` parsing argument, so if you want to, you can include parsing elements
-such as ``[npc.name]``.
+The :ref:`name` of this set bonus. The character under the effect is passed in
+as the ``npc`` parsing argument, so if you want to, you can include parsing
+elements such as ``[npc.name]``.
 
 .. code:: xml
 
@@ -128,10 +130,10 @@ file.
 colours
 -------
 
-The colour which should be associated with this status effect. Just like with
-clothing and weapon recolouring, this is used to recolour the image you used
-above. ``PresetColour`` value should be used here, drawn from
-`src/com/lilithsthrone/utils/colours/PresetColour.java <https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/utils/colours/PresetColour.java>`_
+The :ref:`colour <colours>` which should be associated with this status effect.
+Just like with clothing and weapon recolouring, this is used to recolour the
+image you used above. ``PresetColour`` value should be used here, drawn from
+:ltgithub:`src/com/lilithsthrone/utils/colours/PresetColour.java`
 
 colourPrimary
 ~~~~~~~~~~~~~
@@ -162,18 +164,26 @@ attributeModifiers
 ------------------
 
 The attributes which should be affected by having this status effect. The
-``value="10"`` part defines how much the attribute should be numerically
-affected (and can be negative), while the ``DAMAGE_LUST`` part defines which
-attribute is being affected. You can define any number of attribute modifiers,
-but it’s usually best to keep it limited to just a few. Values for attributes
-should be drawn from here:
-`/src/com/lilithsthrone/game/character/attributes/Attribute.java
-<https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/character/attributes/Attribute.java>`_
+``modifier`` node must contain the attribute to be affected, in the example
+``DAMAGE_LUST``. You can define any number of attribute modifiers, but it’s
+usually best to keep it limited to just a few.
+
+.. seealso::
+
+   List of attributes:
+   :ltgithub:`/src/com/lilithsthrone/game/character/attributes/Attribute.java`
+
+**modifier Variables**
+
+.. nodevar:: value <integer> ()
+
+   Defines how much the attribute should be numerically affected, either
+   positively or negatively.
 
 .. code:: xml
 
     <attributeModifiers>
-    	<modifier value="100.0">HEALTH_MAXIMUM</modifier>
+    	<modifier value="10">DAMAGE_LUST</modifier>
     </attributeModifiers>
 
 combatMoves
@@ -182,44 +192,44 @@ combatMoves
 The ``CombatMoves`` which should be unlocked for the character affected by this
 status effect. ``CombatMoves`` identifiers are defined in their constructors.
 When modding support for combat moves is added, the identifier will be described
-in the modding file there. Current ``CombatMoves`` can be found in the files in
-this folder: `src/com/lilithsthrone/game/combat/moves
-<https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/combat/moves>`_
+in the modding file there.
 
-Acceptable format:
+.. seealso::
 
-.. code:: xml
+   list of ``CombatMoves``: :ltgithub:`src/com/lilithsthrone/game/combat/moves`
 
-    <combatMoves>
-    	<move>cat-scratch</move>
-    </combatMoves>
+Example:
+    .. code:: xml
 
-If combat moves are unecessary, insert an empty tag:
+        <combatMoves>
+            <move>cat-scratch</move>
+        </combatMoves>
 
-.. code:: xml
+    If combat moves are unecessary, insert an empty tag::
 
-    <combatMoves/>
+        <combatMoves/>
 
 spells
 ------
 
 The Spells which should be unlocked for the character affected by this status
-effect. Current Spells can be found in the files in this folder:
-`src/com/lilithsthrone/game/combat/spells/Spell.java <https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/combat/spells/Spell.java>`_
+effect.
+
+.. seealso::
+
+   Current Spells can be found in the files in this folder:
+   :ltgithub:`src/com/lilithsthrone/game/combat/spells/Spell.java`
 
 Acceptable format:
+    .. code:: xml
 
-.. code:: xml
+        <spells>
+            <spell>ARCANE_AROUSAL</spell>
+        </spells>
 
-    <spells>
-    	<spell>ARCANE_AROUSAL</spell>
-    </spells>
+    For an empty spell list::
 
-For an empty spell list:
-
-.. code:: xml
-
-    <spells/>
+        <spells/>
 
 extraEffects
 ------------
@@ -237,9 +247,7 @@ described, but if you need to use this section, use the following format:
     	<effect><![CDATA[You're a playful kitty!]]></effect>
     </extraEffects>
 
-An empty ``extraEffects`` list:
-
-.. code:: xml
+An empty ``extraEffects`` list::
 
     <extraEffects/>
 
@@ -250,9 +258,7 @@ The condition for a status effect to be applied is by default ``false``, which
 means that it can only be applied by a direct method call elsewhere for
 ``GameCharacter.addStatusEffect(AbstractStatusEffect statusEffect, int
 seconds)``. If you would like your status effect to similarly only be applied
-when called upon, then define this element as:
-
-.. code:: xml
+when called upon, then define this element as::
 
     <applicationCondition><![CDATA[false]]></applicationCondition>
 
@@ -274,23 +280,27 @@ applicationCondition
 This example is meant to show that you can use the parser to create more
 *complex* conditionals.
 
-.. code:: xml
+**Examples:**
+    .. code:: xml
 
-    <applicationCondition><![CDATA[
-    	#IF(SET_BONUS_innoxia_template.isCharacterWearingCompleteSet(npc))
-    		true
-    	#ELSE
-    		false
-    	#ENDIF
-    ]]></applicationCondition>
+        <applicationCondition><![CDATA[
+            #IF(SET_BONUS_innoxia_template.isCharacterWearingCompleteSet(npc))
+                true
+            #ELSE
+                false
+            #ENDIF
+        ]]></applicationCondition>
 
-An alternate, simpler example to achieve the same effect would be to just do:
+    An alternate, simpler example to achieve the same effect would be to just
+    do:
 
-.. code:: xml
+    .. code:: xml
 
-    <applicationCondition><![CDATA[
-    	SET_BONUS_innoxia_kitty.isCharacterWearingCompleteSet(npc)
-    ]]></applicationCondition>
+        <applicationCondition><![CDATA[
+            SET_BONUS_innoxia_kitty.isCharacterWearingCompleteSet(npc)
+        ]]></applicationCondition>
+
+.. `applyEffect`_
 
 applyEffect
 ~~~~~~~~~~~
@@ -307,11 +317,16 @@ You can define your own effects to be parsed here, just like hard-coded status
 effects. While your options are a little limited by what the parser can access,
 you should be able to apply a good range of effects.
 
-``interval``
+**Node Variables:**
+
+.. nodevar:: interval <integer> ()
+
     The ``interval`` attribute is an integer representing how often this effect
     should be applied (measured in seconds). For example, an interval of 3600
-    would make this effect be applied only once per hour (60\*60=3600). Use an
-    interval of 0 to make this effect be applied on every turn.
+    would make this effect be applied only once per hour :math:`(60 \times 60 =
+    3600)`. Use an interval of 0 to make this effect be applied on every turn.
+
+**Content tags:**
 
 ``npc``
     is the parser target for the character affected by this status effect.
@@ -323,7 +338,7 @@ you should be able to apply a good range of effects.
 ``TOTAL_SECONDS_PASSED``
     is a special tag which is converted into a long value of the total time
     that’s passed while under the effect of this status effect (in seconds).
-    This can be used with a ``TOTAL_SECONDS_PASSED==0`` check to, for example,
+    This can be used with a ``TOTAL_SECONDS_PASSED == 0`` check to, for example,
     only apply an effect when this status effect is initially added.
 
     .. important::

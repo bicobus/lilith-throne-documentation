@@ -18,6 +18,7 @@
     <link rel="canonical" href="https://bicobus.github.io/lilith-throne-documentation/statusEffects.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="6. Authors" href="authors.html" />
     <link rel="prev" title="4. Item Sets" href="setBonuses.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -39,6 +40,10 @@
           &larr;
           <a href="setBonuses.html" title="Previous document"><span class="section-number">4. </span>Item Sets</a>
         </li>
+        <li>
+          <a href="authors.html" title="Next document"><span class="section-number">6. </span>Authors</a>
+          &rarr;
+        </li>
     </ul>
   </nav>
               </div>
@@ -50,7 +55,7 @@
 <h1><span class="section-number">5. </span>statusEffects<a class="headerlink" href="#statuseffects" title="Permalink to this headline">¶</a></h1>
 <blockquote>
 <div><dl class="field-list simple">
-<dt class="field-odd">Author</dt>
+<dt class="field-odd">Authors</dt>
 <dd class="field-odd"><p>innoxia, bicobus</p>
 </dd>
 </dl>
@@ -61,7 +66,7 @@
 access to a variety of content, like combat moves or spell. They can also change
 the attributes of the character.</p>
 <p>You can see an annotated example in the file
-<code class="docutils literal notranslate"><span class="pre">res/statusEffects/innoxia/set_kitty.xml</span></code>.</p>
+<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/res/statusEffects/innoxia/set_kitty.xml">res/statusEffects/innoxia/set_kitty.xml</a>.</p>
 </div>
 <div class="section" id="renderingpriority">
 <h2><span class="section-number">5.2. </span>renderingPriority<a class="headerlink" href="#renderingpriority" title="Permalink to this headline">¶</a></h2>
@@ -126,10 +131,10 @@ of combat.</p>
 </div>
 </div>
 <div class="section" id="name">
-<h2><span class="section-number">5.7. </span>name<a class="headerlink" href="#name" title="Permalink to this headline">¶</a></h2>
-<p>The name of this set bonus. The character under the effect is passed in as the
-<code class="docutils literal notranslate"><span class="pre">npc</span></code> parsing argument, so if you want to, you can include parsing elements
-such as <code class="docutils literal notranslate"><span class="pre">[npc.name]</span></code>.</p>
+<h2><span class="section-number">5.7. </span><span class="target" id="index-0"></span>name<a class="headerlink" href="#name" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference internal" href="overview.html#name"><span class="std std-ref">name</span></a> of this set bonus. The character under the effect is passed in
+as the <code class="docutils literal notranslate"><span class="pre">npc</span></code> parsing argument, so if you want to, you can include parsing
+elements such as <code class="docutils literal notranslate"><span class="pre">[npc.name]</span></code>.</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;name&gt;</span><span class="cp">&lt;![CDATA[Socks of Power]]&gt;</span><span class="nt">&lt;/name&gt;</span>
 </pre></div>
 </div>
@@ -156,10 +161,10 @@ file.</p>
 </div>
 <div class="section" id="colours">
 <h2><span class="section-number">5.10. </span>colours<a class="headerlink" href="#colours" title="Permalink to this headline">¶</a></h2>
-<p>The colour which should be associated with this status effect. Just like with
-clothing and weapon recolouring, this is used to recolour the image you used
-above. <code class="docutils literal notranslate"><span class="pre">PresetColour</span></code> value should be used here, drawn from
-<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/utils/colours/PresetColour.java">src/com/lilithsthrone/utils/colours/PresetColour.java</a></p>
+<p>The <a class="reference internal" href="overview.html#colours"><span class="std std-ref">colour</span></a> which should be associated with this status effect.
+Just like with clothing and weapon recolouring, this is used to recolour the
+image you used above. <code class="docutils literal notranslate"><span class="pre">PresetColour</span></code> value should be used here, drawn from
+<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/utils/colours/PresetColour.java">src/com/lilithsthrone/utils/colours/PresetColour.java</a></p>
 <div class="section" id="colourprimary">
 <h3><span class="section-number">5.10.1. </span>colourPrimary<a class="headerlink" href="#colourprimary" title="Permalink to this headline">¶</a></h3>
 <p>This has to have a value defined, or else this XML file will fail to load.</p>
@@ -184,14 +189,24 @@ above. <code class="docutils literal notranslate"><span class="pre">PresetColour
 <div class="section" id="attributemodifiers">
 <h2><span class="section-number">5.11. </span>attributeModifiers<a class="headerlink" href="#attributemodifiers" title="Permalink to this headline">¶</a></h2>
 <p>The attributes which should be affected by having this status effect. The
-<code class="docutils literal notranslate"><span class="pre">value=&quot;10&quot;</span></code> part defines how much the attribute should be numerically
-affected (and can be negative), while the <code class="docutils literal notranslate"><span class="pre">DAMAGE_LUST</span></code> part defines which
-attribute is being affected. You can define any number of attribute modifiers,
-but it’s usually best to keep it limited to just a few. Values for attributes
-should be drawn from here:
-<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/character/attributes/Attribute.java">/src/com/lilithsthrone/game/character/attributes/Attribute.java</a></p>
+<code class="docutils literal notranslate"><span class="pre">modifier</span></code> node must contain the attribute to be affected, in the example
+<code class="docutils literal notranslate"><span class="pre">DAMAGE_LUST</span></code>. You can define any number of attribute modifiers, but it’s
+usually best to keep it limited to just a few.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>List of attributes:
+<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev//src/com/lilithsthrone/game/character/attributes/Attribute.java">/src/com/lilithsthrone/game/character/attributes/Attribute.java</a></p>
+</div>
+<p><strong>modifier Variables</strong></p>
+<dl class="std nodevar">
+<dt id="nodevar-value-statusEffects">
+<span id="nodevar-value; statusEffects"></span><code class="sig-name descname">value</code> Type: integer<a class="headerlink" href="#nodevar-value-statusEffects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines how much the attribute should be numerically affected, either
+positively or negatively.</p>
+</dd></dl>
+
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;attributeModifiers&gt;</span>
-    <span class="nt">&lt;modifier</span> <span class="na">value=</span><span class="s">&quot;100.0&quot;</span><span class="nt">&gt;</span>HEALTH_MAXIMUM<span class="nt">&lt;/modifier&gt;</span>
+    <span class="nt">&lt;modifier</span> <span class="na">value=</span><span class="s">&quot;10&quot;</span><span class="nt">&gt;</span>DAMAGE_LUST<span class="nt">&lt;/modifier&gt;</span>
 <span class="nt">&lt;/attributeModifiers&gt;</span>
 </pre></div>
 </div>
@@ -201,10 +216,13 @@ should be drawn from here:
 <p>The <code class="docutils literal notranslate"><span class="pre">CombatMoves</span></code> which should be unlocked for the character affected by this
 status effect. <code class="docutils literal notranslate"><span class="pre">CombatMoves</span></code> identifiers are defined in their constructors.
 When modding support for combat moves is added, the identifier will be described
-in the modding file there. Current <code class="docutils literal notranslate"><span class="pre">CombatMoves</span></code> can be found in the files in
-this folder: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/combat/moves">src/com/lilithsthrone/game/combat/moves</a></p>
-<p>Acceptable format:</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;combatMoves&gt;</span>
+in the modding file there.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>list of <code class="docutils literal notranslate"><span class="pre">CombatMoves</span></code>: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/combat/moves">src/com/lilithsthrone/game/combat/moves</a></p>
+</div>
+<dl>
+<dt>Example:</dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;combatMoves&gt;</span>
     <span class="nt">&lt;move&gt;</span>cat-scratch<span class="nt">&lt;/move&gt;</span>
 <span class="nt">&lt;/combatMoves&gt;</span>
 </pre></div>
@@ -213,14 +231,20 @@ this folder: <a class="reference external" href="https://github.com/Innoxia/lili
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;combatMoves/&gt;</span>
 </pre></div>
 </div>
+</dd>
+</dl>
 </div>
 <div class="section" id="spells">
 <h2><span class="section-number">5.13. </span>spells<a class="headerlink" href="#spells" title="Permalink to this headline">¶</a></h2>
 <p>The Spells which should be unlocked for the character affected by this status
-effect. Current Spells can be found in the files in this folder:
-<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/combat/spells/Spell.java">src/com/lilithsthrone/game/combat/spells/Spell.java</a></p>
-<p>Acceptable format:</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;spells&gt;</span>
+effect.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Current Spells can be found in the files in this folder:
+<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/combat/spells/Spell.java">src/com/lilithsthrone/game/combat/spells/Spell.java</a></p>
+</div>
+<dl>
+<dt>Acceptable format:</dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;spells&gt;</span>
     <span class="nt">&lt;spell&gt;</span>ARCANE_AROUSAL<span class="nt">&lt;/spell&gt;</span>
 <span class="nt">&lt;/spells&gt;</span>
 </pre></div>
@@ -229,6 +253,8 @@ effect. Current Spells can be found in the files in this folder:
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;spells/&gt;</span>
 </pre></div>
 </div>
+</dd>
+</dl>
 </div>
 <div class="section" id="extraeffects">
 <h2><span class="section-number">5.14. </span>extraEffects<a class="headerlink" href="#extraeffects" title="Permalink to this headline">¶</a></h2>
@@ -272,21 +298,25 @@ is stripped from the returned String before it is parsed into a Boolean.</p>
 <h3><span class="section-number">5.15.1. </span>applicationCondition<a class="headerlink" href="#applicationcondition" title="Permalink to this headline">¶</a></h3>
 <p>This example is meant to show that you can use the parser to create more
 <em>complex</em> conditionals.</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;applicationCondition&gt;</span><span class="cp">&lt;![CDATA[</span>
+<dl>
+<dt><strong>Examples:</strong></dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;applicationCondition&gt;</span><span class="cp">&lt;![CDATA[</span>
 <span class="cp">    #IF(SET_BONUS_innoxia_template.isCharacterWearingCompleteSet(npc))</span>
-<span class="cp">            true</span>
+<span class="cp">        true</span>
 <span class="cp">    #ELSE</span>
-<span class="cp">            false</span>
+<span class="cp">        false</span>
 <span class="cp">    #ENDIF</span>
 <span class="cp">]]&gt;</span><span class="nt">&lt;/applicationCondition&gt;</span>
 </pre></div>
 </div>
-<p>An alternate, simpler example to achieve the same effect would be to just do:</p>
+<p>An alternate, simpler example to achieve the same effect would be to just
+do:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;applicationCondition&gt;</span><span class="cp">&lt;![CDATA[</span>
 <span class="cp">    SET_BONUS_innoxia_kitty.isCharacterWearingCompleteSet(npc)</span>
 <span class="cp">]]&gt;</span><span class="nt">&lt;/applicationCondition&gt;</span>
 </pre></div>
 </div>
+</dd>
+</dl>
 </div>
 <div class="section" id="applyeffect">
 <h3><span class="section-number">5.15.2. </span>applyEffect<a class="headerlink" href="#applyeffect" title="Permalink to this headline">¶</a></h3>
@@ -301,12 +331,18 @@ along with whatever <code class="docutils literal notranslate"><span class="pre"
 You can define your own effects to be parsed here, just like hard-coded status
 effects. While your options are a little limited by what the parser can access,
 you should be able to apply a good range of effects.</p>
-<dl>
-<dt><code class="docutils literal notranslate"><span class="pre">interval</span></code></dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">interval</span></code> attribute is an integer representing how often this effect
+<p><strong>Node Variables:</strong></p>
+<dl class="std nodevar">
+<dt id="nodevar-interval-statusEffects">
+<span id="nodevar-interval; statusEffects"></span><code class="sig-name descname">interval</code> Type: integer<a class="headerlink" href="#nodevar-interval-statusEffects" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">interval</span></code> attribute is an integer representing how often this effect
 should be applied (measured in seconds). For example, an interval of 3600
-would make this effect be applied only once per hour (60*60=3600). Use an
-interval of 0 to make this effect be applied on every turn.</p>
-</dd>
+would make this effect be applied only once per hour <span class="math notranslate nohighlight">\((60 \times 60 =
+3600)\)</span>. Use an interval of 0 to make this effect be applied on every turn.</p>
+</dd></dl>
+
+<p><strong>Content tags:</strong></p>
+<dl>
 <dt><code class="docutils literal notranslate"><span class="pre">npc</span></code></dt><dd><p>is the parser target for the character affected by this status effect.</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">SECONDS_PASSED</span></code></dt><dd><p>is a special tag which is converted into an integer value of the time that
@@ -314,7 +350,7 @@ passed during the last turn’s end (in seconds).</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">TOTAL_SECONDS_PASSED</span></code></dt><dd><p>is a special tag which is converted into a long value of the total time
 that’s passed while under the effect of this status effect (in seconds).
-This can be used with a <code class="docutils literal notranslate"><span class="pre">TOTAL_SECONDS_PASSED==0</span></code> check to, for example,
+This can be used with a <code class="docutils literal notranslate"><span class="pre">TOTAL_SECONDS_PASSED</span> <span class="pre">==</span> <span class="pre">0</span></code> check to, for example,
 only apply an effect when this status effect is initially added.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
@@ -375,6 +411,10 @@ character is no longer under the effects of this status effect.</p>
           &larr;
           <a href="setBonuses.html" title="Previous document"><span class="section-number">4. </span>Item Sets</a>
         </li>
+        <li>
+          <a href="authors.html" title="Next document"><span class="section-number">6. </span>Authors</a>
+          &rarr;
+        </li>
     </ul>
   </nav>
               </div>
@@ -434,6 +474,7 @@ character is no longer under the effects of this status effect.</p>
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="authors.html">6. Authors</a></li>
 </ul>
 
 <div class="relations">
@@ -441,6 +482,7 @@ character is no longer under the effects of this status effect.</p>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="setBonuses.html" title="previous chapter"><span class="section-number">4. </span>Item Sets</a></li>
+      <li>Next: <a href="authors.html" title="next chapter"><span class="section-number">6. </span>Authors</a></li>
   </ul></li>
 </ul>
 </div>
@@ -467,7 +509,7 @@ character is no longer under the effects of this status effect.</p>
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2020, Innoxia, Bicobus.
+      &copy;2020, Innoxia and contributors.
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>

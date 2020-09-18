@@ -11,6 +11,7 @@ Welcome to Lilith's Throne Mod Documentation's documentation!
    outfits
    setBonuses
    statusEffects
+   authors
 
 
 Indices and tables

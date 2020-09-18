@@ -114,6 +114,9 @@ value
 The base value of an object. I roughly base things on 1 flame = 10p, so 10
 flames = £1.
 
+.. index:: ! name
+   :name: name
+
 name
 ----
 
